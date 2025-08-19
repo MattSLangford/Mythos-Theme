@@ -18,14 +18,8 @@
         {{ if or (and (eq .Kind "taxonomy") (eq .Type "categories")) (eq .Section "archive") (in .RelPermalink "/archive") }}
         <div class="archive-categories">
             <div class="category-list">
-                {{ if .Site.Taxonomies.categories }}
-                    {{ range .Site.Taxonomies.categories }}
-                    <a href="/categories/{{ .Name | urlize }}" class="category-button">{{ .Name }}</a>
-                    {{ end }}
-                {{ else }}
-                    {{ range .Pages }}
-                    <a href="{{ .Permalink }}" class="category-button">{{ .Title }}</a>
-                    {{ end }}
+                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                <a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }}</a>
                 {{ end }}
             </div>
         </div>
