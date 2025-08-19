@@ -20,7 +20,7 @@
         {{ .Content }}
     </div>
     
-    {{ if .Params.categories }}
+    {{ if and .Params.categories .Site.Params.show_categories }}
     <div class="post-categories">
         <div class="category-list">
             {{ range .Params.categories }}
