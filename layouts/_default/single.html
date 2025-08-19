@@ -41,8 +41,10 @@
     {{ end }}
     
     <footer class="post-footer">
-        {{ if .Site.Params.include_conversation }}
-        <div id="conversation"></div>
+        {{ if and .Site.Params.include_conversation (eq .Type "post") }}
+        <div id="conversation">
+            <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+        </div>
         {{ end }}
     </footer>
 </article>
