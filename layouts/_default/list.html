@@ -22,6 +22,8 @@
     
     {{ if .Pages }}
     <div class="posts-list">
+        {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
+        {{/* Show pagination for taxonomy and term pages (posts listings) */}}
         {{ $paginator := .Paginate .Pages (or .Site.Params.posts_per_page 10) }}
         
         {{ range $paginator.Pages }}
@@ -57,6 +59,16 @@
                 {{ end }}
             </div>
             
+            {{ if .Params.categories }}
+            <div class="post-categories">
+                <div class="category-list">
+                    {{ range .Params.categories }}
+                    <a href="/categories/{{ . | urlize }}" class="category">{{ . }}</a>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+            
             {{ if .Params.tags }}
             <div class="post-tags">
                 {{ range .Params.tags }}
@@ -81,6 +93,20 @@
             <a href="{{ $paginator.Next.URL }}" class="next-page">Older posts →</a>
             {{ end }}
         </nav>
+        {{ end }}
+        
+        {{ else }}
+        {{/* Show simple list for regular section pages */}}
+        {{ range .Pages }}
+        <article class="page-item">
+            <h2 class="page-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            {{ if .Summary }}
+            <div class="page-summary">{{ .Summary | markdownify }}</div>
+            {{ end }}
+        </article>
+        {{ end }}
         {{ end }}
     </div>
     {{ else }}

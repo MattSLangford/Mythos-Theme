@@ -2,7 +2,7 @@
     <div class="header-container">
         <div class="site-branding">
             {{ $avatar := or .Site.Params.custom_avatar .Site.Params.avatar }}
-            {{ if and $avatar .Site.Params.show_profile_photo }}
+            {{ if $avatar }}
             <a href="/" class="site-avatar" aria-label="Home">
                 <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="avatar-image">
             </a>

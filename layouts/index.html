@@ -14,7 +14,7 @@
     {{ end }}
     
     <div class="posts-list">
-        {{ $paginator := .Paginate .Pages (or .Site.Params.posts_per_page 10) }}
+        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "post" "")) (or .Site.Params.posts_per_page 10) }}
         
         {{ range $paginator.Pages }}
         <article class="post-item">
@@ -48,6 +48,16 @@
                     {{ .Content }}
                 {{ end }}
             </div>
+            
+            {{ if .Params.categories }}
+            <div class="post-categories">
+                <div class="category-list">
+                    {{ range .Params.categories }}
+                    <a href="/categories/{{ . | urlize }}" class="category">{{ . }}</a>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
             
             {{ if .Params.tags }}
             <div class="post-tags">
