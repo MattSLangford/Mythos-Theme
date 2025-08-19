@@ -26,7 +26,7 @@
     <div class="posts-list">
         {{ $paginator := .Paginate $allPosts (or .Site.Params.posts_per_page 10) }}
         
-        {{ range .Paginator.Pages }}
+        {{ range $paginator.Pages }}
         <article class="post-item">
             <header class="post-header">
                 {{ if .Title }}
@@ -62,18 +62,18 @@
         </article>
         {{ end }}
         
-        {{ if gt .Paginator.TotalPages 1 }}
+        {{ if gt $paginator.TotalPages 1 }}
         <nav class="pagination">
-            {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← Newer posts</a>
+            {{ if $paginator.HasPrev }}
+            <a href="{{ $paginator.Prev.URL }}" class="prev-page">← Newer posts</a>
             {{ end }}
             
             <span class="page-numbers">
-                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+                Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
             </span>
             
-            {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">Older posts →</a>
+            {{ if $paginator.HasNext }}
+            <a href="{{ $paginator.Next.URL }}" class="next-page">Older posts →</a>
             {{ end }}
         </nav>
         {{ end }}
