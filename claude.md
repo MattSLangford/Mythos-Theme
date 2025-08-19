@@ -117,3 +117,5 @@ Partials: layouts/partials/*
 - Expect users to make heavy use of markdown styled code blocks
 - Include accomodations for default YouTube embeds
 - Include accomodations for popular Micro.blog plugins: Reply by email, Conversation on Micro.blog, custom home page, Font Awesome (by @manton), all phosphor icon plugins on micro.blog, archive with months, photos with months, photo collections, search space
+
+Also include a proper git ignore.
