@@ -44,6 +44,12 @@
       "options": ["5", "10", "15", "20", "25"]
     },
     {
+      "name": "include_conversation",
+      "label": "Include Conversation on Posts",
+      "type": "checkbox",
+      "default": true
+    },
+    {
       "name": "custom_css",
       "label": "Custom CSS",
       "type": "textarea",

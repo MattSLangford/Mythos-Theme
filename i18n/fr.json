@@ -1,0 +1,23 @@
+{
+  "home": "Accueil",
+  "archive": "Archive",
+  "about": "À propos",
+  "menu": "Menu",
+  "readMore": "Continuer la lecture",
+  "newerPosts": "Articles plus récents",
+  "olderPosts": "Articles plus anciens",
+  "backToHome": "Retour à l'accueil",
+  "previousPost": "Article précédent",
+  "nextPost": "Article suivant",
+  "noPostsFound": "Aucun article trouvé",
+  "page": "Page",
+  "of": "sur",
+  "post": "article",
+  "posts": "articles",
+  "minRead": "min de lecture",
+  "postsTagged": "Articles étiquetés",
+  "allRightsReserved": "Tous droits réservés",
+  "poweredBy": "Propulsé par",
+  "theme": "Thème",
+  "rss": "RSS"
+}

@@ -133,8 +133,10 @@ li {
 
 /* Images */
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    display: block;
+    margin: var(--spacing-md) 0;
 }
 
 img.avatar-image {
@@ -483,17 +485,7 @@ blockquote p:last-child {
     margin-bottom: var(--spacing-md);
 }
 
-.post-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: var(--spacing-lg) auto;
-    border-radius: 5px;
-}
-
-.post-content p img {
-    margin: var(--spacing-md) auto;
-}
+/* Removed redundant post-content img styles - using base img styles */
 
 .read-more {
     font-weight: 600;

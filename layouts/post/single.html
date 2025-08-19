@@ -5,7 +5,6 @@
         <h1 class="post-title">{{ .Title }}</h1>
         {{ end }}
         
-        {{ if eq .Type "post" }}
         <div class="post-meta">
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date.Format "2 January 2006" }}
@@ -15,7 +14,6 @@
             <span class="reading-time">{{ .ReadingTime }} min read</span>
             {{ end }}
         </div>
-        {{ end }}
     </header>
     
     <div class="post-content">
@@ -41,9 +39,7 @@
     {{ end }}
     
     <footer class="post-footer">
-        {{ if .Site.Params.include_conversation }}
         <div id="conversation"></div>
-        {{ end }}
     </footer>
 </article>
 {{ end }}
