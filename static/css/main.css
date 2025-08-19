@@ -135,9 +135,6 @@ li {
 img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: var(--spacing-lg) auto;
-    border-radius: 3px;
 }
 
 img.avatar-image {
@@ -421,8 +418,8 @@ blockquote p:last-child {
 }
 
 .post-item {
-    margin-bottom: var(--spacing-3xl);
-    padding-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-lg);
     border-bottom: 1px solid var(--color-border-light);
 }
 
@@ -433,7 +430,7 @@ blockquote p:last-child {
 }
 
 .post-header {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .post-title {
@@ -465,6 +462,16 @@ blockquote p:last-child {
     font-weight: 500;
 }
 
+.post-date-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+.post-date-link:hover {
+    color: var(--color-link);
+}
+
 .reading-time::before {
     content: "•";
     margin-right: var(--spacing-sm);
@@ -473,7 +480,7 @@ blockquote p:last-child {
 .post-content {
     font-size: var(--font-size-base);
     line-height: var(--line-height-loose);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .post-content img {
@@ -885,28 +892,33 @@ a button, a .button {
 }
 
 .archive-categories .category-button {
-    display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background-color: var(--color-background);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-background-alt) 100%);
     border: 2px solid var(--color-border);
-    border-radius: 25px;
-    color: var(--color-text-muted);
+    border-radius: 8px;
+    color: var(--color-text);
     text-decoration: none;
     font-size: var(--font-size-small);
-    font-weight: 600;
+    font-weight: 700;
     text-transform: capitalize;
-    transition: all var(--transition-fast);
+    letter-spacing: 0.5px;
+    transition: all var(--transition-base);
     white-space: nowrap;
-    min-width: 80px;
+    min-width: 100px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
 }
 
 .archive-categories .category-button:hover {
-    color: var(--color-text);
-    border-color: var(--color-accent);
-    background-color: var(--color-background);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: var(--color-background);
+    border-color: var(--color-text);
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-light) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .archive-categories .category-button:focus {
@@ -1011,9 +1023,10 @@ a button, a .button {
     }
     
     .archive-categories .category-button {
-        padding: var(--spacing-xs) var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-xs);
-        min-width: 60px;
+        min-width: 80px;
+        border-radius: 6px;
     }
     
     .post-categories .category-list,
