@@ -2,9 +2,8 @@
 <div class="home-content">
     {{ if .Site.Params.show_profile_photo }}
     <div class="profile-section">
-        {{ $avatar := or .Site.Params.custom_avatar .Site.Params.avatar }}
-        {{ if $avatar }}
-        <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="profile-photo">
+        {{ if .Site.Author.avatar }}
+        <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }}" class="profile-photo">
         {{ end }}
         
         {{ if .Site.Params.description }}
@@ -25,7 +24,6 @@
                 </h2>
                 {{ end }}
                 
-                {{ if .Site.Params.show_post_dates }}
                 <div class="post-meta">
                     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                         {{ .Date.Format "2 January 2006" }}
@@ -35,18 +33,10 @@
                     <span class="reading-time">{{ .ReadingTime }} min read</span>
                     {{ end }}
                 </div>
-                {{ end }}
             </header>
             
             <div class="post-content">
-                {{ if .Summary }}
-                    {{ .Summary | markdownify }}
-                    {{ if .Truncated }}
-                    <p><a href="{{ .Permalink }}" class="read-more">Continue reading →</a></p>
-                    {{ end }}
-                {{ else }}
-                    {{ .Content }}
-                {{ end }}
+                {{ .Content }}
             </div>
             
             {{ if .Params.tags }}

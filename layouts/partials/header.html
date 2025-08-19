@@ -3,9 +3,8 @@
         <div class="site-branding">
             <div class="site-info">
                 <h1 class="site-title">
-                    {{ $avatar := or .Site.Params.custom_avatar .Site.Params.avatar }}
-                    {{ if $avatar }}
-                    <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="title-avatar">
+                    {{ if .Site.Author.avatar }}
+                    <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }}" class="title-avatar">
                     {{ end }}
                     <a href="/" rel="home">{{ .Site.Title }}</a>
                 </h1>

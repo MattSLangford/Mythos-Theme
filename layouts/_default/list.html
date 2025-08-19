@@ -15,6 +15,16 @@
         <div class="list-description">{{ .Description | markdownify }}</div>
         {{ end }}
         
+        {{ if and (eq .Kind "taxonomy") (eq .Type "categories") }}
+        <div class="archive-categories">
+            <div class="category-list">
+                {{ range .Pages }}
+                <a href="{{ .Permalink }}" class="category-button">{{ .Title }}</a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+        
         {{ if .Pages }}
         <div class="list-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</div>
         {{ end }}
@@ -35,7 +45,6 @@
                 </h2>
                 {{ end }}
                 
-                {{ if .Site.Params.show_post_dates }}
                 <div class="post-meta">
                     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                         {{ .Date.Format "2 January 2006" }}
@@ -45,29 +54,11 @@
                     <span class="reading-time">{{ .ReadingTime }} min read</span>
                     {{ end }}
                 </div>
-                {{ end }}
             </header>
             
             <div class="post-content">
-                {{ if .Summary }}
-                    {{ .Summary | markdownify }}
-                    {{ if .Truncated }}
-                    <p><a href="{{ .Permalink }}" class="read-more">Continue reading →</a></p>
-                    {{ end }}
-                {{ else }}
-                    {{ .Content }}
-                {{ end }}
+                {{ .Content }}
             </div>
-            
-            {{ if .Params.categories }}
-            <div class="post-categories">
-                <div class="category-list">
-                    {{ range .Params.categories }}
-                    <a href="/categories/{{ . | urlize }}" class="category">{{ . }}</a>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
             
             {{ if .Params.tags }}
             <div class="post-tags">
