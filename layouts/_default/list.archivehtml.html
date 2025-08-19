@@ -21,9 +21,10 @@
         </div>
     </header>
     
-    {{ if .Pages }}
+    {{ $allPosts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
+    {{ if $allPosts }}
     <div class="posts-list">
-        {{ $paginator := .Paginate .Pages (or .Site.Params.posts_per_page 10) }}
+        {{ $paginator := .Paginate $allPosts (or .Site.Params.posts_per_page 10) }}
         
         {{ range .Paginator.Pages }}
         <article class="post-item">
