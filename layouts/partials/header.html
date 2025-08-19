@@ -1,15 +1,12 @@
 <header class="site-header" role="banner">
     <div class="header-container">
         <div class="site-branding">
-            {{ $avatar := or .Site.Params.custom_avatar .Site.Params.avatar }}
-            {{ if $avatar }}
-            <a href="/" class="site-avatar" aria-label="Home">
-                <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="avatar-image">
-            </a>
-            {{ end }}
-            
             <div class="site-info">
                 <h1 class="site-title">
+                    {{ $avatar := or .Site.Params.custom_avatar .Site.Params.avatar }}
+                    {{ if $avatar }}
+                    <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="title-avatar">
+                    {{ end }}
                     <a href="/" rel="home">{{ .Site.Title }}</a>
                 </h1>
                 {{ if .Site.Params.tagline }}
@@ -30,22 +27,6 @@
             
             <div class="primary-menu" id="primary-menu">
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link{{ if .IsHome }} current{{ end }}">Home</a>
-                    </li>
-                    
-                    {{ if .Site.Params.archive_url }}
-                    <li class="nav-item">
-                        <a href="{{ .Site.Params.archive_url }}" class="nav-link">Archive</a>
-                    </li>
-                    {{ end }}
-                    
-                    {{ if .Site.Params.about_url }}
-                    <li class="nav-item">
-                        <a href="{{ .Site.Params.about_url }}" class="nav-link">About</a>
-                    </li>
-                    {{ end }}
-                    
                     {{ range .Site.Menus.main }}
                     <li class="nav-item">
                         <a href="{{ .URL }}" class="nav-link"{{ if .Pre }} {{ .Pre | safeHTMLAttr }}{{ end }}>
@@ -53,10 +34,6 @@
                         </a>
                     </li>
                     {{ end }}
-                    
-                    <li class="nav-item">
-                        <a href="/feed.xml" class="nav-link" rel="alternate" type="application/rss+xml">RSS</a>
-                    </li>
                 </ul>
             </div>
         </nav>

@@ -255,6 +255,17 @@ blockquote p:last-child {
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.title-avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .site-title a {
@@ -465,6 +476,18 @@ blockquote p:last-child {
     margin-bottom: var(--spacing-lg);
 }
 
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: var(--spacing-lg) auto;
+    border-radius: 5px;
+}
+
+.post-content p img {
+    margin: var(--spacing-md) auto;
+}
+
 .read-more {
     font-weight: 600;
     text-decoration: none;
@@ -602,23 +625,24 @@ blockquote p:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: var(--spacing-3xl);
-    padding-top: var(--spacing-2xl);
-    border-top: 1px solid var(--color-border);
+    margin-top: var(--spacing-2xl);
+    padding-top: var(--spacing-xl);
     flex-wrap: wrap;
     gap: var(--spacing-md);
 }
 
 .prev-page,
 .next-page {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
     border-radius: 5px;
     text-decoration: none;
     color: var(--color-text-muted);
     font-weight: 600;
+    font-size: var(--font-size-small);
     transition: all var(--transition-fast);
+    white-space: nowrap;
 }
 
 .prev-page:hover,
@@ -975,9 +999,23 @@ a button, a .button {
     }
     
     .pagination {
-        flex-direction: column;
-        gap: var(--spacing-md);
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--spacing-sm);
         text-align: center;
+    }
+    
+    .prev-page,
+    .next-page {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+    
+    .page-numbers {
+        flex: 0 0 auto;
+        font-size: var(--font-size-xs);
     }
     
     .archive-categories .category-list,
