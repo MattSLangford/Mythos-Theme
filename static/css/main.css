@@ -755,12 +755,16 @@ a button, a .button {
 }
 
 #conversation .microblog-post {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     margin-bottom: var(--spacing-md);
     background-color: var(--color-background);
     border: 1px solid var(--color-border-light);
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    transition: border-color var(--transition-fast);
+}
+
+#conversation .microblog-post:hover {
+    border-color: var(--color-border);
 }
 
 #conversation .microblog-post:last-child {
@@ -774,20 +778,22 @@ a button, a .button {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    font-size: var(--font-size-small);
 }
 
 #conversation .microblog-post .microblog-author img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
     border-radius: 50%;
     margin: 0;
-    border: 2px solid var(--color-border-light);
+    border: 1px solid var(--color-border-light);
 }
 
 #conversation .microblog-post .microblog-content {
-    color: var(--color-text);
-    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    line-height: var(--line-height-base);
     margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-base);
 }
 
 #conversation .microblog-post .microblog-date {
@@ -897,6 +903,13 @@ a button, a .button {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.archive-categories li {
+    margin: 0;
 }
 
 .archive-categories .category-button {

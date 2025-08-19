@@ -1,65 +1,50 @@
 {
-  "name": "Mythos Theme",
   "version": "1.0.0",
-  "author": "Matt Langford",
+  "title": "Mythos Theme",
   "description": "A minimal, fast, and highly readable Micro.blog theme with clean black and white design.",
-  "params": [
+  "fields": [
     {
-      "name": "site_language",
+      "field": "defaultContentLanguage",
       "label": "Site Language",
-      "type": "select",
-      "default": "en",
-      "options": ["de","en","es","fi","fr","it","pt","ru"]
+      "type": "string",
+      "placeholder": "Enter the language code (e.g., en, fr, es)"
     },
     {
-      "name": "custom_avatar",
-      "label": "Custom Avatar URL",
-      "type": "text",
-      "default": "",
-      "placeholder": "https://example.com/avatar.jpg"
-    },
-    {
-      "name": "show_profile_photo",
+      "field": "params.show_profile_photo",
       "label": "Show Profile Photo in Header",
-      "type": "checkbox",
-      "default": true
+      "type": "boolean"
     },
     {
-      "name": "show_post_dates",
+      "field": "params.show_post_dates",
       "label": "Show Dates on Posts",
-      "type": "checkbox",
-      "default": true
+      "type": "boolean"
     },
     {
-      "name": "show_reading_time",
+      "field": "params.show_reading_time",
       "label": "Show Reading Time on Posts",
-      "type": "checkbox",
-      "default": false
+      "type": "boolean"
     },
     {
-      "name": "posts_per_page",
+      "field": "params.posts_per_page",
       "label": "Posts per Page",
-      "type": "select",
-      "default": "10",
-      "options": ["5", "10", "15", "20", "25"]
+      "type": "number",
+      "placeholder": "Enter the number of posts per page (default: 10)"
     },
     {
-      "name": "show_categories",
+      "field": "params.show_categories",
       "label": "Show Category Links on Posts",
-      "type": "checkbox",
-      "default": true
+      "type": "boolean"
     },
     {
-      "name": "include_conversation",
+      "field": "params.include_conversation",
       "label": "Include Conversation on Posts",
-      "type": "checkbox",
-      "default": true
+      "type": "boolean"
     },
     {
-      "name": "custom_css",
+      "field": "params.custom_css",
       "label": "Custom CSS",
-      "type": "textarea",
-      "default": ""
+      "type": "text",
+      "placeholder": "Enter custom CSS styles"
     }
   ]
 }
