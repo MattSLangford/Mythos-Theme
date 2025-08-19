@@ -1,0 +1,12 @@
+name = "Mythos"
+license = "MIT"
+licenselink = "https://github.com/mattlangford/mythos-theme/blob/main/LICENSE"
+description = "A minimal, fast, and highly readable Micro.blog theme with clean black and white design."
+homepage = "https://github.com/mattlangford/mythos-theme"
+tags = ["minimal", "clean", "responsive", "accessible", "microblog", "simple", "typography", "fast"]
+features = ["responsive", "accessibility", "i18n", "customization"]
+min_version = "0.55.0"
+
+[author]
+  name = "Matt Langford"
+  homepage = "https://mattlangford.com"

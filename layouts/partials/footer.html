@@ -1,0 +1,26 @@
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p class="copyright">
+                &copy; {{ now.Format "2006" }} {{ .Site.Title }}. 
+                {{ if .Site.Params.license }}{{ .Site.Params.license }}{{ else }}All rights reserved.{{ end }}
+            </p>
+            
+            <p class="powered-by">
+                Powered by <a href="https://micro.blog" rel="nofollow">Micro.blog</a> and 
+                <a href="https://gohugo.io" rel="nofollow">Hugo</a>. 
+                Theme: <a href="https://github.com/mattlangford/mythos-theme" rel="nofollow">Mythos</a>.
+            </p>
+        </div>
+        
+        {{ if .Site.Params.social }}
+        <div class="social-links">
+            {{ range .Site.Params.social }}
+            <a href="{{ .url }}" class="social-link" aria-label="{{ .name }}" rel="me noopener noreferrer" target="_blank">
+                {{ .name }}
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</footer>

@@ -1,0 +1,23 @@
+{
+  "home": "Home",
+  "archive": "Archive",
+  "about": "About",
+  "menu": "Menu",
+  "readMore": "Continue reading",
+  "newerPosts": "Newer posts",
+  "olderPosts": "Older posts",
+  "backToHome": "Back to home",
+  "previousPost": "Previous post",
+  "nextPost": "Next post",
+  "noPostsFound": "No posts found",
+  "page": "Page",
+  "of": "of",
+  "post": "post",
+  "posts": "posts",
+  "minRead": "min read",
+  "postsTagged": "Posts tagged",
+  "allRightsReserved": "All rights reserved",
+  "poweredBy": "Powered by",
+  "theme": "Theme",
+  "rss": "RSS"
+}

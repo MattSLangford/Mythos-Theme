@@ -1,0 +1,53 @@
+{
+  "name": "Mythos Theme",
+  "version": "1.0.0",
+  "author": "Matt Langford",
+  "description": "A minimal, fast, and highly readable Micro.blog theme with clean black and white design.",
+  "params": [
+    {
+      "name": "site_language",
+      "label": "Site Language",
+      "type": "select",
+      "default": "en",
+      "options": ["de","en","es","fi","fr","it","pt","ru"]
+    },
+    {
+      "name": "custom_avatar",
+      "label": "Custom Avatar URL",
+      "type": "text",
+      "default": "",
+      "placeholder": "https://example.com/avatar.jpg"
+    },
+    {
+      "name": "show_profile_photo",
+      "label": "Show Profile Photo in Header",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "name": "show_post_dates",
+      "label": "Show Dates on Posts",
+      "type": "checkbox",
+      "default": true
+    },
+    {
+      "name": "show_reading_time",
+      "label": "Show Reading Time on Posts",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "name": "posts_per_page",
+      "label": "Posts per Page",
+      "type": "select",
+      "default": "10",
+      "options": ["5", "10", "15", "20", "25"]
+    },
+    {
+      "name": "custom_css",
+      "label": "Custom CSS",
+      "type": "textarea",
+      "default": ""
+    }
+  ]
+}

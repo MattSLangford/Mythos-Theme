@@ -1,0 +1,64 @@
+<header class="site-header" role="banner">
+    <div class="header-container">
+        <div class="site-branding">
+            {{ $avatar := or .Site.Params.custom_avatar .Site.Params.avatar }}
+            {{ if and $avatar .Site.Params.show_profile_photo }}
+            <a href="/" class="site-avatar" aria-label="Home">
+                <img src="{{ $avatar }}" alt="{{ .Site.Title }}" class="avatar-image">
+            </a>
+            {{ end }}
+            
+            <div class="site-info">
+                <h1 class="site-title">
+                    <a href="/" rel="home">{{ .Site.Title }}</a>
+                </h1>
+                {{ if .Site.Params.tagline }}
+                <p class="site-tagline">{{ .Site.Params.tagline }}</p>
+                {{ end }}
+            </div>
+        </div>
+        
+        <nav class="site-navigation" role="navigation" aria-label="Main navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
+                <span class="menu-toggle-text">Menu</span>
+                <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            
+            <div class="primary-menu" id="primary-menu">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link{{ if .IsHome }} current{{ end }}">Home</a>
+                    </li>
+                    
+                    {{ if .Site.Params.archive_url }}
+                    <li class="nav-item">
+                        <a href="{{ .Site.Params.archive_url }}" class="nav-link">Archive</a>
+                    </li>
+                    {{ end }}
+                    
+                    {{ if .Site.Params.about_url }}
+                    <li class="nav-item">
+                        <a href="{{ .Site.Params.about_url }}" class="nav-link">About</a>
+                    </li>
+                    {{ end }}
+                    
+                    {{ range .Site.Menus.main }}
+                    <li class="nav-item">
+                        <a href="{{ .URL }}" class="nav-link"{{ if .Pre }} {{ .Pre | safeHTMLAttr }}{{ end }}>
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                    
+                    <li class="nav-item">
+                        <a href="/feed.xml" class="nav-link" rel="alternate" type="application/rss+xml">RSS</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
