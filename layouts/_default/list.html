@@ -60,6 +60,7 @@
                             {{ if gt (len $words) $maxWords }}
                                 {{ delimit (first $maxWords $words) " " }}...
                                 <div class="continue-reading">
+                                    <br>
                                     <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
                                 </div>
                             {{ else }}
