@@ -158,10 +158,12 @@ a {
     transition: color var(--transition-fast);
 }
 
-a:hover,
-a:focus {
+a:hover {
     color: var(--color-link-hover);
     text-decoration-thickness: 2px;
+}
+
+a:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
