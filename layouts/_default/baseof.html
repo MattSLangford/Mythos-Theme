@@ -8,28 +8,15 @@
     
     {{ if .Description }}
     <meta name="description" content="{{ .Description }}">
-    {{ else if .Site.Params.description }}
-    <meta name="description" content="{{ .Site.Params.description }}">
     {{ end }}
     
     <meta name="author" content="{{ .Site.Params.author }}">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/feed.xml" | absURL }}" title="{{ .Site.Title }}">
-    
-    <!-- Custom CSS from theme settings -->
-    {{ if .Site.Params.custom_css }}
-    <style>
-        {{ .Site.Params.custom_css | safeCSS }}
-    </style>
-    {{ end }}
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ .Permalink }}">
@@ -45,6 +32,8 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    
+    {{ partial "microblog_head.html" . }}
 </head>
 
 <body>
