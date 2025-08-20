@@ -828,6 +828,16 @@ a button, a .button {
     cursor: not-allowed;
 }
 
+/* Category Description/Intro */
+.microblog-category-intro {
+    padding-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-light);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-loose);
+}
+
 /* Reply by Email and Related Elements */
 .reply-by-email,
 .webmention-reply,

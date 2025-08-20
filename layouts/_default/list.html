@@ -16,6 +16,10 @@
         {{ end }}
     </header>
     
+    {{ with .Content }}
+    <div class="microblog-category-intro">{{ . }}</div>
+    {{ end }}
+    
     {{ if .Pages }}
     <div class="posts-list">
         {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
