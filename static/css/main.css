@@ -745,7 +745,6 @@ a button, a .button {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
 }
 
 .microblog_avatar {
