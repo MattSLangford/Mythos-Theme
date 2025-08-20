@@ -34,6 +34,11 @@
       "field": "params.show_categories",
       "label": "Show Category Links on Posts",
       "type": "boolean"
+    },
+    {
+      "field": "params.include_conversation",
+      "label": "Include Conversation on Posts",
+      "type": "boolean"
     }
   ]
 }
