@@ -1023,7 +1023,8 @@ a button, a .button {
     
     .prev-page,
     .next-page {
-        padding: var(--spacing-xs) var(--spacing-sm);
+        padding: var(--spacing-md) var(--spacing-md);
+        min-height: 44px;
         font-size: var(--font-size-xs);
         flex: 0 1 auto;
         min-width: 0;
@@ -1039,7 +1040,8 @@ a button, a .button {
     }
     
     .archive-categories .category-button {
-        padding: var(--spacing-xs) var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+        min-height: 44px;
         font-size: var(--font-size-xs);
     }
     
