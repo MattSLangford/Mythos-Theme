@@ -42,32 +42,14 @@
     --container-width: 42rem;
     --container-width-wide: 48rem;
     --header-height: 4rem;
+    --touch-target-height: 44px;
+    --button-padding: var(--spacing-md) var(--spacing-lg);
+    --button-padding-compact: var(--spacing-sm) var(--spacing-md);
     
     /* Transitions */
     --transition-fast: 0.15s ease;
     --transition-base: 0.2s ease;
     --transition-slow: 0.3s ease;
-}
-
-/* Accessibility: Skip Links */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background-color: var(--color-text);
-    color: var(--color-background);
-    padding: var(--spacing-sm) var(--spacing-md);
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 0 0 5px 5px;
-    z-index: 9999;
-    transition: top var(--transition-fast);
-}
-
-.skip-link:focus {
-    top: 0;
-    outline: 2px solid var(--color-background);
-    outline-offset: 2px;
 }
 
 /* Accessibility: Reduced Motion */
@@ -675,33 +657,71 @@ hr {
 }
 
 /* Buttons and Form Elements */
-button, .button, input[type="submit"], input[type="button"] {
+button, .button, input[type="submit"], input[type="button"],
+.post-actions a, .post-actions button,
+.archive-categories .category-button,
+.prev-page, .next-page {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    min-height: 44px;
+    min-height: var(--touch-target-height);
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
     border-radius: 5px;
     color: var(--color-text);
     text-decoration: none;
     font-weight: 600;
-    font-size: var(--font-size-small);
     cursor: pointer;
     transition: all var(--transition-fast);
     font-family: inherit;
-    line-height: 1.4;
 }
 
-button:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+/* Standard button padding */
+button, .button, input[type="submit"], input[type="button"],
+.post-actions a, .post-actions button,
+.archive-categories .category-button,
+.prev-page, .next-page,
+.microblog_reply_button input[type="submit"] {
+    padding: var(--button-padding);
+    font-size: var(--font-size-small);
+}
+
+/* Compact button padding for inline elements */
+.post-categories .category-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--button-padding-compact);
+    min-height: 36px;
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+/* Button hover states */
+button:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover,
+.post-actions a:hover, .post-actions button:hover,
+.archive-categories .category-button:hover,
+.prev-page:hover, .next-page:hover,
+.post-categories .category-button:hover,
+.microblog_reply_button input[type="submit"]:hover:not(:disabled) {
     background-color: var(--color-background);
     border-color: var(--color-accent);
     color: var(--color-text);
     transform: translateY(-1px);
 }
 
-button:focus, .button:focus, input[type="submit"]:focus, input[type="button"]:focus {
+/* Button focus states */
+button:focus, .button:focus, input[type="submit"]:focus, input[type="button"]:focus,
+.post-actions a:focus, .post-actions button:focus,
+.archive-categories .category-button:focus,
+.prev-page:focus, .next-page:focus,
+.post-categories .category-button:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
@@ -903,36 +923,10 @@ a button, a .button {
     flex-wrap: wrap;
 }
 
+/* Post actions styling inherits from consolidated button styles above */
 .post-actions a,
 .post-actions button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    min-height: 44px;
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border);
-    border-radius: 5px;
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: var(--font-size-small);
-    transition: all var(--transition-fast);
     white-space: nowrap;
-}
-
-.post-actions a:hover,
-.post-actions button:hover {
-    color: var(--color-text);
-    border-color: var(--color-accent);
-    transform: translateY(-1px);
-    text-decoration: none;
-}
-
-.post-actions a:focus,
-.post-actions button:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
 }
 
 
@@ -955,33 +949,10 @@ a button, a .button {
     margin: 0;
 }
 
+/* Archive category buttons inherit from consolidated button styles above */
 .archive-categories .category-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    min-height: 44px;
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border);
-    border-radius: 5px;
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-size: var(--font-size-small);
-    font-weight: 600;
     text-transform: capitalize;
-    transition: all var(--transition-fast);
     white-space: nowrap;
-}
-
-.archive-categories .category-button:hover {
-    color: var(--color-text);
-    border-color: var(--color-accent);
-    background-color: var(--color-background);
-}
-
-.archive-categories .category-button:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
 }
 
 /* Page Item Styling for Lists */
@@ -1027,8 +998,11 @@ a button, a .button {
         --spacing-xl: 1.25rem;
         --spacing-2xl: 2rem;
         --spacing-3xl: 2.5rem;
+        --button-padding-mobile: var(--spacing-md) var(--spacing-md);
+        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);
     }
     
+    /* Layout adjustments */
     .header-container {
         padding: var(--spacing-md) var(--spacing-md);
     }
@@ -1041,8 +1015,7 @@ a button, a .button {
         font-size: 1.1rem;
     }
     
-    
-    
+    /* Pagination mobile adjustments */
     .pagination {
         flex-direction: row;
         justify-content: space-between;
@@ -1050,10 +1023,8 @@ a button, a .button {
         text-align: center;
     }
     
-    .prev-page,
-    .next-page {
-        padding: var(--spacing-md) var(--spacing-md);
-        min-height: 44px;
+    .prev-page, .next-page {
+        padding: var(--button-padding-mobile);
         font-size: var(--font-size-xs);
         flex: 0 1 auto;
         min-width: 0;
@@ -1064,26 +1035,28 @@ a button, a .button {
         font-size: var(--font-size-xs);
     }
     
+    /* Archive categories mobile adjustments */
     .archive-categories {
         gap: var(--spacing-xs);
     }
     
     .archive-categories .category-button {
-        padding: var(--spacing-sm) var(--spacing-md);
-        min-height: 44px;
+        padding: var(--button-padding-compact-mobile);
         font-size: var(--font-size-xs);
     }
-    
 }
 
 @media (max-width: 480px) {
+    /* Typography adjustments */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.375rem; }
+    
+    /* Navigation adjustments */
     .menu-toggle-text {
         display: none;
     }
     
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.375rem; }
-    
+    /* Profile photo adjustments */
     .profile-photo {
         width: 4rem;
         height: 4rem;

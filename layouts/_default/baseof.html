@@ -48,13 +48,9 @@
 </head>
 
 <body>
-    <!-- Skip Navigation Links -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <a class="skip-link" href="#navigation">Skip to navigation</a>
-    
     {{ partial "header.html" . }}
     
-    <main class="main-content" role="main" id="main-content">
+    <main class="main-content" role="main">
         {{ block "main" . }}{{ end }}
     </main>
     
