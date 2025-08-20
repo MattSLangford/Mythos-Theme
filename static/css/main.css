@@ -103,13 +103,14 @@ p:last-child {
 
 /* Special paragraph types */
 p.note {
-    background-color: var(--color-background-alt);
-    border-left: 4px solid var(--color-accent);
+    background-color: #e8f4fd;
+    border: 1px solid #bee5eb;
+    border-left: 4px solid #007acc;
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
-    border-radius: 0 5px 5px 0;
-    font-style: italic;
-    color: var(--color-text-light);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #0c5460;
 }
 
 p.alert {
@@ -124,22 +125,14 @@ p.alert {
 }
 
 p.aside {
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border-light);
-    border-radius: 5px;
-    padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + 1.5em);
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #6c757d;
+    padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
-    font-size: var(--font-size-small);
-    color: var(--color-text-muted);
-    position: relative;
-}
-
-p.aside::before {
-    content: "ℹ️";
-    position: absolute;
-    top: var(--spacing-sm);
-    left: var(--spacing-sm);
-    font-size: 1.2em;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #495057;
 }
 
 /* Links */
@@ -178,7 +171,7 @@ img {
     height: auto;
     display: block;
     margin: var(--spacing-md) 0;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 /* Videos */
@@ -187,7 +180,7 @@ video {
     height: auto;
     display: block;
     margin: var(--spacing-md) 0;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 img.avatar-image {
@@ -214,7 +207,7 @@ img.thumbnail {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 5px;
     margin: var(--spacing-sm);
 }
 
@@ -253,7 +246,7 @@ code {
     font-size: 0.9em;
     background-color: var(--color-background-alt);
     padding: 0.15em 0.3em;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid var(--color-border-light);
 }
 
@@ -774,7 +767,7 @@ a button, a .button {
     width: 100%;
     padding: var(--spacing-sm);
     border: 1px solid var(--color-border);
-    border-radius: 3px;
+    border-radius: 5px;
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
@@ -789,7 +782,7 @@ a button, a .button {
     padding: var(--spacing-sm) var(--spacing-lg);
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 3px;
+    border-radius: 5px;
     color: var(--color-text);
     font-weight: 600;
     cursor: pointer;
@@ -878,7 +871,7 @@ a button, a .button {
     padding: var(--spacing-sm) var(--spacing-lg);
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 20px;
+    border-radius: 5px;
     color: var(--color-text-muted);
     text-decoration: none;
     font-size: var(--font-size-small);
