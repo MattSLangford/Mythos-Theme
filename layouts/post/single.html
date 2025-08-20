@@ -5,20 +5,26 @@
         <h1 class="post-title">{{ .Title }}</h1>
         {{ end }}
         
-        {{ if not .Site.Params.show_post_dates }}
         <div class="post-meta">
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date.Format "2 January 2006" }}
             </time>
         </div>
-        {{ end }}
     </header>
     
     <div class="post-content">
         {{ .Content }}
     </div>
     
-    
+    {{ if and .Params.categories (not .Site.Params.show_categories) }}
+    <div class="post-categories">
+        <div class="category-list">
+            {{ range .Params.categories }}
+            <a href="/categories/{{ . | urlize }}" class="category-button">{{ . }}</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
     
     <footer class="post-footer">
         {{ if or (templates.Exists "partials/reply-by-email.html") (templates.Exists "partials/conversation-link.html") }}

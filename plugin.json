@@ -15,11 +15,6 @@
       "type": "boolean"
     },
     {
-      "field": "params.show_post_dates",
-      "label": "Hide Dates",
-      "type": "boolean"
-    },
-    {
       "field": "params.posts_per_page",
       "label": "Posts per Page",
       "type": "number",
@@ -27,7 +22,7 @@
     },
     {
       "field": "params.show_categories",
-      "label": "Show Category Links on Posts",
+      "label": "Hide Category Links on Posts",
       "type": "boolean"
     },
     {

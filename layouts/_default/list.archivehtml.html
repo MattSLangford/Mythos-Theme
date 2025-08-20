@@ -33,7 +33,6 @@
                 </h2>
                 {{ end }}
                 
-                {{ if not .Site.Params.show_post_dates }}
                 <div class="post-meta">
                     <a href="{{ .Permalink }}" class="post-date-link">
                         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -41,7 +40,6 @@
                         </time>
                     </a>
                 </div>
-                {{ end }}
             </header>
             
             <div class="post-content">

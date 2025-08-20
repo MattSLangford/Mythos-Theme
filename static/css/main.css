@@ -806,6 +806,43 @@ a button, a .button {
     line-height: var(--line-height-loose);
 }
 
+/* Post Categories */
+.post-categories {
+    margin: var(--spacing-xl) 0;
+}
+
+.post-categories .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.post-categories .category-button {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.post-categories .category-button:hover {
+    color: var(--color-text);
+    border-color: var(--color-accent);
+    background-color: var(--color-background);
+}
+
+.post-categories .category-button:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
 /* Post Actions (Plugin Buttons) */
 .post-actions {
     margin-bottom: var(--spacing-xl);
