@@ -3,18 +3,13 @@
         <div class="footer-content">
             {{ if templates.Exists "partials/custom_footer.html" }}
                 {{ partial "custom_footer.html" . }}
-            {{ else }}
-            <p class="copyright">
-                &copy; {{ now.Format "2006" }} {{ .Site.Title }}. 
-                All rights reserved.
-            </p>
+            {{ end }}
             
             <p class="powered-by">
                 Powered by <a href="https://micro.blog" rel="nofollow">Micro.blog</a> and 
                 <a href="https://gohugo.io" rel="nofollow">Hugo</a>. 
                 <a href="https://github.com/mattlangford/mythos-theme" rel="nofollow">Mythos Theme</a> designed by <a href="https://mattlangford.com" rel="nofollow">Matt Langford</a>.
             </p>
-            {{ end }}
         </div>
         
     </div>
