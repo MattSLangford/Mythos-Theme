@@ -1,25 +1,25 @@
 {{ define "main" }}
 <div class="list-page">
     <header class="list-header">
-        <h1 class="list-title">{{ .Title }}</h1>
+        <h1>{{ .Title }}</h1>
         
         {{ if .Description }}
         <div class="list-description">{{ .Description | markdownify }}</div>
         {{ end }}
-        
-        <div class="archive-section">
-            <h2 class="archive-section-title">{{ i18n "categories" }}</h2>
-            <ul class="archive-categories">
-                {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                <li><a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }}</a></li>
-                {{ end }}
-            </ul>
-        </div>
-        
-        <div class="archive-section">
-            <h2 class="archive-section-title">{{ i18n "allPosts" }}</h2>
-        </div>
     </header>
+    
+    <div class="archive-section">
+        <h2>{{ i18n "categories" }}</h2>
+        <ul class="archive-categories">
+            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <li><a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    
+    <div class="archive-section">
+        <h2>{{ i18n "allPosts" }}</h2>
+    </div>
     
     {{ $allPosts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
     {{ if $allPosts }}
