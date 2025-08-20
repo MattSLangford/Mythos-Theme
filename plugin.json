@@ -16,7 +16,7 @@
     },
     {
       "field": "params.show_post_dates",
-      "label": "Show Dates on Posts",
+      "label": "Hide Dates",
       "type": "boolean"
     },
     {
