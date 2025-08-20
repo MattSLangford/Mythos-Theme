@@ -1,10 +1,10 @@
 {{ define "main" }}
-<div class="list-page">
-    <header class="list-header">
+<div>
+    <header>
         <h1>{{ .Title }}</h1>
         
         {{ if .Description }}
-        <div class="list-description">{{ .Description | markdownify }}</div>
+        <div>{{ .Description | markdownify }}</div>
         {{ end }}
     </header>
     
