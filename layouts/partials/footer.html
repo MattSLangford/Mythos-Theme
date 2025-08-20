@@ -1,26 +1,21 @@
 <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
         <div class="footer-content">
+            {{ if templates.Exists "partials/custom_footer.html" }}
+                {{ partial "custom_footer.html" . }}
+            {{ else }}
             <p class="copyright">
                 &copy; {{ now.Format "2006" }} {{ .Site.Title }}. 
-                {{ if .Site.Params.license }}{{ .Site.Params.license }}{{ else }}All rights reserved.{{ end }}
+                All rights reserved.
             </p>
             
             <p class="powered-by">
                 Powered by <a href="https://micro.blog" rel="nofollow">Micro.blog</a> and 
                 <a href="https://gohugo.io" rel="nofollow">Hugo</a>. 
-                Theme: <a href="https://github.com/mattlangford/mythos-theme" rel="nofollow">Mythos</a>.
+                <a href="https://github.com/mattlangford/mythos-theme" rel="nofollow">Mythos Theme</a> designed by <a href="https://mattlangford.com" rel="nofollow">Matt Langford</a>.
             </p>
-        </div>
-        
-        {{ if .Site.Params.social }}
-        <div class="social-links">
-            {{ range .Site.Params.social }}
-            <a href="{{ .url }}" class="social-link" aria-label="{{ .name }}" rel="me noopener noreferrer" target="_blank">
-                {{ .name }}
-            </a>
             {{ end }}
         </div>
-        {{ end }}
+        
     </div>
 </footer>

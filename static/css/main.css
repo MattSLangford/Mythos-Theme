@@ -287,12 +287,6 @@ blockquote p:last-child {
     color: var(--color-link);
 }
 
-.site-tagline {
-    margin: 0;
-    font-size: var(--font-size-small);
-    color: var(--color-text-muted);
-    line-height: 1.3;
-}
 
 /* Navigation */
 .site-navigation {
@@ -419,11 +413,6 @@ blockquote p:last-child {
     border-bottom: 1px solid var(--color-border);
 }
 
-.site-description {
-    color: var(--color-text-light);
-    font-size: var(--font-size-large);
-    margin-top: var(--spacing-md);
-}
 
 /* Posts */
 .posts-list {
@@ -637,23 +626,8 @@ blockquote p:last-child {
     color: var(--color-text-muted);
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    flex-wrap: wrap;
-}
 
-.social-link {
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color var(--transition-fast);
-}
 
-.social-link:hover {
-    color: var(--color-text);
-}
 
 /* Horizontal Rules */
 hr {
@@ -873,43 +847,6 @@ a button, a .button {
     transform: translateY(-1px);
 }
 
-/* Post Categories */
-.post-categories,
-.post-category {
-    margin: var(--spacing-lg) 0;
-}
-
-.post-categories .category-list,
-.post-category .category-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-}
-
-.post-categories .category,
-.post-category .category,
-.category-link {
-    display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-md);
-    background-color: var(--color-background-alt);
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-size: var(--font-size-xs);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all var(--transition-fast);
-}
-
-.post-categories .category:hover,
-.post-category .category:hover,
-.category-link:hover {
-    color: var(--color-text);
-    border-color: var(--color-accent);
-    background-color: var(--color-background);
-}
 
 /* Archive Page Sections */
 .archive-section {
@@ -1012,9 +949,6 @@ a button, a .button {
         font-size: 1.1rem;
     }
     
-    .site-tagline {
-        font-size: var(--font-size-xs);
-    }
     
     .post-navigation {
         flex-direction: column;
@@ -1055,10 +989,6 @@ a button, a .button {
         font-size: var(--font-size-xs);
     }
     
-    .post-categories .category-list,
-    .post-category .category-list {
-        justify-content: flex-start;
-    }
 }
 
 @media (max-width: 480px) {

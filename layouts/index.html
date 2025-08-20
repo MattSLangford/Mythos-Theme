@@ -6,9 +6,6 @@
         <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }}" class="profile-photo">
         {{ end }}
         
-        {{ if .Site.Params.description }}
-        <div class="site-description">{{ .Site.Params.description | markdownify }}</div>
-        {{ end }}
     </div>
     {{ end }}
     

@@ -16,15 +16,6 @@
         {{ .Content }}
     </div>
     
-    {{ if and .Params.categories .Site.Params.show_categories }}
-    <div class="post-categories">
-        <div class="category-list">
-            {{ range .Params.categories }}
-            <a href="/categories/{{ . | urlize }}" class="category">{{ . }}</a>
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
     
     
     <footer class="post-footer">
