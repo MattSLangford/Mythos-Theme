@@ -355,12 +355,14 @@ blockquote p:last-child {
     transform: translateY(-10px);
     transition: all var(--transition-base);
     z-index: 1000;
+    display: none;
 }
 
 .primary-menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: block;
 }
 
 .nav-menu {
