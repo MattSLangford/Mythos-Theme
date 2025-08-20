@@ -812,6 +812,43 @@ a button, a .button {
     line-height: var(--line-height-loose);
 }
 
+/* Post Actions (Plugin Buttons) */
+.post-actions {
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.post-actions a,
+.post-actions button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-background-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.post-actions a:hover,
+.post-actions button:hover {
+    color: var(--color-text);
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.post-actions a:focus,
+.post-actions button:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
 /* Reply by Email and Related Elements */
 .reply-by-email,
 .webmention-reply,
