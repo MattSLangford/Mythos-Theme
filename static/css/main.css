@@ -162,9 +162,6 @@ a:hover,
 a:focus {
     color: var(--color-link-hover);
     text-decoration-thickness: 2px;
-}
-
-a:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
@@ -200,19 +197,6 @@ video {
     border-radius: 5px;
 }
 
-img.avatar-image {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    margin: 0;
-}
-
-img.profile-photo {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    margin: 0 auto var(--spacing-md);
-}
 
 img.half-width {
     width: 50%;
@@ -236,25 +220,11 @@ img.frame {
 
 /* Extended width elements */
 img.full-width,
-figure.full-width,
-blockquote,
-pre,
-.highlight {
+figure.full-width {
     width: 100vw;
-    max-width: 100vw;
+    max-width: 1200px;
     margin-left: 50%;
     transform: translateX(-50%);
-}
-
-/* Non-image extended width elements */
-blockquote,
-pre,
-.highlight {
-    max-width: var(--container-width-wide);
-    margin-left: auto;
-    margin-right: auto;
-    transform: none;
-    width: auto;
 }
 
 /* Code */
@@ -552,10 +522,6 @@ blockquote p:last-child {
     margin-bottom: var(--spacing-md);
 }
 
-/* Removed redundant post-content img styles - using base img styles */
-
-
-
 /* Single Post */
 .post {
     max-width: 100%;
@@ -566,11 +532,6 @@ blockquote p:last-child {
     padding-top: var(--spacing-2xl);
     border-top: 1px solid var(--color-border);
 }
-
-
-
-
-
 
 .empty-list {
     text-align: center;
@@ -622,7 +583,7 @@ blockquote p:last-child {
 
 /* Footer */
 .site-footer {
-    background-color: var(--color-background-alt);
+    background-color: var(--color-background);
     border-top: 1px solid var(--color-border);
     margin-top: var(--spacing-3xl);
 }
@@ -643,9 +604,6 @@ blockquote p:last-child {
     font-size: var(--font-size-small);
     color: var(--color-text-muted);
 }
-
-
-
 
 /* Horizontal Rules */
 hr {
@@ -726,7 +684,7 @@ button:focus, .button:focus, input[type="submit"]:focus, input[type="button"]:fo
     outline-offset: 2px;
 }
 
-/* Accommodate nested buttons in links */
+/* Accommodate nested buttons in links when this is incorrectly used in html */
 a button, a .button {
     margin: 0;
 }
@@ -981,8 +939,6 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
 .post-actions button {
     white-space: nowrap;
 }
-
-
 
 /* Archive Page Sections */
 .archive-section {
