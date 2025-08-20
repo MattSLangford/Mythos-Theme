@@ -1,152 +1,205 @@
 # Mythos Theme
 
-A minimal, fast, and highly readable Micro.blog theme featuring a clean black and white design with exceptional typography and user experience.
+A minimal, fast, and highly readable Micro.blog theme with clean black and white design.
 
-## Features
+# Credits
 
-- **Minimal Design**: Clean black and white aesthetic with subtle gray accents
-- **Fast & Lightweight**: Optimized for performance with minimal JavaScript
-- **Readable Typography**: Carefully chosen font sizes, line heights, and spacing
-- **Fully Responsive**: Mobile-first design that works on all devices
-- **Accessible**: Semantic HTML, keyboard navigation, and screen reader friendly
-- **Customizable**: Multiple theme options without editing code
-- **Modern**: Sticky header, smooth animations, and backdrop blur effects
+Mythos is created and maintained by [Matt Langford](https://mattlangford.com).
 
-## Installation
+## ✨ Features
 
-### Option 1: Direct Installation from GitHub
+- **Ultra-Fast Performance**: 24KB total CSS with zero external dependencies
+- **WCAG 2.1 AA Compliant**: Exceptional accessibility with proper contrast ratios and keyboard navigation
+- **16 Language Support**: Comprehensive internationalization (i18n) including English, Spanish, French, German, Portuguese, Italian, Russian, Japanese, Finnish, Swedish, Ukrainian, Chinese (Traditional/Simplified), Korean, Dutch, Polish, and Norwegian
+- **Intelligent Post Summaries**: Automatic summaries with `<!--more-->` tag support and smart fallbacks
+- **Touch-Friendly Design**: 44px minimum touch targets for optimal mobile experience
+- **Responsive Typography**: Optimized reading experience across all devices
+- **Plugin Ecosystem**: Deep integration with popular Micro.blog plugins
+- **Advanced Customization**: Extensive theme options and custom CSS support
+- **Modern CSS**: Uses CSS Grid, Flexbox, and custom properties for maintainable code
+- **SEO Optimized**: Proper meta tags, Open Graph, and semantic markup
 
-1. In your Micro.blog admin, go to **Design** → **Edit Custom Themes**
-2. Click **New Theme** and enter the repository URL:
-   ```
-   https://github.com/mattlangford/mythos-theme
-   ```
-3. Click **Add Theme**
-4. Select **Mythos** from your themes list
-5. Customize the settings in **Design** → **Edit Custom Themes** → **Theme Settings**
+## 📦 Installation
 
-### Option 2: Download and Upload
+1. Log into your Micro.blog account
+2. Go to **Plugins** in the dashboard
+3. Click **Plug-in Directory**
+5. Choose **Mythos Theme** from the plugin directory
+6. Click **Install**
+7. Once installed, click **Settings** to customize (you may need to refresh to see Settings)
 
-1. Download the theme files from this repository
-2. In Micro.blog admin, go to **Design** → **Edit Custom Themes**
-3. Click **Upload Theme** and select the theme folder
-4. Select **Mythos** from your themes list
+## ⚙️ Theme Settings
 
-## Theme Settings
+All theme customization is done through the Micro.blog dashboard under **Design → Edit Themes → Mythos Theme**.
 
-All customization is done through the theme settings panel in your Micro.blog admin:
+### Available Settings
 
-### Basic Settings
+| Setting | Type | Default | Description |
+|---------|------|---------|-------------|
+| **Site Language** | Text | `en` | Language code (en, fr, es, de, pt, it, ru, ja, fi, sv, uk, zh-TW, zh-CN, ko, nl, pl, no) |
+| **Posts per Page** | Number | `10` | Number of posts to display on home and archive pages |
+| **Avatar Link** | Text | _(empty)_ | URL to custom avatar image (overrides default) |
+| **Hide Avatar** | Checkbox | `false` | Hide the avatar image in the site header |
+| **Hide Category Links on Posts** | Checkbox | `false` | Remove category links from individual posts |
+| **Hide Categories on Archive Page** | Checkbox | `false` | Remove category listing from archive page |
+| **Hide Footer Credits** | Checkbox | `false` | Remove "Powered by" and theme credits |
+| **Use Post Summaries on Feed Pages** | Checkbox | `false` | Show post summaries instead of full content on home/archive pages |
 
-- **Site Language**: Choose from 8 supported languages (English default)
-- **Custom Avatar URL**: Use a custom avatar instead of your Micro.blog profile photo
-- **Show Profile Photo in Header**: Toggle avatar display in the header
-- **Show Dates on Posts**: Display or hide publication dates
-- **Show Reading Time on Posts**: Show estimated reading time for longer posts
-- **Posts per Page**: Control pagination (5, 10, 15, 20, or 25 posts)
+### Post Summary Behavior
 
-### Advanced Customization
+- **Microposts** (posts without titles): Always show full content
+- **Titled posts**: Show full content by default
+- **When "Use Post Summaries" is enabled**: 
+  - Uses content before `<!--more-->` tag if present
+  - Falls back to first 150 words with "Continue Reading" link
+  - Only applies to home page and archive pages
 
-- **Custom CSS**: Add your own CSS for further customization
+## 🎨 Advanced Customization
 
-### Example Custom CSS
+### Custom CSS
+
+Add custom styles through **Design → Edit Themes → Mythos Theme → Custom CSS** field:
 
 ```css
-/* Custom accent color */
+/* Example: Change accent color */
 :root {
-    --color-link: #2563eb;
-    --color-link-hover: #1d4ed8;
+    --color-accent: #0066cc;
 }
 
-/* Custom fonts */
-body {
-    font-family: 'Georgia', serif;
+/* Example: Larger post titles */
+.post-title {
+    font-size: 2rem;
 }
 
-/* Wider content area */
-:root {
-    --container-width: 48rem;
+/* Example: Custom blockquote styling */
+blockquote {
+    border-left-color: #ff6b6b;
+    background-color: #fff5f5;
+}
+
+/* Example: Hide post dates */
+.post-meta {
+    display: none;
+}
+
+/* Example: Custom font for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", serif;
 }
 ```
 
-## Design Philosophy
+### Custom Footer
 
-Mythos prioritizes readability and performance:
+Add custom footer content through **Design → Edit Themes → Mythos Theme → Footer** section in the Micro.blog dashboard. This content will appear above the theme credits.
 
-- **Typography First**: Optimized font sizes and line heights for comfortable reading
-- **Performance**: Minimal dependencies and optimized assets
-- **Accessibility**: Proper semantic markup and keyboard navigation
-- **Responsive**: Max-width based responsive design for consistent experience
-- **Content Focus**: Clean design that puts your writing first
+## 🖼️ Content Styling Options
 
-## Supported Features
+### Image Classes
 
-### Micro.blog Specific
-- Microposts (posts without titles)
-- Posts with titles
-- Summary and "read more" functionality
-- Category descriptions
-- Tags and categories
-- Archive pages with pagination
-- RSS feeds
+Apply these classes to images in your posts:
 
-### Content Types
-- Text posts
-- Photo posts
-- Code blocks with syntax highlighting
-- Blockquotes
-- Lists and typography
-- Embedded media (YouTube, etc.)
+- `img.full-width` - Breaks out of content width (max 1200px)
+- `img.half-width` - 50% width, centered
+- `img.thumbnail` - 150px width, left-aligned with text wrap
+- `img.frame` - Adds elegant border and shadow
 
-### Image Styling
-The theme supports additional image classes for enhanced layouts:
-- `img.full-width` - Extends image beyond text width
-- `img.half-width` - Half-width images
-- `img.thumbnail` - Small thumbnail images
-- `img.frame` - Adds subtle border frame
+Example usage:
+```html
+<img src="/photo.jpg" alt="Description" class="full-width">
+```
 
-### Navigation
-- Automatic menu generation
-- Custom menu items via Hugo configuration
-- Mobile-optimized hamburger menu
-- Keyboard accessible navigation
+### Special Paragraphs
 
-## Browser Support
+Create styled content blocks:
 
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- iOS Safari
-- Android Chrome
-- Graceful degradation for older browsers
+- `p.alert` - Yellow warning/attention block
+- `p.note` - Blue informational block  
+- `p.aside` - Gray sidebar-style content
 
-## Development
+Example usage:
+```html
+<p class="alert">This is important information!</p>
+<p class="note">Here's a helpful tip.</p>
+<p class="aside">This is supplementary information.</p>
+```
 
-This theme follows Micro.blog and Hugo best practices:
+### Figure Styling
 
-- All settings configured via `plugin.json`
-- Semantic HTML structure
-- CSS custom properties for easy customization
-- Minimal JavaScript for enhanced UX
-- Internationalization ready
+- `figure.full-width` - Full-width figure with caption
 
-## Contributing
+## 🔌 Micro.blog Features Supported
 
-1. Fork this repository
-2. Make your changes
-3. Test thoroughly on various devices and browsers
-4. Submit a pull request with detailed description
+### Core Features
+- **Posts and Microposts**: Full support for titled and untitled posts
+- **Categories**: Display and navigation with post counts
+- **Archives**: Category-based archive pages
+- **Pagination**: Accessible pagination with proper ARIA labels
+- **RSS Feeds**: Automatic feed discovery and linking
+- **Custom Pages**: Support for static pages and custom layouts
 
-## License
+### Plugin Integration
+- Most popular plugins including (but not limited to) Reply By Email, Conversation on M.b, and Search Space are fully supported.
 
-MIT License. See [LICENSE](LICENSE) file for details.
+## 🌐 Internationalization
 
-## Support
+The theme includes complete translations for:
 
-- **Documentation**: [help.micro.blog](https://help.micro.blog)
-- **Issues**: [GitHub Issues](https://github.com/mattlangford/mythos-theme/issues)
-- **Demo**: [mattlangford.com](https://mattlangford.com)
+- **English** (en) - Default
+- **Spanish** (es) - Español
+- **French** (fr) - Français  
+- **German** (de) - Deutsch
+- **Portuguese** (pt) - Português
+- **Italian** (it) - Italiano
+- **Russian** (ru) - Русский
+- **Japanese** (ja) - 日本語
+- **Finnish** (fi) - Suomi
+- **Swedish** (sv) - Svenska
+- **Ukrainian** (uk) - Українська
+- **Chinese Traditional** (zh-TW) - 繁體中文
+- **Chinese Simplified** (zh-CN) - 简体中文
+- **Korean** (ko) - 한국어
+- **Dutch** (nl) - Nederlands
+- **Polish** (pl) - Polski
+- **Norwegian** (no) - Norsk
 
-## Credits
+Set your language using the "Site Language" setting in the theme options.
 
-Created by [Matt Langford](https://mattlangford.com) for the Micro.blog community.
+## 🛠️ Contributing
 
-Built with ❤️ for writers who value simplicity and readability.
+### Reporting Issues
+Found a bug or have a suggestion? Please report it on [GitHub Issues](https://github.com/mattlangford/mythos-theme/issues).
+
+### Contributing Code
+1. Fork the repository on GitHub
+2. Create a feature branch for your changes
+3. Make your modifications
+4. Test thoroughly across different screen sizes
+5. Submit a pull request with a clear description
+
+### Translation Contributions
+Help improve or add language support by:
+1. Editing files in the `i18n/` directory
+2. Following the existing translation format
+3. Testing with your language setting
+4. Submitting a pull request
+
+## 📄 License
+
+This theme is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 💬 Support
+
+- **Theme Issues**: [GitHub Issues](https://github.com/mattlangford/mythos-theme/issues)
+- **Micro.blog Platform**: [Micro.blog Help](https://help.micro.blog)
+- **Community**: [Micro.blog Community](https://help.micro.blog/)
+
+## 📈 Version History
+
+- **v1.1.0** (2025-08-20): Major accessibility improvements, internationalization, post summaries, performance optimizations
+- **v1.0.0** (2025-08-18): Initial release with core features and clean design
+
+---
+
+**Built with ❤️ for the Micro.blog community**
+
+*Mythos Theme focuses on what matters most: your content. Clean, fast, and accessible design that gets out of the way of your words.*
