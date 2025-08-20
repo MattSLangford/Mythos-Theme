@@ -10,24 +10,25 @@
       "placeholder": "Enter the language code (e.g., en, fr, es)"
     },
     {
-      "field": "params.show_profile_photo",
-      "label": "Hide Avatar",
-      "type": "boolean"
-    },
-    {
       "field": "params.posts_per_page",
       "label": "Posts per Page",
       "type": "number",
       "placeholder": "Enter the number of posts per page (default: 10)"
     },
     {
-      "field": "params.show_categories",
-      "label": "Hide Category Links on Posts",
+      "field": "params.custom_avatar",
+      "label": "Avatar Link",
+      "type": "string",
+      "placeholder": "Enter the URL to a custom avatar image"
+    },
+    {
+      "field": "params.show_profile_photo",
+      "label": "Hide Avatar",
       "type": "boolean"
     },
     {
-      "field": "params.include_conversation",
-      "label": "Include Conversation on Posts",
+      "field": "params.show_categories",
+      "label": "Hide Category Links on Posts",
       "type": "boolean"
     }
   ]
