@@ -2,7 +2,7 @@
 
 A minimal, fast, and highly readable Micro.blog theme with clean black and white design.
 
-# Credits
+## ! Credits
 
 Mythos is created and maintained by [Matt Langford](https://mattlangford.com).
 
