@@ -796,7 +796,11 @@ a button, a .button {
 }
 
 .microblog_reply_button input[type="submit"] {
-    padding: var(--spacing-sm) var(--spacing-lg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    min-height: 44px;
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
     border-radius: 5px;
