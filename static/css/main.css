@@ -325,7 +325,7 @@ blockquote p:last-child {
     color: var(--color-text);
     text-decoration: none;
     transition: color var(--transition-fast);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: var(--spacing-sm);
 }
