@@ -1,11 +1,11 @@
 {{ define "main" }}
 <div class="home-content">
     
-    <div class="posts-list">
+    <div class="posts-list" role="feed" aria-label="Blog posts">
         {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (or .Site.Params.posts_per_page 10) }}
         
         {{ range .Paginator.Pages }}
-        <article class="post-item">
+        <article class="post-item" role="article">
             <header class="post-header">
                 {{ if .Title }}
                 <h2 class="post-title">
@@ -56,17 +56,17 @@
         {{ end }}
         
         {{ if gt .Paginator.TotalPages 1 }}
-        <nav class="pagination">
+        <nav class="pagination" role="navigation" aria-label="Pagination Navigation">
             {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← {{ T "NewerPosts" }}</a>
+            <a href="{{ .Paginator.Prev.URL }}" class="prev-page" aria-label="Go to page {{ .Paginator.Prev.PageNumber }}">← {{ T "NewerPosts" }}</a>
             {{ end }}
             
-            <span class="page-numbers">
+            <span class="page-numbers" aria-current="page">
                 {{ T "Page" }} {{ .Paginator.PageNumber }} {{ T "Of" }} {{ .Paginator.TotalPages }}
             </span>
             
             {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">{{ T "OlderPosts" }} →</a>
+            <a href="{{ .Paginator.Next.URL }}" class="next-page" aria-label="Go to page {{ .Paginator.Next.PageNumber }}">{{ T "OlderPosts" }} →</a>
             {{ end }}
         </nav>
         {{ end }}

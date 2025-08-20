@@ -5,9 +5,9 @@
                 <h1 class="site-title">
                     {{ if not .Site.Params.show_profile_photo }}
                         {{ if .Site.Params.custom_avatar }}
-                        <img src="{{ .Site.Params.custom_avatar }}" alt="{{ .Site.Title }}" class="title-avatar">
+                        <img src="{{ .Site.Params.custom_avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar">
                         {{ else if .Site.Author.avatar }}
-                        <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }}" class="title-avatar">
+                        <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar">
                         {{ end }}
                     {{ end }}
                     <a href="/" rel="home">{{ .Site.Title }}</a>
