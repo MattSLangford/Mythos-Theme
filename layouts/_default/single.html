@@ -32,13 +32,6 @@
     </div>
     {{ end }}
     
-    {{ if .Params.tags }}
-    <div class="post-tags">
-        {{ range .Params.tags }}
-        <a href="/tags/{{ . | urlize }}" class="tag">#{{ . }}</a>
-        {{ end }}
-    </div>
-    {{ end }}
     
     <footer class="post-footer">
         {{ if .Site.Params.include_conversation }}

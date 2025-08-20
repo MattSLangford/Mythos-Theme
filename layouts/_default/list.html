@@ -5,7 +5,7 @@
             {{ if eq .Kind "taxonomy" }}
                 {{ .Title }}
             {{ else if eq .Kind "term" }}
-                Posts tagged "{{ .Title }}"
+                Posts in "{{ .Title }}"
             {{ else }}
                 {{ .Title }}
             {{ end }}
@@ -53,13 +53,6 @@
                 {{ .Content }}
             </div>
             
-            {{ if .Params.tags }}
-            <div class="post-tags">
-                {{ range .Params.tags }}
-                <a href="/tags/{{ . | urlize }}" class="tag">#{{ . }}</a>
-                {{ end }}
-            </div>
-            {{ end }}
         </article>
         {{ end }}
         
