@@ -1,0 +1,17 @@
+{
+  "Menu": "Valikko",
+  "Categories": "Kategoriat",
+  "AllPosts": "Kaikki Viestit",
+  "Archive": "Arkisto",
+  "Replies": "Vastaukset",
+  "NewerPosts": "Uudemmat viestit",
+  "OlderPosts": "Vanhemmat viestit",
+  "NewerReplies": "Uudemmat vastaukset",
+  "OlderReplies": "Vanhemmat vastaukset",
+  "Page": "Sivu",
+  "Of": "/",
+  "PoweredBy": "Voimanlähde",
+  "DesignedBy": "suunnittelija",
+  "NoPostsFound": "Viestejä ei löytynyt",
+  "NoRepliesFound": "Vastauksia ei löytynyt"
+}

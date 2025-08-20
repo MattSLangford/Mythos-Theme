@@ -8,17 +8,19 @@
         {{ end }}
     </header>
     
+    {{ if not .Site.Params.hide_archive_categories }}
     <div class="archive-section">
-        <h2>{{ i18n "categories" }}</h2>
+        <h2>{{ T "Categories" }}</h2>
         <ul class="archive-categories">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
             <li><a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }}</a></li>
             {{ end }}
         </ul>
     </div>
+    {{ end }}
     
     <div class="archive-section">
-        <h2>{{ i18n "allPosts" }}</h2>
+        <h2>{{ T "AllPosts" }}</h2>
     </div>
     
     {{ $allPosts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
@@ -52,7 +54,7 @@
     </div>
     {{ else }}
     <div class="empty-list">
-        <p>No posts found.</p>
+        <p>{{ T "NoPostsFound" }}</p>
     </div>
     {{ end }}
 </div>

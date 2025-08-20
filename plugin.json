@@ -30,6 +30,16 @@
       "field": "params.show_categories",
       "label": "Hide Category Links on Posts",
       "type": "boolean"
+    },
+    {
+      "field": "params.hide_archive_categories",
+      "label": "Hide Categories on Archive Page",
+      "type": "boolean"
+    },
+    {
+      "field": "params.hide_footer_credits",
+      "label": "Hide Footer Credits",
+      "type": "boolean"
     }
   ]
 }

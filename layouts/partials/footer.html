@@ -5,11 +5,13 @@
                 {{ partial "custom_footer.html" . }}
             {{ end }}
             
+            {{ if not .Site.Params.hide_footer_credits }}
             <p class="powered-by">
-                Powered by <a href="https://micro.blog" rel="nofollow">Micro.blog</a> and 
+                {{ T "PoweredBy" }} <a href="https://micro.blog" rel="nofollow">Micro.blog</a> + 
                 <a href="https://gohugo.io" rel="nofollow">Hugo</a>. 
-                <a href="https://github.com/mattlangford/mythos-theme" rel="nofollow">Mythos Theme</a> designed by <a href="https://mattlangford.com" rel="nofollow">Matt Langford</a>.
+                <a href="https://github.com/mattlangford/mythos-theme" rel="nofollow">Mythos Theme</a> {{ T "DesignedBy" }} <a href="https://mattlangford.com" rel="nofollow">Matt Langford</a>.
             </p>
+            {{ end }}
         </div>
         
     </div>

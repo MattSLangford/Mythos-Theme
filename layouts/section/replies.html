@@ -39,22 +39,22 @@
         {{ if gt .Paginator.TotalPages 1 }}
         <nav class="pagination">
             {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← Newer replies</a>
+            <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← {{ T "NewerReplies" }}</a>
             {{ end }}
             
             <span class="page-numbers">
-                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+                {{ T "Page" }} {{ .Paginator.PageNumber }} {{ T "Of" }} {{ .Paginator.TotalPages }}
             </span>
             
             {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">Older replies →</a>
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">{{ T "OlderReplies" }} →</a>
             {{ end }}
         </nav>
         {{ end }}
     </div>
     {{ else }}
     <div class="empty-list">
-        <p>No replies found.</p>
+        <p>{{ T "NoRepliesFound" }}</p>
     </div>
     {{ end }}
 </div>

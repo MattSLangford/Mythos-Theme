@@ -54,15 +54,15 @@
         {{ if gt .Paginator.TotalPages 1 }}
         <nav class="pagination">
             {{ if .Paginator.HasPrev }}
-            <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← Newer posts</a>
+            <a href="{{ .Paginator.Prev.URL }}" class="prev-page">← {{ T "NewerPosts" }}</a>
             {{ end }}
             
             <span class="page-numbers">
-                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+                {{ T "Page" }} {{ .Paginator.PageNumber }} {{ T "Of" }} {{ .Paginator.TotalPages }}
             </span>
             
             {{ if .Paginator.HasNext }}
-            <a href="{{ .Paginator.Next.URL }}" class="next-page">Older posts →</a>
+            <a href="{{ .Paginator.Next.URL }}" class="next-page">{{ T "OlderPosts" }} →</a>
             {{ end }}
         </nav>
         {{ end }}
@@ -83,7 +83,7 @@
     </div>
     {{ else }}
     <div class="empty-list">
-        <p>No posts found.</p>
+        <p>{{ T "NoPostsFound" }}</p>
     </div>
     {{ end }}
 </div>

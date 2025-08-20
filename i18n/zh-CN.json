@@ -1,0 +1,17 @@
+{
+  "Menu": "菜单",
+  "Categories": "分类",
+  "AllPosts": "所有文章",
+  "Archive": "存档",
+  "Replies": "回复",
+  "NewerPosts": "较新文章",
+  "OlderPosts": "较旧文章",
+  "NewerReplies": "较新回复",
+  "OlderReplies": "较旧回复",
+  "Page": "第",
+  "Of": "页，共",
+  "PoweredBy": "技术支持：",
+  "DesignedBy": "设计：",
+  "NoPostsFound": "找不到文章",
+  "NoRepliesFound": "找不到回复"
+}

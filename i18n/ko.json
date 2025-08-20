@@ -1,0 +1,17 @@
+{
+  "Menu": "메뉴",
+  "Categories": "카테고리",
+  "AllPosts": "모든 게시물",
+  "Archive": "보관함",
+  "Replies": "답글",
+  "NewerPosts": "최신 게시물",
+  "OlderPosts": "이전 게시물",
+  "NewerReplies": "최신 답글",
+  "OlderReplies": "이전 답글",
+  "Page": "페이지",
+  "Of": "/",
+  "PoweredBy": "기술 지원:",
+  "DesignedBy": "디자인:",
+  "NoPostsFound": "게시물을 찾을 수 없습니다",
+  "NoRepliesFound": "답글을 찾을 수 없습니다"
+}
