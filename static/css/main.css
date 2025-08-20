@@ -701,7 +701,7 @@ input[type="url"], input[type="password"], textarea, select {
     color: var(--color-text);
     font-family: inherit;
     font-size: var(--font-size-small);
-    line-height: 1.4;
+    line-height: 1;
     transition: border-color var(--transition-fast);
     width: 100%;
     max-width: 400px;
