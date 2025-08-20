@@ -21,7 +21,7 @@
     {{ end }}
     
     {{ if .Pages }}
-    <div class="posts-list">
+    <div class="posts-list" role="feed" aria-label="Blog posts">
         {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
         {{/* Show pagination for taxonomy and term pages (posts listings) */}}
         {{ $paginator := .Paginate .Pages (or .Site.Params.posts_per_page 10) }}
