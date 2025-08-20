@@ -567,11 +567,6 @@ blockquote p:last-child {
 
 
 
-.list-count {
-    font-size: var(--font-size-small);
-    color: var(--color-text-muted);
-    font-weight: 500;
-}
 
 .empty-list {
     text-align: center;

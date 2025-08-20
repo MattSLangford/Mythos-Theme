@@ -14,11 +14,6 @@
         {{ if .Description }}
         <div class="list-description">{{ .Description | markdownify }}</div>
         {{ end }}
-        
-        
-        {{ if .Pages }}
-        <div class="list-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</div>
-        {{ end }}
     </header>
     
     {{ if .Pages }}
