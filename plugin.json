@@ -20,11 +20,6 @@
       "type": "boolean"
     },
     {
-      "field": "params.show_reading_time",
-      "label": "Show Reading Time on Posts",
-      "type": "boolean"
-    },
-    {
       "field": "params.posts_per_page",
       "label": "Posts per Page",
       "type": "number",

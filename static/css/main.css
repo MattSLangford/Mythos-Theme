@@ -470,10 +470,6 @@ blockquote p:last-child {
     color: var(--color-link);
 }
 
-.reading-time::before {
-    content: "•";
-    margin-right: var(--spacing-sm);
-}
 
 .post-content {
     font-size: var(--font-size-base);

@@ -42,10 +42,6 @@
                             {{ .Date.Format "2 January 2006" }}
                         </time>
                     </a>
-                    
-                    {{ if and .Site.Params.show_reading_time (gt .ReadingTime 1) }}
-                    <span class="reading-time">{{ .ReadingTime }} min read</span>
-                    {{ end }}
                 </div>
             </header>
             

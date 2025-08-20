@@ -9,10 +9,6 @@
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date.Format "2 January 2006" }}
             </time>
-            
-            {{ if and .Site.Params.show_reading_time (gt .ReadingTime 1) }}
-            <span class="reading-time">{{ .ReadingTime }} min read</span>
-            {{ end }}
         </div>
     </header>
     
