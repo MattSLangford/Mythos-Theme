@@ -13,7 +13,7 @@
         <h2>{{ T "Categories" }}</h2>
         <ul class="archive-categories">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-            <li><a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }}</a></li>
+            <li><a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }} ({{ len $taxonomy.Pages }})</a></li>
             {{ end }}
         </ul>
     </div>

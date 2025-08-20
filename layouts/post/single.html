@@ -20,7 +20,9 @@
     <div class="post-categories">
         <div class="category-list">
             {{ range .Params.categories }}
-            <a href="/categories/{{ . | urlize }}" class="category-button">{{ . }}</a>
+            {{ $categoryName := . }}
+            {{ $categoryTaxonomy := index $.Site.Taxonomies.categories ($categoryName | urlize) }}
+            <a href="/categories/{{ . | urlize }}" class="category-button">{{ . }} ({{ len $categoryTaxonomy.Pages }})</a>
             {{ end }}
         </div>
     </div>
