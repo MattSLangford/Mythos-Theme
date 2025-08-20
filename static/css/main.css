@@ -49,6 +49,27 @@
     --transition-slow: 0.3s ease;
 }
 
+/* Accessibility: Skip Links */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0 0 5px 5px;
+    z-index: 9999;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid var(--color-background);
+    outline-offset: 2px;
+}
+
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -80,6 +101,7 @@ body {
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.01em;
 }
 
 /* Typography */
@@ -183,6 +205,9 @@ img {
     margin: var(--spacing-md) 0;
     border-radius: 5px;
 }
+
+/* Note: For lazy loading, users should add loading="lazy" to img tags in content.
+   Avatar images in header should NOT use lazy loading as they're above-the-fold. */
 
 /* Videos */
 video {
