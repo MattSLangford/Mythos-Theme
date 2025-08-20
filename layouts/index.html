@@ -1,13 +1,5 @@
 {{ define "main" }}
 <div class="home-content">
-    {{ if .Site.Params.show_profile_photo }}
-    <div class="profile-section">
-        {{ if .Site.Author.avatar }}
-        <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }}" class="profile-photo">
-        {{ end }}
-        
-    </div>
-    {{ end }}
     
     <div class="posts-list">
         {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (or .Site.Params.posts_per_page 10) }}

@@ -11,7 +11,7 @@
     },
     {
       "field": "params.show_profile_photo",
-      "label": "Show Profile Photo in Header",
+      "label": "Hide Avatar",
       "type": "boolean"
     },
     {

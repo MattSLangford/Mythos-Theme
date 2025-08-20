@@ -3,7 +3,7 @@
         <div class="site-branding">
             <div class="site-info">
                 <h1 class="site-title">
-                    {{ if .Site.Author.avatar }}
+                    {{ if and .Site.Author.avatar (not .Site.Params.show_profile_photo) }}
                     <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }}" class="title-avatar">
                     {{ end }}
                     <a href="/" rel="home">{{ .Site.Title }}</a>
