@@ -5,13 +5,6 @@
         <h1 class="post-title">{{ .Title }}</h1>
         {{ end }}
         
-        {{ if eq .Type "post" }}
-        <div class="post-meta">
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                {{ .Date.Format "2 January 2006" }}
-            </time>
-        </div>
-        {{ end }}
     </header>
     
     <div class="post-content">
