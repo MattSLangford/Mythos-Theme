@@ -40,6 +40,11 @@
       "field": "params.hide_footer_credits",
       "label": "Hide Footer Credits",
       "type": "boolean"
+    },
+    {
+      "field": "params.use_post_summaries",
+      "label": "Use Post Summaries on Feed Pages",
+      "type": "boolean"
     }
   ]
 }

@@ -45,7 +45,33 @@
             </header>
             
             <div class="post-content">
-                {{ .Content }}
+                {{ if .Title }}
+                    {{ if .Site.Params.use_post_summaries }}
+                        {{ if .Summary }}
+                            {{ .Summary }}
+                            {{ if .Truncated }}
+                                <div class="continue-reading">
+                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                                </div>
+                            {{ end }}
+                        {{ else }}
+                            {{ $words := split .Content " " }}
+                            {{ $maxWords := 150 }}
+                            {{ if gt (len $words) $maxWords }}
+                                {{ delimit (first $maxWords $words) " " }}...
+                                <div class="continue-reading">
+                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                                </div>
+                            {{ else }}
+                                {{ .Content }}
+                            {{ end }}
+                        {{ end }}
+                    {{ else }}
+                        {{ .Content }}
+                    {{ end }}
+                {{ else }}
+                    {{ .Content }}
+                {{ end }}
             </div>
             
         </article>
