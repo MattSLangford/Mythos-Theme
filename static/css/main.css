@@ -975,6 +975,39 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     white-space: nowrap;
 }
 
+/* Copy link button specific styling */
+.copy-link-button {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.copy-link-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.copy-link-button.copied::after {
+    content: attr(data-copied-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* Archive Page Sections */
 .archive-section {
     margin-bottom: var(--spacing-2xl);

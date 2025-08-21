@@ -45,6 +45,11 @@
       "field": "params.use_post_summaries",
       "label": "Use Post Summaries on Feed Pages",
       "type": "boolean"
+    },
+    {
+      "field": "params.hide_copy_links",
+      "label": "Hide Copy Link Buttons on Posts",
+      "type": "boolean"
     }
   ]
 }
