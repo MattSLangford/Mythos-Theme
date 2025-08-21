@@ -52,6 +52,68 @@
     --transition-slow: 0.3s ease;
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Colors */
+        --color-text: #e5e5e5;
+        --color-text-light: #cccccc;
+        --color-text-muted: #999999;
+        --color-background: #1a1a1a;
+        --color-background-alt: #2a2a2a;
+        --color-border: #404040;
+        --color-border-light: #333333;
+        --color-link: #aaaaaa;
+        --color-link-hover: #e5e5e5;
+        --color-accent: #888888;
+    }
+    
+    /* Special paragraph colors for dark mode */
+    p.note {
+        background-color: #1a2533;
+        border-color: #2d4a5c;
+        border-left-color: #4a90cc;
+        color: #b3d7f0;
+    }
+    
+    p.alert {
+        background-color: #332914;
+        border-color: #5c4a1a;
+        border-left-color: #cc9944;
+        color: #f0d9a3;
+    }
+    
+    p.aside {
+        background-color: #2a2a2a;
+        border-color: #404040;
+        border-left-color: #777777;
+        color: #cccccc;
+    }
+    
+    /* Images in dark mode get subtle border for definition */
+    img {
+        border: 1px solid var(--color-border-light);
+    }
+    
+    /* Code highlighting adjustments */
+    code {
+        background-color: #2d2d2d;
+        border-color: var(--color-border);
+        color: #e5e5e5;
+    }
+    
+    pre {
+        background-color: #2d2d2d;
+        border-color: var(--color-border);
+        color: #e5e5e5;
+    }
+}
+
+/* Universal dark mode transitions */
+*, *::before, *::after {
+    transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -84,6 +146,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0.01em;
+    transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* Typography */
