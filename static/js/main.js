@@ -1,6 +1,8 @@
-/**
- * Mythos Theme JavaScript
- * Minimal JavaScript for enhanced user experience
+/*!
+ * Mythos Theme for Micro.blog - JavaScript
+ * Author: Matt Langford | https://mattlangford.com
+ * Repository: https://github.com/mattlangford/mythos-theme
+ * License: MIT License
  */
 
 (function() {
