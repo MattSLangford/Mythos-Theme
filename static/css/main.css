@@ -420,6 +420,32 @@ blockquote p:last-child {
     margin: 0;
     padding: var(--spacing-sm) 0;
     min-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+/* Two column layout when 6+ items */
+.nav-menu:has(.nav-item:nth-child(6)) {
+    grid-template-columns: 1fr 1fr;
+    min-width: 360px;
+    gap: 0;
+}
+
+/* Fallback for browsers without :has() support */
+@supports not (selector(:has(*))) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 300px;
+        min-width: 360px;
+    }
+    
+    .nav-item {
+        flex: 0 0 auto;
+        width: 50%;
+    }
 }
 
 .nav-item {
@@ -427,21 +453,28 @@ blockquote p:last-child {
 }
 
 .nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: var(--spacing-md) var(--spacing-lg);
     min-height: 44px;
     color: var(--color-text-muted);
     text-decoration: none;
     font-weight: 500;
     transition: all var(--transition-fast);
-    display: flex;
-    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-link:hover,
 .nav-link.current {
     color: var(--color-text);
     background-color: var(--color-background-alt);
+}
+
+.nav-link:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 /* Main Content */
@@ -1055,6 +1088,16 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
         padding: var(--button-padding-compact-mobile);
         font-size: var(--font-size-xs);
     }
+    
+    /* Navigation mobile adjustments */
+    .nav-menu:has(.nav-item:nth-child(6)) {
+        min-width: 280px;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-xs);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1071,5 +1114,14 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     .profile-photo {
         width: 4rem;
         height: 4rem;
+    }
+    
+    /* Navigation ultra-mobile adjustments */
+    .nav-menu:has(.nav-item:nth-child(6)) {
+        min-width: 240px;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
     }
 }
