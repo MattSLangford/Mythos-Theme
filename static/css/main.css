@@ -1091,12 +1091,12 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     
     /* Navigation mobile adjustments */
     .nav-menu:has(.nav-item:nth-child(6)) {
-        min-width: 280px;
+        min-width: 320px;
     }
     
     .nav-link {
-        padding: var(--spacing-sm) var(--spacing-md);
-        font-size: var(--font-size-xs);
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-small);
     }
 }
 
@@ -1118,10 +1118,11 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     
     /* Navigation ultra-mobile adjustments */
     .nav-menu:has(.nav-item:nth-child(6)) {
-        min-width: 240px;
+        min-width: 280px;
     }
     
     .nav-link {
-        padding: var(--spacing-xs) var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-small);
     }
 }
