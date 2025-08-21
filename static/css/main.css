@@ -2,119 +2,145 @@
  * Mythos Theme for Micro.blog
  * A minimal, fast, and readable black and white theme
  * Version 1.1.0
+ * 
+ * CUSTOMIZATION TIP: To change colors, fonts, or spacing, edit the CSS variables below.
+ * These variables control the entire theme appearance and automatically work in both light and dark modes.
  */
 
-/* CSS Custom Properties */
+/* ===== THEME CUSTOMIZATION VARIABLES =====
+ * Change these values to customize your theme colors, fonts, and spacing.
+ * All changes here will automatically apply throughout your entire site.
+ */
 :root {
-    /* Colors */
-    --color-text: #000000;
-    --color-text-light: #333333;
-    --color-text-muted: #666666;
-    --color-background: #ffffff;
-    --color-background-alt: #f8f9fa;
-    --color-border: #e1e5e9;
-    --color-border-light: #f1f3f4;
-    --color-link: #555555;
-    --color-link-hover: #000000;
-    --color-accent: #666666;
+    /* COLORS - Light Mode Default
+     * Change these hex color codes to customize your theme colors.
+     * Example: Change --color-text to #333333 for softer black text */
+    --color-text: #000000;              /* Main text color */
+    --color-text-light: #333333;        /* Slightly lighter text for less emphasis */
+    --color-text-muted: #666666;        /* Muted text for timestamps, meta info */
+    --color-background: #ffffff;        /* Main page background */
+    --color-background-alt: #f8f9fa;    /* Background for code blocks, cards, forms */
+    --color-border: #e1e5e9;           /* Borders around elements */
+    --color-border-light: #f1f3f4;     /* Lighter borders for subtle dividers */
+    --color-link: #555555;             /* Link color */
+    --color-link-hover: #000000;       /* Link color when hovering */
+    --color-accent: #666666;           /* Accent color for focus states, buttons */
     
-    /* Typography */
-    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
-    --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", "Courier New", monospace;
-    --font-size-base: 18px;
-    --font-size-large: 20px;
-    --font-size-small: 16px;
-    --font-size-xs: 14px;
-    --line-height-base: 1.6;
-    --line-height-tight: 1.4;
-    --line-height-loose: 1.8;
+    /* TYPOGRAPHY 
+     * Controls all text appearance throughout your site.
+     * Tip: Change --font-size-base to make all text larger or smaller (18px is default) */
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;  /* Main text font - uses system fonts for best performance */
+    --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", "Courier New", monospace;  /* Code font */
+    --font-size-base: 18px;             /* Base text size - increase for larger text site-wide */
+    --font-size-large: 20px;            /* Large text size */
+    --font-size-small: 16px;            /* Small text size */
+    --font-size-xs: 14px;               /* Extra small text size */
+    --line-height-base: 1.6;            /* Normal line spacing (1.6 = comfortable reading) */
+    --line-height-tight: 1.4;           /* Tight line spacing for headlines */
+    --line-height-loose: 1.8;           /* Loose line spacing for post content */
     
-    /* Spacing */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    --spacing-3xl: 4rem;
+    /* SPACING 
+     * Controls margins, padding, and gaps throughout your site.
+     * Tip: Increase these values for more spacious design, decrease for more compact */
+    --spacing-xs: 0.25rem;              /* Extra small spacing (4px) */
+    --spacing-sm: 0.5rem;               /* Small spacing (8px) */
+    --spacing-md: 1rem;                 /* Medium spacing (16px) */
+    --spacing-lg: 1.5rem;               /* Large spacing (24px) */
+    --spacing-xl: 2rem;                 /* Extra large spacing (32px) */
+    --spacing-2xl: 3rem;                /* 2X large spacing (48px) */
+    --spacing-3xl: 4rem;                /* 3X large spacing (64px) */
     
-    /* Layout */
-    --container-width: 42rem;
-    --container-width-wide: 48rem;
-    --header-height: 4rem;
-    --touch-target-height: 44px;
-    --button-padding: var(--spacing-md) var(--spacing-lg);
-    --button-padding-compact: var(--spacing-sm) var(--spacing-md);
+    /* LAYOUT 
+     * Controls the width of your content and key measurements. */
+    --container-width: 42rem;           /* Main content width (672px) - perfect for readability */
+    --container-width-wide: 48rem;      /* Wider content width for special pages */
+    --header-height: 4rem;              /* Height of site header */
+    --touch-target-height: 44px;        /* Minimum button/link size for mobile accessibility */
+    --button-padding: var(--spacing-md) var(--spacing-lg);         /* Standard button padding */
+    --button-padding-compact: var(--spacing-sm) var(--spacing-md); /* Smaller button padding */
     
-    /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-base: 0.2s ease;
-    --transition-slow: 0.3s ease;
+    /* ANIMATIONS 
+     * Controls how fast hover effects and transitions happen.
+     * Tip: Set these to 0s if you prefer no animations */
+    --transition-fast: 0.15s ease;      /* Quick transitions for subtle effects */
+    --transition-base: 0.2s ease;       /* Standard transition speed */
+    --transition-slow: 0.3s ease;       /* Slower transitions for prominent effects */
 }
 
-/* Dark Mode */
+/* ===== DARK MODE =====
+ * Automatically activates when user's device is set to dark mode.
+ * These colors override the light mode colors above.
+ * Tip: Customize these colors to create your perfect dark mode experience. */
 @media (prefers-color-scheme: dark) {
     :root {
-        /* Colors */
-        --color-text: #e5e5e5;
-        --color-text-light: #cccccc;
-        --color-text-muted: #999999;
-        --color-background: #1a1a1a;
-        --color-background-alt: #2a2a2a;
-        --color-border: #404040;
-        --color-border-light: #333333;
-        --color-link: #aaaaaa;
-        --color-link-hover: #e5e5e5;
-        --color-accent: #888888;
+        /* DARK MODE COLORS
+         * Note: These use softer colors than pure black/white for better eye comfort */
+        --color-text: #e5e5e5;              /* Light gray text instead of pure white */
+        --color-text-light: #cccccc;        /* Slightly darker for less emphasis */
+        --color-text-muted: #999999;        /* Muted gray for timestamps, meta info */
+        --color-background: #1a1a1a;        /* Dark gray background (not pure black) */
+        --color-background-alt: #2a2a2a;    /* Lighter dark gray for code blocks, cards */
+        --color-border: #404040;            /* Medium gray borders */
+        --color-border-light: #333333;      /* Subtle gray borders */
+        --color-link: #aaaaaa;              /* Light gray links */
+        --color-link-hover: #e5e5e5;        /* Brighter on hover */
+        --color-accent: #888888;            /* Medium gray accent */
     }
     
-    /* Special paragraph colors for dark mode */
-    p.note {
+    /* SPECIAL CONTENT BLOCKS in Dark Mode
+     * These override the light mode versions for better dark mode contrast */
+    p.note {        /* Blue informational blocks */
         background-color: #1a2533;
         border-color: #2d4a5c;
         border-left-color: #4a90cc;
         color: #b3d7f0;
     }
     
-    p.alert {
+    p.alert {       /* Yellow warning blocks */
         background-color: #332914;
         border-color: #5c4a1a;
         border-left-color: #cc9944;
         color: #f0d9a3;
     }
     
-    p.aside {
+    p.aside {       /* Gray sidebar-style blocks */
         background-color: #2a2a2a;
         border-color: #404040;
         border-left-color: #777777;
         color: #cccccc;
     }
     
-    /* Images in dark mode get subtle border for definition */
+    /* IMAGES in Dark Mode
+     * Add subtle border so images stand out from dark background */
     img {
         border: 1px solid var(--color-border-light);
     }
     
-    /* Code highlighting adjustments */
-    code {
+    /* CODE BLOCKS in Dark Mode 
+     * Dark theme for code and syntax highlighting */
+    code {          /* Inline code */
         background-color: #2d2d2d;
         border-color: var(--color-border);
         color: #e5e5e5;
     }
     
-    pre {
+    pre {           /* Code blocks */
         background-color: #2d2d2d;
         border-color: var(--color-border);
         color: #e5e5e5;
     }
 }
 
-/* Universal dark mode transitions */
+/* ===== SMOOTH TRANSITIONS =====
+ * Makes dark/light mode switching smooth and pleasant.
+ * All elements transition their colors when mode changes. */
 *, *::before, *::after {
     transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
-/* Accessibility: Reduced Motion */
+/* ===== ACCESSIBILITY: REDUCED MOTION =====
+ * Respects user preference for reduced motion (important for vestibular disorders).
+ * When user has "reduce motion" enabled, all animations become nearly instant. */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -124,111 +150,138 @@
     }
 }
 
-/* Reset and Base Styles */
+/* ===== FOUNDATIONAL STYLES =====
+ * These establish the basic behavior and appearance for your entire site.
+ * Generally, you won't need to modify these unless you want advanced customization. */
+
+/* Reset browser defaults and use modern box model */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box;  /* Makes width/height calculations more predictable */
 }
 
+/* Set up base font size and text rendering */
 html {
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-    -webkit-text-size-adjust: 100%;
+    font-size: var(--font-size-base);     /* Base font size for your site */
+    line-height: var(--line-height-base); /* Comfortable line spacing for reading */
+    -webkit-text-size-adjust: 100%;       /* Prevents text scaling issues on mobile */
 }
 
+/* Main page setup - this controls your overall site appearance */
 body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-family-base);
-    color: var(--color-text);
-    background-color: var(--color-background);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    letter-spacing: 0.01em;
-    transition: background-color var(--transition-base), color var(--transition-base);
+    font-family: var(--font-family-base);  /* Uses the font defined in variables above */
+    color: var(--color-text);              /* Main text color */
+    background-color: var(--color-background);  /* Page background color */
+    -webkit-font-smoothing: antialiased;   /* Makes text look crisp on Apple devices */
+    -moz-osx-font-smoothing: grayscale;    /* Makes text look crisp on Firefox/Mac */
+    letter-spacing: 0.01em;                /* Subtle letter spacing for improved readability */
+    transition: background-color var(--transition-base), color var(--transition-base);  /* Smooth dark mode transitions */
 }
 
-/* Typography */
+/* ===== TYPOGRAPHY =====
+ * Controls the appearance of all text elements.
+ * Tip: To change font sizes site-wide, modify the --font-size variables at the top. */
+
+/* Headlines (h1, h2, h3, h4, h5, h6)
+ * These control your blog post titles and section headings */
 h1, h2, h3, h4, h5, h6 {
-    margin: var(--spacing-xl) 0 var(--spacing-md);
-    font-weight: 600;
-    line-height: var(--line-height-tight);
-    color: var(--color-text);
+    margin: var(--spacing-xl) 0 var(--spacing-md);  /* Space above and below headings */
+    font-weight: 600;                               /* Semi-bold weight for good contrast */
+    line-height: var(--line-height-tight);          /* Tighter line spacing for headlines */
+    color: var(--color-text);                       /* Same color as body text */
 }
 
+/* Remove extra space above the first heading in a section */
 h1:first-child,
 h2:first-child,
 h3:first-child {
     margin-top: 0;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.25rem; }
-h4 { font-size: 1.1rem; }
-h5 { font-size: 1rem; }
-h6 { font-size: 0.9rem; }
+/* Specific heading sizes - change these to adjust hierarchy
+ * Tip: rem units scale with your base font size */
+h1 { font-size: 2rem; }      /* Largest - usually post titles */
+h2 { font-size: 1.5rem; }    /* Major sections */
+h3 { font-size: 1.25rem; }   /* Subsections */
+h4 { font-size: 1.1rem; }    /* Minor headings */
+h5 { font-size: 1rem; }      /* Same as body text but bold */
+h6 { font-size: 0.9rem; }    /* Smallest heading */
 
+/* Paragraphs - your main text content */
 p {
-    margin: 0 0 var(--spacing-md);
+    margin: 0 0 var(--spacing-md);  /* Space below each paragraph */
 }
 
+/* Remove space below the last paragraph in a section */
 p:last-child {
     margin-bottom: 0;
 }
 
-/* Special paragraph types */
+/* ===== SPECIAL CONTENT BLOCKS =====
+ * Use these classes in your posts for styled content blocks.
+ * Example: <p class="note">This is an informational note.</p> */
+
+/* Blue informational blocks - use for tips, notes, helpful information */
 p.note {
-    background-color: #e8f4fd;
-    border: 1px solid #bee5eb;
-    border-left: 4px solid #007acc;
-    padding: var(--spacing-md);
-    margin: var(--spacing-lg) 0;
-    border-radius: 5px;
-    font-weight: 600;
-    color: #084248;
+    background-color: #e8f4fd;        /* Light blue background */
+    border: 1px solid #bee5eb;        /* Blue border */
+    border-left: 4px solid #007acc;   /* Thick left border for emphasis */
+    padding: var(--spacing-md);       /* Internal spacing */
+    margin: var(--spacing-lg) 0;      /* Space above and below */
+    border-radius: 5px;               /* Rounded corners */
+    font-weight: 600;                 /* Bold text */
+    color: #084248;                   /* Dark blue text */
 }
 
+/* Yellow warning blocks - use for warnings, important notices */
 p.alert {
-    background-color: #fff3cd;
-    border: 1px solid #ffeaa7;
-    border-left: 4px solid #f39c12;
+    background-color: #fff3cd;        /* Light yellow background */
+    border: 1px solid #ffeaa7;        /* Yellow border */
+    border-left: 4px solid #f39c12;   /* Thick orange left border */
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
     border-radius: 5px;
     font-weight: 600;
-    color: #6b4f03;
+    color: #6b4f03;                   /* Dark orange text */
 }
 
+/* Gray sidebar-style blocks - use for additional info, asides */
 p.aside {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-left: 4px solid #6c757d;
+    background-color: #f8f9fa;        /* Light gray background */
+    border: 1px solid #dee2e6;        /* Gray border */
+    border-left: 4px solid #6c757d;   /* Thick gray left border */
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
     border-radius: 5px;
     font-weight: 600;
-    color: #495057;
+    color: #495057;                   /* Dark gray text */
 }
 
-/* Links */
+/* ===== LINKS =====
+ * Controls how all links appear and behave throughout your site. */
+
+/* Default link appearance */
 a {
-    color: var(--color-link);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-    text-decoration-thickness: 1px;
-    transition: color var(--transition-fast);
+    color: var(--color-link);              /* Link color from variables */
+    text-decoration: underline;            /* Always show underlines for accessibility */
+    text-underline-offset: 0.2em;          /* Space between text and underline */
+    text-decoration-thickness: 1px;        /* Thin underline by default */
+    transition: color var(--transition-fast);  /* Smooth color change on hover */
 }
 
+/* Link hover state - when mouse hovers over link */
 a:hover {
-    color: var(--color-link-hover);
-    text-decoration-thickness: 2px;
+    color: var(--color-link-hover);        /* Different color on hover */
+    text-decoration-thickness: 2px;        /* Thicker underline on hover */
 }
 
+/* Link focus state - when keyboard user tabs to link (accessibility) */
 a:focus {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
+    outline: 2px solid var(--color-accent);  /* Visible outline for keyboard users */
+    outline-offset: 2px;                     /* Space between text and outline */
 }
 
 /* Lists */
@@ -283,13 +336,18 @@ img.frame {
     margin: var(--spacing-lg) 0;
 }
 
-/* Extended width elements */
+/* ===== SPECIAL IMAGE CLASSES =====
+ * Add these classes to images in your posts for different effects.
+ * Example: <img src="photo.jpg" class="full-width" alt="Description"> */
+
+/* Full-width images that break out of the normal content width
+ * Great for hero images, wide screenshots, landscape photos */
 img.full-width,
 figure.full-width {
-    width: 100vw;
-    max-width: 1200px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    width: 100vw;                /* Full viewport width */
+    max-width: 1200px;           /* But not bigger than 1200px */
+    margin-left: 50%;            /* Center positioning trick... */
+    transform: translateX(-50%); /* ...moves it back to true center */
 }
 
 /* Code */
@@ -335,17 +393,20 @@ blockquote p:last-child {
     margin-bottom: 0;
 }
 
-/* Layout Components */
+/* ===== LAYOUT COMPONENTS =====
+ * These control the major sections of your site layout.
+ * Generally you won't need to modify these unless you want structural changes. */
 
-/* Header */
+/* ===== SITE HEADER =====
+ * The top navigation bar that contains your site title and menu */
 .site-header {
-    background-color: var(--color-background);
-    border-bottom: 1px solid var(--color-border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--color-background);   /* Header background color */
+    border-bottom: 1px solid var(--color-border); /* Line under header */
+    position: sticky;                            /* Header sticks to top when scrolling */
+    top: 0;                                      /* Sticks to very top */
+    z-index: 100;                               /* Appears above other content */
+    backdrop-filter: blur(10px);                /* Blur effect for modern browsers */
+    -webkit-backdrop-filter: blur(10px);        /* Blur effect for Safari */
 }
 
 .header-container {
@@ -398,9 +459,11 @@ blockquote p:last-child {
 }
 
 
-/* Navigation */
+/* ===== NAVIGATION MENU =====
+ * The dropdown menu that appears when clicking the menu button.
+ * Features automatic 2-column layout when you have 6+ menu items. */
 .site-navigation {
-    position: relative;
+    position: relative;  /* Needed for dropdown positioning */
 }
 
 .menu-toggle {
@@ -488,26 +551,28 @@ blockquote p:last-child {
     gap: 0;
 }
 
-/* Two column layout when 6+ items */
+/* SMART 2-COLUMN LAYOUT: Automatically switches to 2 columns when you have 6+ menu items
+ * This keeps your navigation compact even with many menu items */
 .nav-menu:has(.nav-item:nth-child(6)) {
-    grid-template-columns: 1fr 1fr;
-    min-width: 360px;
+    grid-template-columns: 1fr 1fr;  /* Two equal columns */
+    min-width: 360px;                /* Wider to accommodate columns */
     gap: 0;
 }
 
-/* Fallback for browsers without :has() support */
+/* FALLBACK for older browsers that don't support :has() selector
+ * Provides same 2-column behavior using flexbox instead of grid */
 @supports not (selector(:has(*))) {
     .nav-menu {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        max-height: 300px;
+        flex-wrap: wrap;       /* Items wrap to create columns */
+        max-height: 300px;     /* Forces wrapping at this height */
         min-width: 360px;
     }
     
     .nav-item {
         flex: 0 0 auto;
-        width: 50%;
+        width: 50%;           /* Each item takes half width = 2 columns */
     }
 }
 
@@ -1128,17 +1193,21 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     line-height: var(--line-height-loose);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN =====
+ * These rules make your site look great on tablets and phones.
+ * They automatically activate based on screen size. */
+
+/* TABLET AND MOBILE STYLES (screens 768px and smaller) */
 @media (max-width: 768px) {
     :root {
-        --font-size-base: 16px;
-        --container-width: 100%;
-        --spacing-lg: 1rem;
+        --font-size-base: 16px;      /* Slightly smaller text on mobile */
+        --container-width: 100%;     /* Full width on mobile */
+        --spacing-lg: 1rem;          /* Reduced spacing for smaller screens */
         --spacing-xl: 1.25rem;
         --spacing-2xl: 2rem;
         --spacing-3xl: 2.5rem;
-        --button-padding-mobile: var(--spacing-md) var(--spacing-md);
-        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);
+        --button-padding-mobile: var(--spacing-md) var(--spacing-md);           /* Mobile button padding */
+        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);   /* Compact mobile buttons */
     }
     
     /* Layout adjustments */
@@ -1195,14 +1264,15 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     }
 }
 
+/* SMALL MOBILE STYLES (screens 480px and smaller - phones in portrait) */
 @media (max-width: 480px) {
-    /* Typography adjustments */
-    h1 { font-size: 1.75rem; }
-    h2 { font-size: 1.375rem; }
+    /* Make headings smaller on tiny screens */
+    h1 { font-size: 1.75rem; }    /* Smaller main headings */
+    h2 { font-size: 1.375rem; }   /* Smaller section headings */
     
-    /* Navigation adjustments */
+    /* Hide menu button text on small screens to save space */
     .menu-toggle-text {
-        display: none;
+        display: none;  /* Only shows hamburger icon */
     }
     
     /* Profile photo adjustments */
