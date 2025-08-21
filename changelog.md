@@ -2,6 +2,27 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.1.1] - 2025-08-21
+
+### ✨ New Features Added
+- **Copy Link Functionality**: Added one-click permalink copying on single posts with "Copy Link" button
+- **Comprehensive Internationalization**: Copy link feature includes translations for all 16 supported languages
+
+### 🎨 Design & UX Improvements  
+- **Smart Navigation Menu**: Automatic 2-column layout when 6+ navigation items for better space utilization
+- **Enhanced CSS Documentation**: Added comprehensive user-friendly comments throughout CSS for easy customization
+- **Mobile Navigation Optimization**: Improved spacing and typography on mobile devices for better touch experience
+
+### 🔧 Technical Improvements
+- **Professional Attribution**: Added proper design credits to CSS and JavaScript files with minification-safe syntax
+- **Cross-Browser Compatibility**: Added fallback support for `:has()` selector in navigation menu
+- **Accessibility Enhancement**: Improved keyboard navigation and focus management for mobile menu
+
+### 📱 Mobile & Responsive Enhancements
+- **Touch-Friendly Navigation**: Better button sizing and spacing on mobile devices
+- **Responsive Menu Layout**: Optimized 2-column navigation for different screen sizes
+- **Enhanced Mobile Typography**: Improved font sizes and spacing for small screens
+
 ## [1.1.0] - 2025-08-20
 
 ### ✨ Major Features Added

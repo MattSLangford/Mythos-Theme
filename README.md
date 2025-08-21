@@ -44,6 +44,7 @@ All theme customization is done through the Micro.blog dashboard under **Design 
 | **Hide Categories on Archive Page** | Checkbox | `false` | Remove category listing from archive page |
 | **Hide Footer Credits** | Checkbox | `false` | Remove "Powered by" and theme credits |
 | **Use Post Summaries on Feed Pages** | Checkbox | `false` | Show post summaries instead of full content on home/archive pages |
+| **Hide Copy Link Buttons on Posts** | Checkbox | `false` | Remove copy link buttons from individual posts |
 
 ### Post Summary Behavior
 
@@ -195,6 +196,7 @@ This theme is released under the MIT License. See the [LICENSE](LICENSE) file fo
 
 ## 📈 Version History
 
+- **v1.1.1** (2025-08-21): Copy link functionality, smart 2-column navigation, enhanced CSS documentation, mobile improvements
 - **v1.1.0** (2025-08-20): Major accessibility improvements, internationalization, post summaries, performance optimizations
 - **v1.0.0** (2025-08-18): Initial release with core features and clean design
 
