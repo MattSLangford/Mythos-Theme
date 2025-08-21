@@ -50,6 +50,12 @@
       "field": "params.hide_copy_links",
       "label": "Hide Copy Link Buttons on Posts",
       "type": "boolean"
+    },
+    {
+      "field": "params.enable_dev_mode",
+      "label": "Enable Development Mode",
+      "type": "boolean",
+      "description": "Shows CSS class names and element info for customization. DISABLE for production sites."
     }
   ]
 }

@@ -58,5 +58,11 @@
     
     <!-- JavaScript -->
     <script src="/js/main.js" defer></script>
+    
+    <!-- Development Mode (only loaded when enabled) -->
+    {{ if .Site.Params.enable_dev_mode }}
+    <link rel="stylesheet" href="/css/dev-mode.css?v=1.1.1">
+    <script src="/js/dev-mode.js?v=1.1.1" defer></script>
+    {{ end }}
 </body>
 </html>
