@@ -8,8 +8,9 @@
  * License: MIT License
  * Version: 1.1.0
  * 
- * CUSTOMIZATION TIP: To change colors, fonts, or spacing, edit the CSS variables below.
- * These variables control the entire theme appearance and automatically work in both light and dark modes.
+ * CUSTOMIZATION TIP: Do not modify this file directly. Instead use Micro.blog's Custom CSS feature.
+ * If you modify (or overwrite) this file, it will be reversed when a new update for the theme is released.
+ * Use this file as a guide, but only include the specific things you want to change in your Custom CSS.
  */
 
 /* ===== THEME CUSTOMIZATION VARIABLES =====
