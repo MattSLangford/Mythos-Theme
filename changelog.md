@@ -2,6 +2,11 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.2.0] - 2025-08-22
+
+### ✨ New Features Added
+- **Smart Social Media Images**: Home page now automatically uses avatar (custom or default) as social media image for Twitter, Facebook, and other social sharing platforms
+
 ## [1.1.2] - 2025-08-22
 
 ### 🎨 Design & UX Improvements

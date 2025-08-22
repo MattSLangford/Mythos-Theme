@@ -66,7 +66,7 @@ For complete setup instructions, customization guides, and examples, visit:
 
 ## Version
 
-Current version: **1.1.2** (2025-08-22)
+Current version: **1.2.0** (2025-08-22)
 
 ---
 
