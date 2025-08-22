@@ -418,6 +418,11 @@ figure.full-width {
     transform: translateX(-50%); /* ...moves it back to true center */
 }
 
+/* Remove rounded corners from full-width images when they reach browser edge */
+img.full-width {
+    border-radius: 0;            /* No rounded corners for full-width images */
+}
+
 /* Figure captions - centered styling for image descriptions */
 figcaption {
     text-align: center;                     /* Center the caption text */
