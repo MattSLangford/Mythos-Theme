@@ -1488,3 +1488,8 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
         font-size: var(--font-size-xs);       /* Even smaller on mobile */
     }
 }
+
+/* Fix Micro.blog photo grid alignment */
+.photos-grid-container {
+    grid-template-columns: 1fr 1fr 1fr !important;
+}
