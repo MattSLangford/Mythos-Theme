@@ -135,6 +135,12 @@
         border-color: var(--color-border);
         color: #e5e5e5;
     }
+    
+    /* HIGHLIGHT element in Dark Mode */
+    highlight, mark {
+        background-color: #4a4a00;     /* Darker yellow background for dark mode */
+        color: #ffffff;                /* White text for contrast */
+    }
 }
 
 /* ===== SMOOTH TRANSITIONS =====
@@ -300,6 +306,62 @@ li {
     margin-bottom: var(--spacing-xs);
 }
 
+/* ===== TABLES =====
+ * Clean, readable table styling that matches the theme design. */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-lg) 0;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+/* Table headers */
+th {
+    background-color: var(--color-background-alt);
+    color: var(--color-text);
+    font-weight: 600;
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: left;
+    border-bottom: 2px solid var(--color-border);
+    border-right: 1px solid var(--color-border-light);
+}
+
+th:last-child {
+    border-right: none;
+}
+
+/* Table cells */
+td {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border-light);
+    border-right: 1px solid var(--color-border-light);
+}
+
+td:last-child {
+    border-right: none;
+}
+
+/* Zebra striping for better readability */
+tbody tr:nth-child(even) {
+    background-color: var(--color-background-alt);
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: var(--color-background-alt);
+    transition: background-color var(--transition-fast);
+}
+
+/* Responsive table wrapper for mobile */
+.table-wrapper {
+    overflow-x: auto;
+    margin: var(--spacing-lg) 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: 5px;
+}
+
 /* Images */
 img {
     width: 100%;
@@ -383,6 +445,24 @@ pre code {
     border: none;
     padding: 0;
     font-size: inherit;
+}
+
+/* Highlight element - for text highlighting/marking */
+highlight, mark {
+    background-color: #fff3cd;          /* Soft yellow background */
+    color: var(--color-text);           /* Keep text readable */
+    padding: 0.1em 0.2em;               /* Subtle padding */
+    border-radius: 3px;                 /* Rounded corners */
+    font-weight: 500;                   /* Slightly bold for emphasis */
+}
+
+/* Abbreviation element - for acronyms and abbreviations */
+abbr {
+    text-decoration: underline dotted;   /* Dotted underline indicates abbreviation */
+    text-underline-offset: 0.2em;       /* Space between text and underline */
+    cursor: help;                       /* Help cursor indicates more info available */
+    font-variant: small-caps;           /* Small caps for professional appearance */
+    letter-spacing: 0.05em;             /* Slight letter spacing for readability */
 }
 
 /* Blockquotes */
@@ -1267,6 +1347,15 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     .nav-link {
         padding: var(--spacing-md) var(--spacing-lg);
         font-size: var(--font-size-small);
+    }
+    
+    /* Table mobile adjustments */
+    table {
+        font-size: var(--font-size-small);
+    }
+    
+    th, td {
+        padding: var(--spacing-sm) var(--spacing-md);
     }
 }
 

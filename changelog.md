@@ -6,12 +6,19 @@ All notable changes to the Mythos Theme will be documented in this file.
 
 ### ✨ New Features Added
 - **Copy Link Functionality**: Added one-click permalink copying on single posts with "Copy Link" button
+- **Development Mode**: Interactive CSS inspection tool for easy theme customization
+  - Hover elements to see CSS class names
+  - Click elements for detailed styling information
+  - Keyboard shortcuts for power users
+  - Mobile-responsive design
+  - Only loads when enabled via plugin settings
 - **Comprehensive Internationalization**: Copy link feature includes translations for all 16 supported languages
 
 ### 🎨 Design & UX Improvements  
 - **Smart Navigation Menu**: Automatic 2-column layout when 6+ navigation items for better space utilization
 - **Enhanced CSS Documentation**: Added comprehensive user-friendly comments throughout CSS for easy customization
 - **Mobile Navigation Optimization**: Improved spacing and typography on mobile devices for better touch experience
+- **Comprehensive Table Styling**: Added complete table styling system with headers, zebra striping, hover effects, and mobile responsiveness
 
 ### 🔧 Technical Improvements
 - **Professional Attribution**: Added proper design credits to CSS and JavaScript files with minification-safe syntax

@@ -45,6 +45,7 @@ All theme customization is done through the Micro.blog dashboard under **Design 
 | **Hide Footer Credits** | Checkbox | `false` | Remove "Powered by" and theme credits |
 | **Use Post Summaries on Feed Pages** | Checkbox | `false` | Show post summaries instead of full content on home/archive pages |
 | **Hide Copy Link Buttons on Posts** | Checkbox | `false` | Remove copy link buttons from individual posts |
+| **Enable Development Mode** | Checkbox | `false` | Shows CSS class names and element info for customization. **DISABLE for production sites.** |
 
 ### Post Summary Behavior
 
@@ -54,6 +55,25 @@ All theme customization is done through the Micro.blog dashboard under **Design 
   - Uses content before `<!--more-->` tag if present
   - Falls back to first 150 words with "Continue Reading" link
   - Only applies to home page and archive pages
+
+### Development Mode
+
+**Enable Development Mode** to see CSS class names and element information while customizing your site:
+
+1. Go to **Design → Edit Themes → Mythos Theme → Settings**
+2. Check **"Enable Development Mode"**
+3. Visit your site - you'll see a red "🔧 DEV MODE" indicator
+4. **Hover** over any element to see its CSS classes
+5. **Click** elements to see detailed information (colors, sizes, properties)
+6. **Copy** class names for use in Custom CSS
+7. **Remember to disable** when you're done customizing
+
+**Keyboard Shortcuts:**
+- `ESC` - Close info panels
+- `Ctrl+Shift+D` - Toggle development mode visibility
+- Click dev mode indicator - Close info panel
+
+**⚠️ Important:** Always disable development mode on production sites - it's only for customization work.
 
 ## 🎨 Advanced Customization
 
