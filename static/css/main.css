@@ -1344,30 +1344,26 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     border: none;                           /* Remove border since wrapper has it */
 }
 
-/* Auto-wrap all tables in scrollable container */
+/* Simple table responsiveness - contain within parent */
 table {
-    width: 100%;                            /* Full width within container */
-    min-width: 500px;                       /* Minimum width before scrolling kicks in */
-    overflow-x: auto;                       /* Allow horizontal scrolling */
-    display: block;                         /* Block display for scrolling */
-    white-space: nowrap;                    /* Prevent text wrapping in cells */
+    max-width: 100%;                        /* Don't exceed container width */
+    overflow-x: auto;                       /* Scroll horizontally when needed */
+    display: block;                         /* Enable scrolling */
 }
 
-table thead,
-table tbody {
-    display: table;                         /* Restore table display for structure */
-    width: 100%;                            /* Full width */
-    table-layout: fixed;                    /* Fixed layout for consistent columns */
+table thead, table tbody {
+    display: table;                         /* Maintain table structure */
+    width: 100%;                            /* Full available width */
+    table-layout: auto;                     /* Auto-size columns based on content */
 }
 
 table tr {
-    display: table-row;                     /* Restore row display */
+    display: table-row;                     /* Normal row display */
 }
 
-table th,
-table td {
-    display: table-cell;                    /* Restore cell display */
-    white-space: normal;                    /* Allow normal text wrapping in cells */
+table th, table td {
+    display: table-cell;                    /* Normal cell display */
+    white-space: nowrap;                    /* Prevent text wrapping in cells */
 }
 
 /* Page Item Styling for Lists */
