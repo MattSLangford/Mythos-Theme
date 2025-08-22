@@ -296,6 +296,23 @@ a:focus {
     outline-offset: 2px;                     /* Space between text and outline */
 }
 
+/* Footnote links - remove underlines for cleaner appearance */
+a[href^="#fn:"],           /* Inline footnote reference links */
+a[href^="#fnref:"],        /* Return links from footnotes */
+.footnote-ref,             /* Alternative footnote reference class */
+.footnote-backref {        /* Alternative footnote return class */
+    text-decoration: none; /* Remove underline from footnote links */
+}
+
+/* Add subtle hover effect for footnote links */
+a[href^="#fn:"]:hover,
+a[href^="#fnref:"]:hover,
+.footnote-ref:hover,
+.footnote-backref:hover {
+    text-decoration: underline;        /* Show underline on hover for clarity */
+    text-decoration-thickness: 1px;    /* Thin underline */
+}
+
 /* Lists */
 ul, ol {
     margin: 0 0 var(--spacing-md);
