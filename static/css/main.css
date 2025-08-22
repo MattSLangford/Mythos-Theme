@@ -1331,6 +1331,24 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     line-height: var(--line-height-base);  /* Standard line height */
 }
 
+/* Table horizontal scrolling for responsive design */
+.table-wrapper {
+    overflow-x: auto;                       /* Horizontal scroll when needed */
+    margin: var(--spacing-lg) 0;           /* Standard table spacing */
+    border-radius: 5px;                     /* Match theme border radius */
+    border: 1px solid var(--color-border-light);  /* Subtle container border */
+}
+
+.table-wrapper table {
+    margin: 0;                              /* Remove default margins inside wrapper */
+    border: none;                           /* Remove border since wrapper has it */
+}
+
+/* Ensure tables are responsive when they don't have explicit wrapper */
+table {
+    max-width: 100%;                        /* Don't exceed container width */
+}
+
 /* Page Item Styling for Lists */
 .page-item {
     margin-bottom: var(--spacing-xl);
@@ -1492,4 +1510,41 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
 /* Fix Micro.blog photo grid alignment */
 .photos-grid-container {
     grid-template-columns: 1fr 1fr 1fr !important;
+}
+
+/* Override Micro.blog photo collection layout */
+.microblog_collection {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: var(--spacing-md) !important;
+    margin: var(--spacing-lg) 0 !important;
+    line-height: normal !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+}
+
+.microblog_collection img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
+    border-radius: 5px !important;
+    border: 1px solid var(--color-border-light) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+
+.microblog_collection img:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Mobile: 3 columns for photo collections */
+@media (max-width: 768px) {
+    .microblog_collection {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--spacing-sm) !important;
+    }
 }
