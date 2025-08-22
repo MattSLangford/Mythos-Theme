@@ -9,7 +9,7 @@ A clean, fast, and readable theme for Micro.blog that gets out of the way of you
 Mythos is designed for people who want their blog to load fast and look professional without the clutter. It's perfect for writers, photographers, and anyone who wants their content to shine.
 
 **Key Features:**
-- **Lightning fast** - Only 24KB total, loads instantly
+- **Lightning fast** - Lightweight ~46KB, loads instantly
 - **Works everywhere** - Looks great on phones, tablets, and computers  
 - **Easy to read** - Clean typography and proper spacing
 - **Accessible** - Works with screen readers and keyboard navigation
