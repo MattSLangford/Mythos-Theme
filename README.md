@@ -121,7 +121,7 @@ Apply these classes to images in your posts:
 
 - `img.full-width` - Breaks out of content width (max 1200px)
 - `img.half-width` - 50% width, centered
-- `img.thumbnail` - 150px width, left-aligned with text wrap
+- `img.small` - 150px width, left-aligned with text wrap
 - `img.frame` - Adds elegant border and shadow
 
 Example usage:

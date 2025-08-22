@@ -390,7 +390,7 @@ img.half-width {
     margin: var(--spacing-md) auto;
 }
 
-img.thumbnail {
+img.small {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -416,6 +416,17 @@ figure.full-width {
     max-width: 1200px;           /* But not bigger than 1200px */
     margin-left: 50%;            /* Center positioning trick... */
     transform: translateX(-50%); /* ...moves it back to true center */
+}
+
+/* Figure captions - centered styling for image descriptions */
+figcaption {
+    text-align: center;                     /* Center the caption text */
+    font-size: var(--font-size-small);     /* Smaller text size */
+    color: var(--color-text-muted);        /* Muted color for subtlety */
+    font-style: italic;                     /* Italic styling for elegance */
+    margin-top: var(--spacing-sm);         /* Space above caption */
+    padding: 0 var(--spacing-md);          /* Side padding for narrow screens */
+    line-height: var(--line-height-base);  /* Standard line height */
 }
 
 /* Code */
