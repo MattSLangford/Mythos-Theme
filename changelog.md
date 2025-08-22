@@ -2,6 +2,29 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.1.2] - 2025-08-22
+
+### 🎨 Design & UX Improvements
+- **Archive Page Enhancement**: Redesigned archive list with clean date-first layout, showing titles for posts and 50-character summaries for microposts
+- **Table Styling**: Added comprehensive table styling with headers, zebra striping, hover effects, and mobile responsiveness
+- **Image Classes Refinement**: Renamed `img.thumbnail` to `img.small` for better clarity
+- **Figure Captions**: Added centered, elegant caption styling for images
+- **Photo Grid Fix**: Corrected Micro.blog photo grid alignment issues with proper column distribution
+
+### ✨ New Features Added  
+- **Enhanced Text Elements**: Added support for `<highlight>`, `<mark>`, and `<abbr>` elements with proper styling
+- **Footnote Styling**: Clean footnote link styling without underlines, with subtle hover effects
+- **More Tag Logic**: Improved `<!--more-->` tag behavior to work consistently regardless of summary settings
+
+### 🔧 Technical Improvements
+- **Template Logic Enhancement**: Fixed summary truncation logic to properly respect manual `<!--more-->` tags vs automatic summaries
+- **Mobile Responsiveness**: Enhanced archive page layout with stacked design on mobile devices
+- **CSS Organization**: Added comprehensive commenting and user-friendly explanations throughout stylesheets
+
+### 📝 Content & Documentation
+- **README Rewrite**: Completely rewrote documentation with non-technical language, focusing users to mythos.micro.blog for detailed guides
+- **Version Management**: Updated all version references and cache-busting URLs
+
 ## [1.1.1] - 2025-08-21
 
 ### ✨ New Features Added
