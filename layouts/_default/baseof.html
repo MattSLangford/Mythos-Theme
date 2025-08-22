@@ -17,6 +17,14 @@
       <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 125 }}">
       <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
       <meta name="description" content="{{ .Site.Params.itunes_description }}">
+      <!-- Use avatar as social media image for home page -->
+      {{ if .Site.Params.custom_avatar }}
+        <meta name="twitter:image" content="{{ .Site.Params.custom_avatar }}">
+        <meta property="og:image" content="{{ .Site.Params.custom_avatar }}">
+      {{ else }}
+        <meta name="twitter:image" content="{{ .Site.Author.avatar }}">
+        <meta property="og:image" content="{{ .Site.Author.avatar }}">
+      {{ end }}
     {{ else }}
       <meta name="twitter:description" content="{{ .Summary | truncate 60 }}">
       <meta name="og:description" content="{{ .Summary | truncate 60 }}">
