@@ -24,38 +24,27 @@
             
             <div class="post-content">
                 {{ if .Title }}
-                    {{ if .Site.Params.use_post_summaries }}
-                        {{ if .Summary }}
-                            {{ .Summary }}
-                            {{ if .Truncated }}
-                                <div class="continue-reading">
-                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
-                                </div>
-                            {{ end }}
-                        {{ else }}
-                            {{ $words := split .Content " " }}
-                            {{ $maxWords := 150 }}
-                            {{ if gt (len $words) $maxWords }}
-                                {{ delimit (first $maxWords $words) " " }}...
-                                <div class="continue-reading">
-                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
-                                </div>
-                            {{ else }}
-                                {{ .Content }}
-                            {{ end }}
-                        {{ end }}
-                    {{ else }}
-                        {{/* Always respect <!--more--> tag even when summaries are disabled */}}
-                        {{ if .Summary }}
-                            {{ .Summary }}
-                            {{ if .Truncated }}
-                                <div class="continue-reading">
-                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
-                                </div>
-                            {{ end }}
+                    {{ if and .Summary .Truncated }}
+                        {{/* Always respect <!--more--> tag regardless of summary settings */}}
+                        {{ .Summary }}
+                        <div class="continue-reading">
+                            <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                        </div>
+                    {{ else if .Site.Params.use_post_summaries }}
+                        {{/* Only do automatic truncation when summaries are enabled */}}
+                        {{ $words := split .Content " " }}
+                        {{ $maxWords := 150 }}
+                        {{ if gt (len $words) $maxWords }}
+                            {{ delimit (first $maxWords $words) " " }}...
+                            <div class="continue-reading">
+                                <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                            </div>
                         {{ else }}
                             {{ .Content }}
                         {{ end }}
+                    {{ else }}
+                        {{/* Show full content when no <!--more--> tag and summaries disabled */}}
+                        {{ .Content }}
                     {{ end }}
                 {{ else }}
                     {{ .Content }}
