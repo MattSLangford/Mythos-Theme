@@ -40,9 +40,13 @@ hugo_stats.json
 # IDE and Editors
 .vscode/
 .idea/
+.nova/
 *.swp
 *.swo
 *~
+
+# Claude Code specific files
+CLAUDE.md
 
 # Logs
 *.log
