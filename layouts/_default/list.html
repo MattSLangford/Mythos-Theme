@@ -46,7 +46,7 @@
             
             <div class="post-content">
                 {{ if .Title }}
-                    {{ if and .Truncated (findRE "<!--\s*more\s*-->" .RawContent) }}
+                    {{ if and .Truncated (in .RawContent "<!--more-->") }}
                         {{/* Always respect <!--more--> tag regardless of summary settings */}}
                         {{ .Summary }}
                         <div class="continue-reading">
