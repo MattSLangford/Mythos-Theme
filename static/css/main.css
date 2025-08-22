@@ -1344,26 +1344,9 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     border: none;                           /* Remove border since wrapper has it */
 }
 
-/* Simple table responsiveness - contain within parent */
+/* Simple table constraint - prevent layout breaking */
 table {
     max-width: 100%;                        /* Don't exceed container width */
-    overflow-x: auto;                       /* Scroll horizontally when needed */
-    display: block;                         /* Enable scrolling */
-}
-
-table thead, table tbody {
-    display: table;                         /* Maintain table structure */
-    width: 100%;                            /* Full available width */
-    table-layout: auto;                     /* Auto-size columns based on content */
-}
-
-table tr {
-    display: table-row;                     /* Normal row display */
-}
-
-table th, table td {
-    display: table-cell;                    /* Normal cell display */
-    white-space: nowrap;                    /* Prevent text wrapping in cells */
 }
 
 /* Page Item Styling for Lists */
