@@ -1278,6 +1278,59 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     white-space: nowrap;
 }
 
+/* Archive Posts List - compact layout for all posts */
+.archive-posts-list {
+    margin-top: var(--spacing-xl);
+}
+
+.archive-post-item {
+    display: flex;                          /* Side-by-side layout */
+    align-items: flex-start;                /* Align items to top */
+    gap: var(--spacing-lg);                 /* Space between date and content */
+    padding: var(--spacing-md) 0;          /* Vertical spacing */
+    border-bottom: 1px solid var(--color-border-light);  /* Subtle divider */
+}
+
+.archive-post-item:last-child {
+    border-bottom: none;                    /* No border on last item */
+}
+
+.archive-post-date {
+    flex-shrink: 0;                         /* Don't shrink date column */
+    min-width: 140px;                       /* Consistent date column width */
+}
+
+.archive-date-link {
+    font-size: var(--font-size-small);     /* Smaller date text */
+    color: var(--color-text-muted);        /* Muted color */
+    text-decoration: none;                  /* Clean appearance */
+    font-weight: 500;                       /* Slightly bold for readability */
+}
+
+.archive-date-link:hover {
+    color: var(--color-link-hover);        /* Highlight on hover */
+    text-decoration: underline;             /* Show underline on hover */
+}
+
+.archive-post-content {
+    flex: 1;                                /* Take remaining space */
+    min-width: 0;                          /* Allow text truncation */
+}
+
+.archive-post-title {
+    font-size: var(--font-size-base);      /* Standard font size */
+    font-weight: 600;                       /* Semi-bold weight */
+    margin: 0;                              /* Remove default margins */
+    line-height: var(--line-height-tight); /* Tight line spacing */
+    color: var(--color-text);              /* Standard text color */
+}
+
+.archive-post-summary {
+    color: var(--color-text-light);        /* Lighter text for summaries */
+    font-style: italic;                     /* Italicize micropost summaries */
+    line-height: var(--line-height-base);  /* Standard line height */
+}
+
 /* Page Item Styling for Lists */
 .page-item {
     margin-bottom: var(--spacing-xl);
@@ -1417,5 +1470,21 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     .nav-link {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-small);
+    }
+    
+    /* Archive posts mobile layout */
+    .archive-post-item {
+        flex-direction: column;                 /* Stack date above content */
+        gap: var(--spacing-xs);                /* Smaller gap when stacked */
+        align-items: flex-start;               /* Left-align everything */
+    }
+    
+    .archive-post-date {
+        min-width: auto;                       /* Remove fixed width */
+        margin-bottom: var(--spacing-xs);     /* Space below date */
+    }
+    
+    .archive-date-link {
+        font-size: var(--font-size-xs);       /* Even smaller on mobile */
     }
 }

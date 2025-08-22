@@ -1,10 +1,10 @@
 {{ define "main" }}
-<div>
-    <header>
-        <h1>{{ .Title }}</h1>
+<div class="archive-page">
+    <header class="archive-header">
+        <h1 class="archive-title">{{ .Title }}</h1>
         
         {{ if .Description }}
-        <div>{{ .Description | markdownify }}</div>
+        <div class="archive-description">{{ .Description | markdownify }}</div>
         {{ end }}
     </header>
     
@@ -25,58 +25,27 @@
     
     {{ $allPosts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
     {{ if $allPosts }}
-    <div class="posts-list" role="feed" aria-label="All blog posts">
+    <div class="archive-posts-list" role="feed" aria-label="All blog posts">
         {{ range $allPosts }}
-        <article class="post-item" role="article">
-            <header class="post-header">
+        <article class="archive-post-item" role="article">
+            <div class="archive-post-date">
+                <a href="{{ .Permalink }}" class="archive-date-link">
+                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .Date.Format "2 January 2006" }}
+                    </time>
+                </a>
+            </div>
+            <div class="archive-post-content">
                 {{ if .Title }}
-                <h2 class="post-title">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </h2>
-                {{ end }}
-                
-                <div class="post-meta">
-                    <a href="{{ .Permalink }}" class="post-date-link">
-                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                            {{ .Date.Format "2 January 2006" }}
-                        </time>
-                    </a>
-                </div>
-            </header>
-            
-            <div class="post-content">
-                {{ if .Title }}
-                    {{ if .Site.Params.use_post_summaries }}
-                        {{ if .Summary }}
-                            {{ .Summary }}
-                            {{ if .Truncated }}
-                                <div class="continue-reading">
-                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
-                                </div>
-                            {{ end }}
-                        {{ else }}
-                            {{ $words := split .Content " " }}
-                            {{ $maxWords := 150 }}
-                            {{ if gt (len $words) $maxWords }}
-                                {{ delimit (first $maxWords $words) " " }}...
-                                <div class="continue-reading">
-                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
-                                </div>
-                            {{ else }}
-                                {{ .Content }}
-                            {{ end }}
-                        {{ end }}
-                    {{ else }}
-                        {{ .Content }}
-                    {{ end }}
+                    <h3 class="archive-post-title">{{ .Title }}</h3>
                 {{ else }}
-                    {{ .Content }}
+                    {{ $content := .Content | plainify }}
+                    {{ $summary := substr $content 0 50 }}
+                    <span class="archive-post-summary">{{ $summary }}{{ if gt (len $content) 50 }}...{{ end }}</span>
                 {{ end }}
             </div>
-            
         </article>
         {{ end }}
-        
     </div>
     {{ else }}
     <div class="empty-list">
