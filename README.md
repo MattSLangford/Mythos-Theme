@@ -50,11 +50,13 @@ All theme customization is done through the Micro.blog dashboard under **Design 
 ### Post Summary Behavior
 
 - **Microposts** (posts without titles): Always show full content
-- **Titled posts**: Show full content by default
-- **When "Use Post Summaries" is enabled**: 
-  - Uses content before `<!--more-->` tag if present
-  - Falls back to first 150 words with "Continue Reading" link
-  - Only applies to home page and archive pages
+- **Titled posts**: 
+  - **Always respects `<!--more-->` tag** regardless of summary settings
+  - **When summaries are disabled**: Shows full content UNLESS `<!--more-->` tag is present
+  - **When "Use Post Summaries" is enabled**: 
+    - Uses content before `<!--more-->` tag if present
+    - Falls back to first 150 words with "Continue Reading" link
+    - Only applies to home page and archive pages
 
 ### Development Mode
 

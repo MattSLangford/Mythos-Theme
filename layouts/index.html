@@ -45,7 +45,17 @@
                             {{ end }}
                         {{ end }}
                     {{ else }}
-                        {{ .Content }}
+                        {{/* Always respect <!--more--> tag even when summaries are disabled */}}
+                        {{ if .Summary }}
+                            {{ .Summary }}
+                            {{ if .Truncated }}
+                                <div class="continue-reading">
+                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                                </div>
+                            {{ end }}
+                        {{ else }}
+                            {{ .Content }}
+                        {{ end }}
                     {{ end }}
                 {{ else }}
                     {{ .Content }}
