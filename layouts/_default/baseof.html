@@ -76,5 +76,9 @@
     <link rel="stylesheet" href="/css/dev-mode.css?v=1.2.0">
     <script src="/js/dev-mode.js?v=1.2.0" defer></script>
     {{ end }}
+    
+    {{ if .Site.Params.custom_body_html }}
+    {{ .Site.Params.custom_body_html | safeHTML }}
+    {{ end }}
 </body>
 </html>

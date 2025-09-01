@@ -62,6 +62,12 @@
       "label": "Custom Head HTML",
       "type": "string",
       "placeholder": "This will be added before the closing </head>"
+    },
+    {
+      "field": "params.custom_body_html",
+      "label": "Custom Body HTML",
+      "type": "string",
+      "placeholder": "This will be added before the closing </body>"
     }
   ]
 }
