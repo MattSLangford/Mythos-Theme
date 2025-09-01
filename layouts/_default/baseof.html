@@ -53,6 +53,10 @@
     <meta property="og:site_name" content="{{ .Site.Title }}">
     
     {{ partial "microblog_head.html" . }}
+    
+    {{ if .Site.Params.custom_head_html }}
+    {{ .Site.Params.custom_head_html | safeHTML }}
+    {{ end }}
 </head>
 
 <body>

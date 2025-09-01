@@ -56,6 +56,12 @@
       "label": "Enable Development Mode",
       "type": "boolean",
       "description": "Shows CSS class names and element info for customization. DISABLE for production sites."
+    },
+    {
+      "field": "params.custom_head_html",
+      "label": "Custom Head HTML",
+      "type": "string",
+      "placeholder": "<meta name=\"description\" content=\"Your site description\">"
     }
   ]
 }
