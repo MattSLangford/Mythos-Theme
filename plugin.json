@@ -61,7 +61,7 @@
       "field": "params.custom_head_html",
       "label": "Custom Head HTML",
       "type": "string",
-      "placeholder": "<meta name=\"description\" content=\"Your site description\">"
+      "placeholder": "This will be added before the closing </head>"
     }
   ]
 }
