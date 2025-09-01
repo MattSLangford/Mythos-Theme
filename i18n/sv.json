@@ -1,7 +1,7 @@
 {
   "Menu": "Meny",
   "Categories": "Kategorier",
-  "AllPosts": "Alla Inlägg",
+  "AllPosts": "Alla inlägg",
   "Archive": "Arkiv",
   "Replies": "Svar",
   "NewerPosts": "Nyare inlägg",
@@ -10,11 +10,11 @@
   "OlderReplies": "Äldre svar",
   "Page": "Sida",
   "Of": "av",
-  "PoweredBy": "Drivs av",
-  "DesignedBy": "designad av",
+  "PoweredBy": "Drivs med",
+  "DesignedBy": "designat av",
   "NoPostsFound": "Inga inlägg hittades",
   "NoRepliesFound": "Inga svar hittades",
-  "ContinueReading": "Fortsätt Läsa",
-  "CopyLink": "Kopiera Länk",
+  "ContinueReading": "Fortsätt läsa",
+  "CopyLink": "Kopiera länk",
   "LinkCopied": "Kopierad!"
 }
