@@ -31,7 +31,7 @@
             <div class="archive-post-date">
                 <a href="{{ .Permalink }}" class="archive-date-link">
                     <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                        {{ .Date.Format "2 January 2006" }}
+                        {{ .Date | time.Format ":date_long" }}
                     </time>
                 </a>
             </div>
