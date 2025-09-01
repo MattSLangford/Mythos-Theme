@@ -141,6 +141,11 @@
         background-color: #4a4a00;     /* Darker yellow background for dark mode */
         color: #ffffff;                /* White text for contrast */
     }
+    
+    /* Fixes issue with Archive by Months plugin in Dark Mode */
+    .archive_years select {
+       color: #000;
+    }
 }
 
 /* ===== SMOOTH TRANSITIONS =====
