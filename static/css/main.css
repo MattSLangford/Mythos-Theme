@@ -679,6 +679,7 @@ blockquote p:last-child {
  * This keeps your navigation compact even with many menu items */
 .nav-menu:has(.nav-item:nth-child(6)) {
     grid-template-columns: 1fr 1fr;  /* Two equal columns */
+    grid-auto-flow: column;          /* Fill columns top-to-bottom first */
     min-width: 360px;                /* Wider to accommodate columns */
     gap: 0;
 }
@@ -687,16 +688,14 @@ blockquote p:last-child {
  * Provides same 2-column behavior using flexbox instead of grid */
 @supports not (selector(:has(*))) {
     .nav-menu {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;       /* Items wrap to create columns */
-        max-height: 300px;     /* Forces wrapping at this height */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
         min-width: 360px;
     }
     
     .nav-item {
-        flex: 0 0 auto;
-        width: 50%;           /* Each item takes half width = 2 columns */
+        /* Removed width: 50% - grid handles sizing */
     }
 }
 
