@@ -68,6 +68,11 @@
       "label": "Custom Body HTML",
       "type": "string",
       "placeholder": "This will be added before the closing </body>"
+    },
+    {
+      "field": "params.enable_fontawesome",
+      "label": "Enable FontAwesome Icons",
+      "type": "boolean"
     }
   ]
 }
