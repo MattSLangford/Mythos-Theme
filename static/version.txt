@@ -1,5 +1,5 @@
-Mythos Theme v1.2.0
-Last updated: 22 August 2025
+Mythos Theme v1.2.1
+Last updated: 1 September 2025
 Author: Matt Langford
 Website: https://mattlangford.com
 Repository: https://github.com/mattlangford/mythos-theme

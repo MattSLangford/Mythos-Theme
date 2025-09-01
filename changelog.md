@@ -2,6 +2,22 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.2.1] - 2025-09-01
+
+### ✨ New Features Added
+- **FontAwesome Icons Support**: Added optional FontAwesome 7.0.0 integration via `enable_fontawesome` plugin setting
+- **Custom HTML Injection**: Added two new plugin fields for enhanced customization:
+  - `custom_head_html`: Inject custom HTML/scripts before `</head>`
+  - `custom_body_html`: Inject custom HTML/scripts before `</body>`
+
+### 🌐 Internationalization Improvements
+- **Localized Date Formatting**: Replaced all hard-coded English date formats with Hugo's localized date tokens
+  - Dates now properly display in correct language and regional format (e.g., "June 6" vs "6 juin")
+  - Affects all template files: index.html, post/single.html, section/replies.html, list templates
+
+### 🔧 Technical Improvements
+- **Archive Plugin Compatibility**: Fixed compatibility issue with archive by months plugin
+
 ## [1.2.0] - 2025-08-22
 
 ### ✨ New Features Added
