@@ -150,6 +150,17 @@
             0 0 0 1px #404036;
     }
     
+    /* Dark mode washi tape */
+    img.vintage::before,
+    img.vintage::after {
+        background: linear-gradient(45deg, 
+            rgba(186, 85, 211, 0.6) 0%, 
+            rgba(186, 85, 211, 0.7) 50%, 
+            rgba(186, 85, 211, 0.6) 100%);
+        border-color: rgba(186, 85, 211, 0.4);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
     /* CODE BLOCKS in Dark Mode 
      * Dark theme for code and syntax highlighting */
     /* Inline code */
@@ -477,7 +488,7 @@ img.full-width {
     border-radius: 0;
 }
 
-/* Vintage scrapbook-style image */
+/* Vintage scrapbook-style image with washi tape */
 img.vintage {
     position: relative;
     border: 8px solid #f5f5f0;
@@ -487,7 +498,7 @@ img.vintage {
         inset 0 0 0 1px rgba(0, 0, 0, 0.1),
         0 0 0 1px #e8e8e0;
     transform: rotate(-0.5deg);
-    margin: var(--spacing-lg) auto;
+    margin: var(--spacing-xl) auto;
     display: block;
     background-color: #f9f9f6;
     padding: 4px;
@@ -496,6 +507,35 @@ img.vintage {
 img.vintage:hover {
     transform: rotate(0deg);
     transition: transform 0.3s ease;
+}
+
+/* Washi tape corners */
+img.vintage::before,
+img.vintage::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: linear-gradient(45deg, 
+        rgba(255, 182, 193, 0.7) 0%, 
+        rgba(255, 182, 193, 0.8) 50%, 
+        rgba(255, 182, 193, 0.7) 100%);
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    border-radius: 2px;
+    z-index: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+img.vintage::before {
+    top: -10px;
+    left: 20px;
+    transform: rotate(-8deg);
+}
+
+img.vintage::after {
+    bottom: -10px;
+    right: 20px;
+    transform: rotate(8deg);
 }
 
 /* Figure captions - centered styling for image descriptions */
