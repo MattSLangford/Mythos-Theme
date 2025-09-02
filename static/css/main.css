@@ -604,12 +604,9 @@ blockquote p:last-child {
     color: var(--color-text-muted);
 }
 
-/* Only enable hover effects on devices that can actually hover */
-@media (hover: hover) and (pointer: fine) {
-    .menu-toggle:hover {
-        border-color: var(--color-accent);
-        color: var(--color-text);
-    }
+.menu-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
 }
 
 .menu-toggle-text {
@@ -655,6 +652,8 @@ blockquote p:last-child {
     .menu-toggle {
         position: relative;
         z-index: 1002;  /* Ensure hamburger stays clickable */
+        background-color: var(--color-background) !important;  /* Force solid background */
+        backdrop-filter: none !important;  /* Disable any backdrop effects */
     }
     
     .primary-menu {
