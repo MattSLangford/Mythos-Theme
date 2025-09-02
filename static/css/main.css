@@ -645,7 +645,13 @@ blockquote p:last-child {
 /* MOBILE: Full-screen overlay navigation */
 @media (max-width: 768px) {
     .site-navigation {
+        position: relative;
         z-index: 1001;  /* Keep hamburger button above overlay */
+    }
+    
+    .menu-toggle {
+        position: relative;
+        z-index: 1002;  /* Ensure hamburger stays clickable */
     }
     
     .primary-menu {
@@ -663,13 +669,11 @@ blockquote p:last-child {
         display: flex;
         align-items: center;
         justify-content: center;
-        pointer-events: none;  /* Allow clicks to pass through when closed */
     }
     
     .primary-menu.active {
         opacity: 1;
         visibility: visible;
-        pointer-events: auto;  /* Enable clicks when open */
     }
     
     .nav-menu {
@@ -683,7 +687,8 @@ blockquote p:last-child {
         overflow-y: auto;
         min-width: 280px;
         max-width: 400px;
-        pointer-events: auto;  /* Ensure menu content is clickable */
+        position: relative;
+        z-index: 1001;
     }
 }
 
