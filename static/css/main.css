@@ -604,9 +604,12 @@ blockquote p:last-child {
     color: var(--color-text-muted);
 }
 
-.menu-toggle:hover {
-    border-color: var(--color-accent);
-    color: var(--color-text);
+/* Only enable hover effects on devices that can actually hover */
+@media (hover: hover) and (pointer: fine) {
+    .menu-toggle:hover {
+        border-color: var(--color-accent);
+        color: var(--color-text);
+    }
 }
 
 .menu-toggle-text {
