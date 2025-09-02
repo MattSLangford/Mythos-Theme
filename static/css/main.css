@@ -653,6 +653,8 @@ blockquote p:last-child {
         position: relative;
         z-index: 1002;  /* Ensure hamburger stays clickable */
         background-color: var(--color-background) !important;  /* Force solid background */
+        border-color: var(--color-border) !important;  /* Force original border color */
+        color: var(--color-text-muted) !important;  /* Force original text color */
         backdrop-filter: none !important;  /* Disable any backdrop effects */
     }
     
