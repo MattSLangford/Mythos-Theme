@@ -2,6 +2,31 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.2.2] - 2025-09-02
+
+### ✨ New Features Added
+- **Code Block Copy Buttons**: One-click copy functionality for all code blocks with hover reveal and visual feedback
+- **Redesigned Navigation System**: 
+  - Mobile: Full-screen overlay with semi-transparent backdrop and centered menu
+  - Desktop: Clean dropdown with vertical list layout
+  - Supports unlimited navigation items with proper accessibility
+
+### 🎨 Design & UX Improvements
+- **Navigation Ordering Fixed**: Natural 1-2-3-4-5 order instead of scattered column layout
+- **Mobile Navigation UX**: Full-screen overlay prevents menu ordering issues and accommodates any number of links
+- **Enhanced Touch Interactions**: Fixed stuck hover states on mobile hamburger menu
+
+### 🔧 Technical Improvements & Code Cleanup
+- **CSS Consolidation**: 
+  - Consolidated 3 separate mobile media queries into 1 unified block (~75 lines saved)
+  - Unified button styles with base `.btn` class (~25+ lines saved)
+  - Added CSS custom properties for shadows and border radius values
+- **Code Quality**: Removed 187 inline property comments for cleaner, more maintainable CSS
+- **Removed Dead Code**: Eliminated improper `<a><button>` nesting styles and duplicate `.table-wrapper` definition
+
+### 🌐 Internationalization Improvements
+- **Swedish Translation Refinements**: Improved grammar and changed from title case to sentence case
+
 ## [1.2.1] - 2025-09-01
 
 ### ✨ New Features Added
