@@ -1205,6 +1205,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     max-width: 1.75rem !important;
     border-radius: 50%;
     border: 1px solid var(--color-border-light);
+    margin-top: 0;
 }
 
 .microblog_fullname {
