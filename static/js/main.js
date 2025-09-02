@@ -137,10 +137,12 @@
         
         function showCopiedFeedback(button) {
             button.textContent = 'Copied!';
+            button.setAttribute('aria-label', 'Code copied to clipboard');
             button.classList.add('copied');
             
             setTimeout(() => {
                 button.textContent = 'Copy';
+                button.setAttribute('aria-label', 'Copy code to clipboard');
                 button.classList.remove('copied');
             }, 2000);
         }
