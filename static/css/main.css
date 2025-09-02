@@ -131,10 +131,23 @@
         color: #cccccc;
     }
     
+    p.lead {
+        color: #cccccc;
+    }
+    
     /* IMAGES in Dark Mode
      * Add subtle border so images stand out from dark background */
     img {
         border: 1px solid var(--color-border-light);
+    }
+    
+    img.vintage {
+        border-color: #3a3a36;
+        background-color: #2a2a26;
+        box-shadow: 
+            0 2px 8px rgba(0, 0, 0, 0.3),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+            0 0 0 1px #404036;
     }
     
     /* CODE BLOCKS in Dark Mode 
@@ -292,6 +305,15 @@ p.aside {
     border-radius: var(--radius-small);
     font-weight: 600;
     color: #495057;
+}
+
+/* Lead paragraph - larger text for introductions */
+p.lead {
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    line-height: var(--line-height-loose);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-light);
 }
 
 /* ===== LINKS =====
@@ -455,6 +477,27 @@ img.full-width {
     border-radius: 0;
 }
 
+/* Vintage scrapbook-style image */
+img.vintage {
+    position: relative;
+    border: 8px solid #f5f5f0;
+    border-radius: 2px;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+        0 0 0 1px #e8e8e0;
+    transform: rotate(-0.5deg);
+    margin: var(--spacing-lg) auto;
+    display: block;
+    background-color: #f9f9f6;
+    padding: 4px;
+}
+
+img.vintage:hover {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
 /* Figure captions - centered styling for image descriptions */
 figcaption {
     text-align: center;
@@ -558,6 +601,47 @@ blockquote {
 
 blockquote p:last-child {
     margin-bottom: 0;
+}
+
+/* Bible verse styling - elegant formatting for scripture */
+blockquote.verse {
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-style: normal;
+    color: var(--color-text);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin: var(--spacing-xl) auto;
+    position: relative;
+    max-width: 600px;
+}
+
+blockquote.verse:before {
+    content: """;
+    font-size: 3em;
+    color: var(--color-text-muted);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0.8;
+}
+
+blockquote.verse p {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-loose);
+    margin-bottom: var(--spacing-md);
+}
+
+blockquote.verse cite {
+    font-style: normal;
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    display: block;
+    margin-top: var(--spacing-md);
+    letter-spacing: 0.5px;
 }
 
 /* ===== LAYOUT COMPONENTS =====
