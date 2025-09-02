@@ -695,6 +695,82 @@ blockquote p:last-child {
         position: relative;
         z-index: 1001;
     }
+    
+    /* CSS Variables for mobile */
+    :root {
+        --font-size-base: 16px;      /* Slightly smaller text on mobile */
+        --container-width: 100%;     /* Full width on mobile */
+        --spacing-lg: 1rem;          /* Reduced spacing for smaller screens */
+        --spacing-xl: 1.25rem;
+        --spacing-2xl: 2rem;
+        --spacing-3xl: 2.5rem;
+        --button-padding-mobile: var(--spacing-md) var(--spacing-md);           /* Mobile button padding */
+        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);   /* Compact mobile buttons */
+    }
+    
+    /* Layout adjustments */
+    .header-container {
+        padding: var(--spacing-md) var(--spacing-md);
+    }
+    
+    .main-content {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .site-title {
+        font-size: 1.1rem;
+    }
+    
+    /* Navigation mobile adjustments */
+    .nav-link {
+        padding: var(--spacing-md) var(--spacing-lg);
+        font-size: var(--font-size-small);
+    }
+    
+    /* Pagination mobile adjustments */
+    .pagination {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .prev-page, .next-page {
+        padding: var(--button-padding-mobile);
+        font-size: var(--font-size-xs);
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+    
+    .page-numbers {
+        flex: 0 0 auto;
+        font-size: var(--font-size-xs);
+    }
+    
+    /* Archive categories mobile adjustments */
+    .archive-categories {
+        gap: var(--spacing-xs);
+    }
+    
+    .archive-categories .category-button {
+        padding: var(--button-padding-compact-mobile);
+        font-size: var(--font-size-xs);
+    }
+    
+    /* Table mobile adjustments */
+    table {
+        font-size: var(--font-size-small);
+    }
+    
+    th, td {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    /* Photo collection mobile adjustments */
+    .microblog_collection {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--spacing-sm) !important;
+    }
 }
 
 /* DESKTOP: Dropdown navigation */
@@ -1426,77 +1502,6 @@ table {
  * They automatically activate based on screen size. */
 
 /* TABLET AND MOBILE STYLES (screens 768px and smaller) */
-@media (max-width: 768px) {
-    :root {
-        --font-size-base: 16px;      /* Slightly smaller text on mobile */
-        --container-width: 100%;     /* Full width on mobile */
-        --spacing-lg: 1rem;          /* Reduced spacing for smaller screens */
-        --spacing-xl: 1.25rem;
-        --spacing-2xl: 2rem;
-        --spacing-3xl: 2.5rem;
-        --button-padding-mobile: var(--spacing-md) var(--spacing-md);           /* Mobile button padding */
-        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);   /* Compact mobile buttons */
-    }
-    
-    /* Layout adjustments */
-    .header-container {
-        padding: var(--spacing-md) var(--spacing-md);
-    }
-    
-    .main-content {
-        padding: var(--spacing-xl) var(--spacing-md);
-    }
-    
-    .site-title {
-        font-size: 1.1rem;
-    }
-    
-    /* Pagination mobile adjustments */
-    .pagination {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: var(--spacing-sm);
-        text-align: center;
-    }
-    
-    .prev-page, .next-page {
-        padding: var(--button-padding-mobile);
-        font-size: var(--font-size-xs);
-        flex: 0 1 auto;
-        min-width: 0;
-    }
-    
-    .page-numbers {
-        flex: 0 0 auto;
-        font-size: var(--font-size-xs);
-    }
-    
-    /* Archive categories mobile adjustments */
-    .archive-categories {
-        gap: var(--spacing-xs);
-    }
-    
-    .archive-categories .category-button {
-        padding: var(--button-padding-compact-mobile);
-        font-size: var(--font-size-xs);
-    }
-    
-    /* Navigation mobile adjustments - now handled by main mobile styles */
-    
-    .nav-link {
-        padding: var(--spacing-md) var(--spacing-lg);
-        font-size: var(--font-size-small);
-    }
-    
-    /* Table mobile adjustments */
-    table {
-        font-size: var(--font-size-small);
-    }
-    
-    th, td {
-        padding: var(--spacing-sm) var(--spacing-md);
-    }
-}
 
 /* SMALL MOBILE STYLES (screens 480px and smaller - phones in portrait) */
 @media (max-width: 480px) {
@@ -1574,9 +1579,3 @@ table {
 }
 
 /* Mobile: 3 columns for photo collections */
-@media (max-width: 768px) {
-    .microblog_collection {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: var(--spacing-sm) !important;
-    }
-}
