@@ -65,6 +65,18 @@
     --button-padding: var(--spacing-md) var(--spacing-lg);
     --button-padding-compact: var(--spacing-sm) var(--spacing-md);
     
+    /* SHADOWS
+     * Controls drop shadows and depth effects throughout the theme. */
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.3);
+    
+    /* BORDER RADIUS
+     * Controls corner rounding for buttons, images, and containers. */
+    --radius-small: 5px;
+    --radius-medium: 8px;
+    --radius-large: 12px;
+    
     /* ANIMATIONS 
      * Controls how fast hover effects and transitions happen.
      * Tip: Set these to 0s if you prefer no animations */
@@ -253,7 +265,7 @@ p.note {
     border-left: 4px solid #007acc;
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     font-weight: 600;
     color: #084248;
 }
@@ -265,7 +277,7 @@ p.alert {
     border-left: 4px solid #f39c12;
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     font-weight: 600;
     color: #6b4f03;
 }
@@ -277,7 +289,7 @@ p.aside {
     border-left: 4px solid #6c757d;
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     font-weight: 600;
     color: #495057;
 }
@@ -388,7 +400,7 @@ img {
     height: auto;
     display: block;
     margin: var(--spacing-md) 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
 }
 
 /* Note: For lazy loading, users should add loading="lazy" to img tags in content.
@@ -400,7 +412,7 @@ video {
     height: auto;
     display: block;
     margin: var(--spacing-md) 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
 }
 
 
@@ -414,13 +426,13 @@ img.small {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     margin: var(--spacing-sm);
 }
 
 img.frame {
     border: 8px solid var(--color-background-alt);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-light);
     margin: var(--spacing-lg) 0;
 }
 
@@ -460,7 +472,7 @@ code {
     font-size: 0.9em;
     background-color: var(--color-background-alt);
     padding: 0.15em 0.3em;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     border: 1px solid var(--color-border-light);
 }
 
@@ -469,7 +481,7 @@ pre {
     font-size: 0.85em;
     background-color: var(--color-background-alt);
     padding: var(--spacing-md);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     border: 1px solid var(--color-border);
     overflow-x: auto;
     margin: var(--spacing-lg) 0;
@@ -594,7 +606,7 @@ blockquote p:last-child {
     gap: var(--spacing-sm);
     background: none;
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     padding: var(--spacing-sm) var(--spacing-md);
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -684,8 +696,8 @@ blockquote p:last-child {
         margin: 0;
         padding: var(--spacing-lg);
         background-color: var(--color-background);
-        border-radius: 12px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border-radius: var(--radius-large);
+        box-shadow: var(--shadow-heavy);
         max-height: 80vh;
         overflow-y: auto;
         min-width: 280px;
@@ -779,8 +791,8 @@ blockquote p:last-child {
         right: 0;
         background-color: var(--color-background);
         border: 1px solid var(--color-border);
-        border-radius: 8px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        border-radius: var(--radius-medium);
+        box-shadow: var(--shadow-medium);
         backdrop-filter: blur(8px);
         opacity: 0;
         visibility: hidden;
@@ -953,7 +965,7 @@ blockquote p:last-child {
     min-height: 44px;
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     text-decoration: none;
     color: var(--color-text-muted);
     font-weight: 600;
@@ -1023,7 +1035,7 @@ button, .button, input[type="submit"], input[type="button"],
     min-height: var(--touch-target-height);
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     color: var(--color-text);
     text-decoration: none;
     font-weight: 600;
@@ -1077,7 +1089,7 @@ input[type="url"], input[type="password"], textarea, select {
     min-height: var(--touch-target-height);
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     color: var(--color-text);
     font-family: inherit;
     font-size: var(--font-size-small);
@@ -1136,7 +1148,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     margin-bottom: var(--spacing-md);
     background-color: var(--color-background);
     border: 1px solid var(--color-border-light);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     transition: border-color var(--transition-fast);
 }
 
@@ -1201,7 +1213,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     padding: var(--spacing-md);
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
 }
 
 .microblog_reply_signin {
@@ -1219,7 +1231,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     width: 100%;
     padding: var(--spacing-sm);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
@@ -1238,7 +1250,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     min-height: 44px;
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     color: var(--color-text);
     font-weight: 600;
     cursor: pointer;
@@ -1284,7 +1296,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     min-height: 36px;
     background-color: var(--color-background-alt);
     border: 1px solid var(--color-border);
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     color: var(--color-text-muted);
     text-decoration: none;
     font-size: var(--font-size-xs);
@@ -1432,7 +1444,7 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
 .table-wrapper {
     overflow-x: auto;
     margin: var(--spacing-lg) 0;
-    border-radius: 5px;
+    border-radius: var(--radius-small);
     border: 1px solid var(--color-border-light);
 }
 
