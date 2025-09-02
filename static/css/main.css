@@ -376,13 +376,6 @@ tbody tr:hover {
     transition: background-color var(--transition-fast);
 }
 
-/* Responsive table wrapper for mobile */
-.table-wrapper {
-    overflow-x: auto;
-    margin: var(--spacing-lg) 0;
-    border: 1px solid var(--color-border-light);
-    border-radius: 5px;
-}
 
 /* Images */
 img {
