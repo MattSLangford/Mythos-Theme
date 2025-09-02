@@ -1,0 +1,42 @@
+{{- /* Structured Data for SEO - Universal Micro.blog Implementation */ -}}
+<script type="application/ld+json">
+{{- if .IsHome -}}
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": {{ .Site.Title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }}
+  {{- with .Site.Params.itunes_description -}},
+  "description": {{ . | jsonify }}
+  {{- end -}}
+  {{- if .Site.Author.name -}},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Author.name | jsonify }}
+    {{- with .Site.Author.avatar -}},
+    "image": {{ . | jsonify }}
+    {{- end -}}
+  }
+  {{- end -}}
+}
+{{- else if .IsPost -}}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }}
+  {{- if .Site.Author.name -}},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Author.name | jsonify }}
+  }
+  {{- end -}},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ .Site.Title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  }
+}
+{{- end -}}
+</script>
