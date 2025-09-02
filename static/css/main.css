@@ -21,56 +21,56 @@
     /* COLORS - Light Mode Default
      * Change these hex color codes to customize your theme colors.
      * Example: Change --color-text to #333333 for softer black text */
-    --color-text: #000000;              /* Main text color */
-    --color-text-light: #333333;        /* Slightly lighter text for less emphasis */
-    --color-text-muted: #666666;        /* Muted text for timestamps, meta info */
-    --color-background: #ffffff;        /* Main page background */
-    --color-background-alt: #f8f9fa;    /* Background for code blocks, cards, forms */
-    --color-border: #e1e5e9;           /* Borders around elements */
-    --color-border-light: #f1f3f4;     /* Lighter borders for subtle dividers */
-    --color-link: #555555;             /* Link color */
-    --color-link-hover: #000000;       /* Link color when hovering */
-    --color-accent: #666666;           /* Accent color for focus states, buttons */
+    --color-text: #000000;
+    --color-text-light: #333333;
+    --color-text-muted: #666666;
+    --color-background: #ffffff;
+    --color-background-alt: #f8f9fa;
+    --color-border: #e1e5e9;
+    --color-border-light: #f1f3f4;
+    --color-link: #555555;
+    --color-link-hover: #000000;
+    --color-accent: #666666;
     
     /* TYPOGRAPHY 
      * Controls all text appearance throughout your site.
      * Tip: Change --font-size-base to make all text larger or smaller (18px is default) */
-    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;  /* Main text font - uses system fonts for best performance */
-    --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", "Courier New", monospace;  /* Code font */
-    --font-size-base: 18px;             /* Base text size - increase for larger text site-wide */
-    --font-size-large: 20px;            /* Large text size */
-    --font-size-small: 16px;            /* Small text size */
-    --font-size-xs: 14px;               /* Extra small text size */
-    --line-height-base: 1.6;            /* Normal line spacing (1.6 = comfortable reading) */
-    --line-height-tight: 1.4;           /* Tight line spacing for headlines */
-    --line-height-loose: 1.8;           /* Loose line spacing for post content */
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+    --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-size-base: 18px;
+    --font-size-large: 20px;
+    --font-size-small: 16px;
+    --font-size-xs: 14px;
+    --line-height-base: 1.6;
+    --line-height-tight: 1.4;
+    --line-height-loose: 1.8;
     
     /* SPACING 
      * Controls margins, padding, and gaps throughout your site.
      * Tip: Increase these values for more spacious design, decrease for more compact */
-    --spacing-xs: 0.25rem;              /* Extra small spacing (4px) */
-    --spacing-sm: 0.5rem;               /* Small spacing (8px) */
-    --spacing-md: 1rem;                 /* Medium spacing (16px) */
-    --spacing-lg: 1.5rem;               /* Large spacing (24px) */
-    --spacing-xl: 2rem;                 /* Extra large spacing (32px) */
-    --spacing-2xl: 3rem;                /* 2X large spacing (48px) */
-    --spacing-3xl: 4rem;                /* 3X large spacing (64px) */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
     
     /* LAYOUT 
      * Controls the width of your content and key measurements. */
-    --container-width: 42rem;           /* Main content width (672px) - perfect for readability */
-    --container-width-wide: 48rem;      /* Wider content width for special pages */
-    --header-height: 4rem;              /* Height of site header */
-    --touch-target-height: 44px;        /* Minimum button/link size for mobile accessibility */
-    --button-padding: var(--spacing-md) var(--spacing-lg);         /* Standard button padding */
-    --button-padding-compact: var(--spacing-sm) var(--spacing-md); /* Smaller button padding */
+    --container-width: 42rem;
+    --container-width-wide: 48rem;
+    --header-height: 4rem;
+    --touch-target-height: 44px;
+    --button-padding: var(--spacing-md) var(--spacing-lg);
+    --button-padding-compact: var(--spacing-sm) var(--spacing-md);
     
     /* ANIMATIONS 
      * Controls how fast hover effects and transitions happen.
      * Tip: Set these to 0s if you prefer no animations */
-    --transition-fast: 0.15s ease;      /* Quick transitions for subtle effects */
-    --transition-base: 0.2s ease;       /* Standard transition speed */
-    --transition-slow: 0.3s ease;       /* Slower transitions for prominent effects */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.2s ease;
+    --transition-slow: 0.3s ease;
 }
 
 /* ===== DARK MODE =====
@@ -81,35 +81,38 @@
     :root {
         /* DARK MODE COLORS
          * Note: These use softer colors than pure black/white for better eye comfort */
-        --color-text: #e5e5e5;              /* Light gray text instead of pure white */
-        --color-text-light: #cccccc;        /* Slightly darker for less emphasis */
-        --color-text-muted: #999999;        /* Muted gray for timestamps, meta info */
-        --color-background: #1a1a1a;        /* Dark gray background (not pure black) */
-        --color-background-alt: #2a2a2a;    /* Lighter dark gray for code blocks, cards */
-        --color-border: #404040;            /* Medium gray borders */
-        --color-border-light: #333333;      /* Subtle gray borders */
-        --color-link: #aaaaaa;              /* Light gray links */
-        --color-link-hover: #e5e5e5;        /* Brighter on hover */
-        --color-accent: #888888;            /* Medium gray accent */
+        --color-text: #e5e5e5;
+        --color-text-light: #cccccc;
+        --color-text-muted: #999999;
+        --color-background: #1a1a1a;
+        --color-background-alt: #2a2a2a;
+        --color-border: #404040;
+        --color-border-light: #333333;
+        --color-link: #aaaaaa;
+        --color-link-hover: #e5e5e5;
+        --color-accent: #888888;
     }
     
     /* SPECIAL CONTENT BLOCKS in Dark Mode
      * These override the light mode versions for better dark mode contrast */
-    p.note {        /* Blue informational blocks */
+    /* Blue informational blocks */
+    p.note {
         background-color: #1a2533;
         border-color: #2d4a5c;
         border-left-color: #4a90cc;
         color: #b3d7f0;
     }
     
-    p.alert {       /* Yellow warning blocks */
+    /* Yellow warning blocks */
+    p.alert {
         background-color: #332914;
         border-color: #5c4a1a;
         border-left-color: #cc9944;
         color: #f0d9a3;
     }
     
-    p.aside {       /* Gray sidebar-style blocks */
+    /* Gray sidebar-style blocks */
+    p.aside {
         background-color: #2a2a2a;
         border-color: #404040;
         border-left-color: #777777;
@@ -124,13 +127,15 @@
     
     /* CODE BLOCKS in Dark Mode 
      * Dark theme for code and syntax highlighting */
-    code {          /* Inline code */
+    /* Inline code */
+    code {
         background-color: #2d2d2d;
         border-color: var(--color-border);
         color: #e5e5e5;
     }
     
-    pre {           /* Code blocks */
+    /* Code blocks */
+    pre {
         background-color: #2d2d2d;
         border-color: var(--color-border);
         color: #e5e5e5;
@@ -138,8 +143,8 @@
     
     /* HIGHLIGHT element in Dark Mode */
     highlight, mark {
-        background-color: #4a4a00;     /* Darker yellow background for dark mode */
-        color: #ffffff;                /* White text for contrast */
+        background-color: #4a4a00;
+        color: #ffffff;
     }
     
     /* Fixes issue with Archive by Months plugin in Dark Mode */
@@ -175,27 +180,27 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;  /* Makes width/height calculations more predictable */
+    box-sizing: border-box;
 }
 
 /* Set up base font size and text rendering */
 html {
-    font-size: var(--font-size-base);     /* Base font size for your site */
-    line-height: var(--line-height-base); /* Comfortable line spacing for reading */
-    -webkit-text-size-adjust: 100%;       /* Prevents text scaling issues on mobile */
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    -webkit-text-size-adjust: 100%;
 }
 
 /* Main page setup - this controls your overall site appearance */
 body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-family-base);  /* Uses the font defined in variables above */
-    color: var(--color-text);              /* Main text color */
-    background-color: var(--color-background);  /* Page background color */
-    -webkit-font-smoothing: antialiased;   /* Makes text look crisp on Apple devices */
-    -moz-osx-font-smoothing: grayscale;    /* Makes text look crisp on Firefox/Mac */
-    letter-spacing: 0.01em;                /* Subtle letter spacing for improved readability */
-    transition: background-color var(--transition-base), color var(--transition-base);  /* Smooth dark mode transitions */
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.01em;
+    transition: background-color var(--transition-base), color var(--transition-base);
 }
 
 /* ===== TYPOGRAPHY =====
@@ -205,10 +210,10 @@ body {
 /* Headlines (h1, h2, h3, h4, h5, h6)
  * These control your blog post titles and section headings */
 h1, h2, h3, h4, h5, h6 {
-    margin: var(--spacing-xl) 0 var(--spacing-md);  /* Space above and below headings */
-    font-weight: 600;                               /* Semi-bold weight for good contrast */
-    line-height: var(--line-height-tight);          /* Tighter line spacing for headlines */
-    color: var(--color-text);                       /* Same color as body text */
+    margin: var(--spacing-xl) 0 var(--spacing-md);
+    font-weight: 600;
+    line-height: var(--line-height-tight);
+    color: var(--color-text);
 }
 
 /* Remove extra space above the first heading in a section */
@@ -220,16 +225,16 @@ h3:first-child {
 
 /* Specific heading sizes - change these to adjust hierarchy
  * Tip: rem units scale with your base font size */
-h1 { font-size: 2rem; }      /* Largest - usually post titles */
-h2 { font-size: 1.5rem; }    /* Major sections */
-h3 { font-size: 1.25rem; }   /* Subsections */
-h4 { font-size: 1.1rem; }    /* Minor headings */
-h5 { font-size: 1rem; }      /* Same as body text but bold */
-h6 { font-size: 0.9rem; }    /* Smallest heading */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; }
 
 /* Paragraphs - your main text content */
 p {
-    margin: 0 0 var(--spacing-md);  /* Space below each paragraph */
+    margin: 0 0 var(--spacing-md);
 }
 
 /* Remove space below the last paragraph in a section */
@@ -243,38 +248,38 @@ p:last-child {
 
 /* Blue informational blocks - use for tips, notes, helpful information */
 p.note {
-    background-color: #e8f4fd;        /* Light blue background */
-    border: 1px solid #bee5eb;        /* Blue border */
-    border-left: 4px solid #007acc;   /* Thick left border for emphasis */
-    padding: var(--spacing-md);       /* Internal spacing */
-    margin: var(--spacing-lg) 0;      /* Space above and below */
-    border-radius: 5px;               /* Rounded corners */
-    font-weight: 600;                 /* Bold text */
-    color: #084248;                   /* Dark blue text */
+    background-color: #e8f4fd;
+    border: 1px solid #bee5eb;
+    border-left: 4px solid #007acc;
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #084248;
 }
 
 /* Yellow warning blocks - use for warnings, important notices */
 p.alert {
-    background-color: #fff3cd;        /* Light yellow background */
-    border: 1px solid #ffeaa7;        /* Yellow border */
-    border-left: 4px solid #f39c12;   /* Thick orange left border */
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-left: 4px solid #f39c12;
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
     border-radius: 5px;
     font-weight: 600;
-    color: #6b4f03;                   /* Dark orange text */
+    color: #6b4f03;
 }
 
 /* Gray sidebar-style blocks - use for additional info, asides */
 p.aside {
-    background-color: #f8f9fa;        /* Light gray background */
-    border: 1px solid #dee2e6;        /* Gray border */
-    border-left: 4px solid #6c757d;   /* Thick gray left border */
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-left: 4px solid #6c757d;
     padding: var(--spacing-md);
     margin: var(--spacing-lg) 0;
     border-radius: 5px;
     font-weight: 600;
-    color: #495057;                   /* Dark gray text */
+    color: #495057;
 }
 
 /* ===== LINKS =====
@@ -282,31 +287,31 @@ p.aside {
 
 /* Default link appearance */
 a {
-    color: var(--color-link);              /* Link color from variables */
-    text-decoration: underline;            /* Always show underlines for accessibility */
-    text-underline-offset: 0.2em;          /* Space between text and underline */
-    text-decoration-thickness: 1px;        /* Thin underline by default */
-    transition: color var(--transition-fast);  /* Smooth color change on hover */
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+    transition: color var(--transition-fast);
 }
 
 /* Link hover state - when mouse hovers over link */
 a:hover {
-    color: var(--color-link-hover);        /* Different color on hover */
-    text-decoration-thickness: 2px;        /* Thicker underline on hover */
+    color: var(--color-link-hover);
+    text-decoration-thickness: 2px;
 }
 
 /* Link focus state - when keyboard user tabs to link (accessibility) */
 a:focus {
-    outline: 2px solid var(--color-accent);  /* Visible outline for keyboard users */
-    outline-offset: 2px;                     /* Space between text and outline */
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 /* Footnote links - remove underlines for cleaner appearance */
-a[href^="#fn:"],           /* Inline footnote reference links */
-a[href^="#fnref:"],        /* Return links from footnotes */
-.footnote-ref,             /* Alternative footnote reference class */
-.footnote-backref {        /* Alternative footnote return class */
-    text-decoration: none; /* Remove underline from footnote links */
+a[href^="#fn:"],
+a[href^="#fnref:"],
+.footnote-ref,
+.footnote-backref {
+    text-decoration: none;
 }
 
 /* Add subtle hover effect for footnote links */
@@ -314,8 +319,8 @@ a[href^="#fn:"]:hover,
 a[href^="#fnref:"]:hover,
 .footnote-ref:hover,
 .footnote-backref:hover {
-    text-decoration: underline;        /* Show underline on hover for clarity */
-    text-decoration-thickness: 1px;    /* Thin underline */
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 /* Lists */
@@ -427,26 +432,26 @@ img.frame {
  * Great for hero images, wide screenshots, landscape photos */
 img.full-width,
 figure.full-width {
-    width: 100vw;                /* Full viewport width */
-    max-width: 1200px;           /* But not bigger than 1200px */
-    margin-left: 50%;            /* Center positioning trick... */
-    transform: translateX(-50%); /* ...moves it back to true center */
+    width: 100vw;
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Remove rounded corners from full-width images when they reach browser edge */
 img.full-width {
-    border-radius: 0;            /* No rounded corners for full-width images */
+    border-radius: 0;
 }
 
 /* Figure captions - centered styling for image descriptions */
 figcaption {
-    text-align: center;                     /* Center the caption text */
-    font-size: var(--font-size-small);     /* Smaller text size */
-    color: var(--color-text-muted);        /* Muted color for subtlety */
-    font-style: italic;                     /* Italic styling for elegance */
-    margin-top: var(--spacing-sm);         /* Space above caption */
-    padding: 0 var(--spacing-md);          /* Side padding for narrow screens */
-    line-height: var(--line-height-base);  /* Standard line height */
+    text-align: center;
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-top: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
+    line-height: var(--line-height-base);
 }
 
 /* Code */
@@ -480,20 +485,20 @@ pre code {
 
 /* Highlight element - for text highlighting/marking */
 highlight, mark {
-    background-color: #fff3cd;          /* Soft yellow background */
-    color: var(--color-text);           /* Keep text readable */
-    padding: 0.1em 0.2em;               /* Subtle padding */
-    border-radius: 3px;                 /* Rounded corners */
-    font-weight: 500;                   /* Slightly bold for emphasis */
+    background-color: #fff3cd;
+    color: var(--color-text);
+    padding: 0.1em 0.2em;
+    border-radius: 3px;
+    font-weight: 500;
 }
 
 /* Abbreviation element - for acronyms and abbreviations */
 abbr {
-    text-decoration: underline dotted;   /* Dotted underline indicates abbreviation */
-    text-underline-offset: 0.2em;       /* Space between text and underline */
-    cursor: help;                       /* Help cursor indicates more info available */
-    font-variant: small-caps;           /* Small caps for professional appearance */
-    letter-spacing: 0.05em;             /* Slight letter spacing for readability */
+    text-decoration: underline dotted;
+    text-underline-offset: 0.2em;
+    cursor: help;
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
 }
 
 /* Blockquotes */
@@ -517,13 +522,13 @@ blockquote p:last-child {
 /* ===== SITE HEADER =====
  * The top navigation bar that contains your site title and menu */
 .site-header {
-    background-color: var(--color-background);   /* Header background color */
-    border-bottom: 1px solid var(--color-border); /* Line under header */
-    position: sticky;                            /* Header sticks to top when scrolling */
-    top: 0;                                      /* Sticks to very top */
-    z-index: 100;                               /* Appears above other content */
-    backdrop-filter: blur(10px);                /* Blur effect for modern browsers */
-    -webkit-backdrop-filter: blur(10px);        /* Blur effect for Safari */
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .header-container {
@@ -580,7 +585,7 @@ blockquote p:last-child {
  * The dropdown menu that appears when clicking the menu button.
  * Features automatic 2-column layout when you have 6+ menu items. */
 .site-navigation {
-    position: relative;  /* Needed for dropdown positioning */
+    position: relative;
 }
 
 .menu-toggle {
@@ -640,16 +645,16 @@ blockquote p:last-child {
 @media (max-width: 768px) {
     .site-navigation {
         position: relative;
-        z-index: 1001;  /* Keep hamburger button above overlay */
+        z-index: 1001;
     }
     
     .menu-toggle {
         position: relative;
-        z-index: 1002;  /* Ensure hamburger stays clickable */
-        background-color: var(--color-background) !important;  /* Force solid background */
-        border-color: var(--color-border) !important;  /* Force original border color */
-        color: var(--color-text-muted) !important;  /* Force original text color */
-        backdrop-filter: none !important;  /* Disable any backdrop effects */
+        z-index: 1002;
+        background-color: var(--color-background) !important;
+        border-color: var(--color-border) !important;
+        color: var(--color-text-muted) !important;
+        backdrop-filter: none !important;
     }
     
     .primary-menu {
@@ -691,14 +696,14 @@ blockquote p:last-child {
     
     /* CSS Variables for mobile */
     :root {
-        --font-size-base: 16px;      /* Slightly smaller text on mobile */
-        --container-width: 100%;     /* Full width on mobile */
-        --spacing-lg: 1rem;          /* Reduced spacing for smaller screens */
+        --font-size-base: 16px;
+        --container-width: 100%;
+        --spacing-lg: 1rem;
         --spacing-xl: 1.25rem;
         --spacing-2xl: 2rem;
         --spacing-3xl: 2.5rem;
-        --button-padding-mobile: var(--spacing-md) var(--spacing-md);           /* Mobile button padding */
-        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);   /* Compact mobile buttons */
+        --button-padding-mobile: var(--spacing-md) var(--spacing-md);
+        --button-padding-compact-mobile: var(--spacing-sm) var(--spacing-md);
     }
     
     /* Layout adjustments */
@@ -1376,69 +1381,69 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
 }
 
 .archive-post-item {
-    display: flex;                          /* Side-by-side layout */
-    align-items: flex-start;                /* Align items to top */
-    gap: var(--spacing-lg);                 /* Space between date and content */
-    padding: var(--spacing-md) 0;          /* Vertical spacing */
-    border-bottom: 1px solid var(--color-border-light);  /* Subtle divider */
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border-light);
 }
 
 .archive-post-item:last-child {
-    border-bottom: none;                    /* No border on last item */
+    border-bottom: none;
 }
 
 .archive-post-date {
-    flex-shrink: 0;                         /* Don't shrink date column */
-    min-width: 140px;                       /* Consistent date column width */
+    flex-shrink: 0;
+    min-width: 140px;
 }
 
 .archive-date-link {
-    font-size: var(--font-size-small);     /* Smaller date text */
-    color: var(--color-text-muted);        /* Muted color */
-    text-decoration: none;                  /* Clean appearance */
-    font-weight: 500;                       /* Slightly bold for readability */
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .archive-date-link:hover {
-    color: var(--color-link-hover);        /* Highlight on hover */
-    text-decoration: underline;             /* Show underline on hover */
+    color: var(--color-link-hover);
+    text-decoration: underline;
 }
 
 .archive-post-content {
-    flex: 1;                                /* Take remaining space */
-    min-width: 0;                          /* Allow text truncation */
+    flex: 1;
+    min-width: 0;
 }
 
 .archive-post-title {
-    font-size: var(--font-size-base);      /* Standard font size */
-    font-weight: 600;                       /* Semi-bold weight */
-    margin: 0;                              /* Remove default margins */
-    line-height: var(--line-height-tight); /* Tight line spacing */
-    color: var(--color-text);              /* Standard text color */
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin: 0;
+    line-height: var(--line-height-tight);
+    color: var(--color-text);
 }
 
 .archive-post-summary {
-    color: var(--color-text-light);        /* Lighter text for summaries */
-    font-style: italic;                     /* Italicize micropost summaries */
-    line-height: var(--line-height-base);  /* Standard line height */
+    color: var(--color-text-light);
+    font-style: italic;
+    line-height: var(--line-height-base);
 }
 
 /* Table horizontal scrolling for responsive design */
 .table-wrapper {
-    overflow-x: auto;                       /* Horizontal scroll when needed */
-    margin: var(--spacing-lg) 0;           /* Standard table spacing */
-    border-radius: 5px;                     /* Match theme border radius */
-    border: 1px solid var(--color-border-light);  /* Subtle container border */
+    overflow-x: auto;
+    margin: var(--spacing-lg) 0;
+    border-radius: 5px;
+    border: 1px solid var(--color-border-light);
 }
 
 .table-wrapper table {
-    margin: 0;                              /* Remove default margins inside wrapper */
-    border: none;                           /* Remove border since wrapper has it */
+    margin: 0;
+    border: none;
 }
 
 /* Simple table constraint - prevent layout breaking */
 table {
-    max-width: 100%;                        /* Don't exceed container width */
+    max-width: 100%;
 }
 
 /* Page Item Styling for Lists */
@@ -1484,12 +1489,12 @@ table {
 /* SMALL MOBILE STYLES (screens 480px and smaller - phones in portrait) */
 @media (max-width: 480px) {
     /* Make headings smaller on tiny screens */
-    h1 { font-size: 1.75rem; }    /* Smaller main headings */
-    h2 { font-size: 1.375rem; }   /* Smaller section headings */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.375rem; }
     
     /* Hide menu button text on small screens to save space */
     .menu-toggle-text {
-        display: none;  /* Only shows hamburger icon */
+        display: none;
     }
     
     /* Profile photo adjustments */
@@ -1507,18 +1512,18 @@ table {
     
     /* Archive posts mobile layout */
     .archive-post-item {
-        flex-direction: column;                 /* Stack date above content */
-        gap: var(--spacing-xs);                /* Smaller gap when stacked */
-        align-items: flex-start;               /* Left-align everything */
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        align-items: flex-start;
     }
     
     .archive-post-date {
-        min-width: auto;                       /* Remove fixed width */
-        margin-bottom: var(--spacing-xs);     /* Space below date */
+        min-width: auto;
+        margin-bottom: var(--spacing-xs);
     }
     
     .archive-date-link {
-        font-size: var(--font-size-xs);       /* Even smaller on mobile */
+        font-size: var(--font-size-xs);
     }
 }
 
