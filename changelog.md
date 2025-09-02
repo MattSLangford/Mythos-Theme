@@ -2,6 +2,23 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.2.3] - 2025-09-02
+
+### ✨ New Features Added
+- **New Content Utility Styles**:
+  - `p.lead` - Larger text style for intro paragraphs with enhanced readability (20px font, looser line height)
+  - `blockquote.verse` - Special Bible verse styling with centered serif typography, decorative quote mark, and citation support
+  - `img.vintage` - Scrapbook-style image with cream border frame, subtle rotation, and hover animation
+
+### 🔧 Technical Improvements  
+- **Microblog Avatar Spacing**: Fixed avatar margin-top alignment by adding `margin-top: 0` to `.microblog_avatar` class
+- **Dark Mode Compatibility**: Added proper dark mode variants for all new utility styles
+
+### 🎨 Design Details
+- **Lead Paragraphs**: Uses larger font size with looser line height for enhanced readability of introductory content
+- **Bible Verses**: Clean, traditional formatting with Georgia serif font, no background/borders, and elegant citation styling  
+- **Vintage Images**: Photo frame effect with cream borders, subtle shadows, slight rotation, and straightening hover animation
+
 ## [1.2.2] - 2025-09-02
 
 ### ✨ New Features Added
