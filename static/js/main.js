@@ -90,11 +90,68 @@
         });
     }
     
+    // Code block copy functionality
+    function initCodeCopy() {
+        const codeBlocks = document.querySelectorAll('pre');
+        
+        codeBlocks.forEach(function(pre) {
+            const button = document.createElement('button');
+            button.className = 'code-copy-button';
+            button.textContent = 'Copy';
+            button.setAttribute('aria-label', 'Copy code to clipboard');
+            
+            button.addEventListener('click', async function() {
+                const code = pre.querySelector('code') || pre;
+                const text = code.textContent;
+                
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(text);
+                        showCopiedFeedback(button);
+                    } else {
+                        const textArea = document.createElement('textarea');
+                        textArea.value = text;
+                        textArea.style.position = 'fixed';
+                        textArea.style.left = '-999999px';
+                        textArea.style.top = '-999999px';
+                        document.body.appendChild(textArea);
+                        textArea.focus();
+                        textArea.select();
+                        
+                        try {
+                            document.execCommand('copy');
+                            showCopiedFeedback(button);
+                        } catch (err) {
+                            console.error('Failed to copy code:', err);
+                        } finally {
+                            textArea.remove();
+                        }
+                    }
+                } catch (err) {
+                    console.error('Failed to copy code:', err);
+                }
+            });
+            
+            pre.appendChild(button);
+        });
+        
+        function showCopiedFeedback(button) {
+            button.textContent = 'Copied!';
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+                button.textContent = 'Copy';
+                button.classList.remove('copied');
+            }, 2000);
+        }
+    }
+    
     // Initialize all functionality when DOM is ready
     function init() {
         initMobileMenu();
         initSmoothScrolling();
         initImageLoading();
+        initCodeCopy();
     }
     
     // Run initialization

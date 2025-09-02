@@ -486,6 +486,39 @@ pre {
     overflow-x: auto;
     margin: var(--spacing-lg) 0;
     line-height: var(--line-height-tight);
+    position: relative;
+}
+
+/* Code block copy button */
+.code-copy-button {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    opacity: 0;
+    transition: all var(--transition-fast);
+    z-index: 10;
+}
+
+pre:hover .code-copy-button {
+    opacity: 1;
+}
+
+.code-copy-button:hover {
+    background-color: var(--color-background-alt);
+    border-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.code-copy-button.copied {
+    background-color: var(--color-accent);
+    color: var(--color-background);
 }
 
 pre code {
