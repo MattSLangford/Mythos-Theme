@@ -89,15 +89,15 @@
         }
     }
     
-    // Navigation overflow handling for 9+ menu items
+    // Navigation overflow handling for 7+ menu items
     function initNavigationOverflow() {
         const navMenu = document.querySelector('.nav-menu');
         if (!navMenu) return;
         
         const navItems = navMenu.querySelectorAll('.nav-item');
         
-        // Add scrollable class if 9+ navigation items
-        if (navItems.length >= 9) {
+        // Add scrollable class if 7+ navigation items
+        if (navItems.length >= 7) {
             navMenu.classList.add('scrollable');
             
             // Handle scroll-to-bottom detection for fade gradient

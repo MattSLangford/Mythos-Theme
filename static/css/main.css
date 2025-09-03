@@ -829,7 +829,7 @@ blockquote.verse cite {
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: var(--spacing-lg) 0 calc(var(--spacing-xl) + env(safe-area-inset-bottom, 20px));
+        padding: var(--spacing-md) 0 calc(var(--spacing-md) + env(safe-area-inset-bottom, 16px));
         overflow-y: auto;
         box-sizing: border-box;
     }
@@ -837,91 +837,45 @@ blockquote.verse cite {
     .nav-menu {
         list-style: none;
         margin: 0;
-        padding: 0 var(--spacing-lg);
+        padding: 0 var(--spacing-md);
         flex: 1;
         position: relative;
     }
     
-    /* Enhanced overflow handling for 9+ navigation items */
+    /* Simplified overflow handling for 7+ navigation items */
     .nav-menu.scrollable {
-        max-height: min(
-            60vh, 
-            calc(100vh - var(--header-height) - 180px),
-            calc(100dvh - var(--header-height) - 160px)
-        );
+        max-height: calc(100vh - var(--header-height) - 140px);
         overflow-y: auto;
-        margin-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-sm);
         border-bottom: 1px solid var(--color-border-light);
-        padding-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-sm);
     }
     
-    /* Fade gradient indicator for scrollable content */
+    /* Simplified fade gradient */
     .nav-menu.scrollable::after {
         content: '';
         position: sticky;
         bottom: 0;
         left: 0;
         right: 0;
-        height: 20px;
-        background: linear-gradient(to bottom, transparent 0%, var(--color-background) 80%);
+        height: 16px;
+        background: linear-gradient(to bottom, transparent, var(--color-background));
         pointer-events: none;
-        margin: 0 calc(-1 * var(--spacing-lg));
+        margin: 0 calc(-1 * var(--spacing-md));
     }
     
-    /* Hide fade gradient when scrolled to bottom */
     .nav-menu.scrollable.scrolled-to-bottom::after {
         display: none;
     }
     
-    /* Short screen adaptations */
-    @media (max-height: 600px) {
-        .nav-menu.scrollable {
-            max-height: min(
-                calc(100vh - var(--header-height) - 120px),
-                calc(100dvh - var(--header-height) - 100px)
-            );
-        }
-        
-        .social-icons {
-            gap: var(--spacing-sm);
-            padding: var(--spacing-md) var(--spacing-lg);
-        }
-    }
-    
-    /* Very short screens - ultra-compact mode */
-    @media (max-height: 450px) {
-        .menu-content {
-            padding: var(--spacing-sm) 0 calc(var(--spacing-md) + env(safe-area-inset-bottom, 10px));
-        }
-        
-        .nav-menu.scrollable {
-            max-height: calc(100vh - var(--header-height) - 80px);
-        }
-        
-        .social-icons {
-            gap: var(--spacing-xs);
-            padding: var(--spacing-sm) var(--spacing-md);
-        }
-        
-        .social-link {
-            width: 36px;
-            height: 36px;
-            font-size: 1rem;
-        }
-    }
-    
-    /* Emergency mode - hide social icons on extremely short screens */
-    @media (max-height: 400px) {
+    /* Aggressive social icon hiding for short screens */
+    @media (max-height: 550px) {
         .social-icons {
             display: none;
         }
         
-        .menu-content {
-            padding: var(--spacing-sm) 0 var(--spacing-sm);
-        }
-        
         .nav-menu.scrollable {
-            max-height: calc(100vh - var(--header-height) - 40px);
+            max-height: calc(100vh - var(--header-height) - 60px);
             margin-bottom: 0;
             border-bottom: none;
             padding-bottom: 0;
@@ -1048,25 +1002,17 @@ blockquote.verse cite {
         position: relative;
     }
     
-    /* Desktop overflow handling */
+    /* Simplified desktop overflow handling */
     .nav-menu.scrollable {
-        max-height: 70vh;
+        max-height: calc(60vh - 80px);
         overflow-y: auto;
         margin-bottom: var(--spacing-sm);
         border-bottom: 1px solid var(--color-border-light);
         padding-bottom: var(--spacing-sm);
     }
     
-    /* Desktop fade gradient */
     .nav-menu.scrollable::after {
-        content: '';
-        position: sticky;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 15px;
-        background: linear-gradient(to bottom, transparent 0%, var(--color-background) 80%);
-        pointer-events: none;
+        height: 12px;
         margin: 0;
     }
     
@@ -1074,31 +1020,17 @@ blockquote.verse cite {
         display: none;
     }
     
-    /* Desktop short screen adaptations */
-    @media (min-width: 769px) and (max-height: 700px) {
-        .nav-menu.scrollable {
-            max-height: min(50vh, calc(100vh - 200px));
-        }
-    }
-    
-    @media (min-width: 769px) and (max-height: 500px) {
-        .nav-menu.scrollable {
-            max-height: calc(100vh - 150px);
-        }
-        
-        .menu-content {
-            padding: var(--spacing-sm) 0;
-        }
-    }
-    
-    /* iPad landscape specific fixes - accounts for multiple social icon rows */
-    @media (min-width: 769px) and (max-width: 1024px) and (max-height: 820px) {
-        .primary-menu {
-            max-height: 85vh;
+    /* Hide social icons on short desktop screens too */
+    @media (min-width: 769px) and (max-height: 600px) {
+        .social-icons {
+            display: none;
         }
         
         .nav-menu.scrollable {
-            max-height: min(40vh, calc(100vh - 250px));
+            max-height: calc(60vh - 40px);
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
         }
     }
 }
@@ -1136,11 +1068,11 @@ blockquote.verse cite {
 
 /* Social Icons Grid */
 .social-icons {
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
     border-top: 1px solid var(--color-border-light);
     display: grid;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     justify-content: center;
     flex-shrink: 0;
 }
