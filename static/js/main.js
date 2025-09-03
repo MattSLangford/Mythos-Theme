@@ -23,12 +23,6 @@
             menuToggle.setAttribute('aria-expanded', 'true');
             primaryMenu.classList.add('active');
             if (menuBackdrop) menuBackdrop.classList.add('active');
-            
-            // Focus first nav link for accessibility
-            const firstNavLink = primaryMenu.querySelector('.nav-link');
-            if (firstNavLink) {
-                setTimeout(() => firstNavLink.focus(), 300);
-            }
         }
         
         function closeMenu() {

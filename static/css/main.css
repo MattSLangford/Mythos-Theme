@@ -797,7 +797,7 @@ blockquote.verse cite {
         border-left: 1px solid var(--color-border);
         transform: translateX(0);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1001;
+        z-index: 1003;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     }
     
@@ -950,6 +950,7 @@ blockquote.verse cite {
     .nav-menu {
         padding: 0;
         flex: none;
+        list-style: none;
     }
 }
 
