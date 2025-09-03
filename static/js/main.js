@@ -12,47 +12,86 @@
     function initMobileMenu() {
         const menuToggle = document.querySelector('.menu-toggle');
         const primaryMenu = document.querySelector('.primary-menu');
+        const menuBackdrop = document.querySelector('.menu-backdrop');
         
         if (!menuToggle || !primaryMenu) return;
+        
+        // Set up social icons grid
+        initSocialGrid();
+        
+        function openMenu() {
+            menuToggle.setAttribute('aria-expanded', 'true');
+            primaryMenu.classList.add('active');
+            if (menuBackdrop) menuBackdrop.classList.add('active');
+            
+            // Focus first nav link for accessibility
+            const firstNavLink = primaryMenu.querySelector('.nav-link');
+            if (firstNavLink) {
+                setTimeout(() => firstNavLink.focus(), 300);
+            }
+        }
+        
+        function closeMenu() {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            primaryMenu.classList.remove('active');
+            if (menuBackdrop) menuBackdrop.classList.remove('active');
+        }
         
         menuToggle.addEventListener('click', function(e) {
             e.preventDefault();
             
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             
-            // Toggle aria-expanded attribute
-            menuToggle.setAttribute('aria-expanded', !isExpanded);
-            
-            // Toggle menu visibility
             if (isExpanded) {
-                primaryMenu.classList.remove('active');
+                closeMenu();
             } else {
-                primaryMenu.classList.add('active');
+                openMenu();
             }
         });
         
-        // Close menu when clicking outside
+        // Close menu when clicking backdrop
+        if (menuBackdrop) {
+            menuBackdrop.addEventListener('click', closeMenu);
+        }
+        
+        // Close menu when clicking outside (but not on backdrop - handled above)
         document.addEventListener('click', function(e) {
-            if (!menuToggle.contains(e.target) && !primaryMenu.contains(e.target)) {
-                menuToggle.setAttribute('aria-expanded', 'false');
-                primaryMenu.classList.remove('active');
+            if (!menuToggle.contains(e.target) && !primaryMenu.contains(e.target) && 
+                (!menuBackdrop || !menuBackdrop.contains(e.target))) {
+                closeMenu();
             }
         });
         
         // Close menu when pressing Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                menuToggle.setAttribute('aria-expanded', 'false');
-                primaryMenu.classList.remove('active');
+                closeMenu();
                 menuToggle.focus();
             }
         });
         
         // Close menu when window is resized (in case user rotates device)
-        window.addEventListener('resize', function() {
-            menuToggle.setAttribute('aria-expanded', 'false');
-            primaryMenu.classList.remove('active');
-        });
+        window.addEventListener('resize', closeMenu);
+    }
+    
+    // Social icons grid setup
+    function initSocialGrid() {
+        const socialIcons = document.querySelector('.social-icons');
+        if (!socialIcons) return;
+        
+        const iconCount = socialIcons.children.length;
+        
+        // Remove existing column classes
+        socialIcons.classList.remove('cols-1', 'cols-2', 'cols-3', 'cols-4');
+        
+        // Add appropriate column class based on count
+        if (iconCount <= 3) {
+            socialIcons.classList.add(`cols-${iconCount}`);
+        } else if (iconCount <= 8) {
+            socialIcons.classList.add('cols-4');
+        } else {
+            socialIcons.classList.add('cols-3'); // Fallback for 9+ icons
+        }
     }
     
     // Smooth scrolling for anchor links

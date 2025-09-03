@@ -70,6 +70,96 @@
       "placeholder": "This will be added before the closing </body>"
     },
     {
+      "field": "params.social_microblog",
+      "label": "Micro.blog URL",
+      "type": "string",
+      "placeholder": "https://micro.blog/username"
+    },
+    {
+      "field": "params.social_mastodon",
+      "label": "Mastodon URL",
+      "type": "string",
+      "placeholder": "https://mastodon.social/@username"
+    },
+    {
+      "field": "params.social_x",
+      "label": "X (Twitter) URL",
+      "type": "string",
+      "placeholder": "https://x.com/username"
+    },
+    {
+      "field": "params.social_instagram",
+      "label": "Instagram URL",
+      "type": "string",
+      "placeholder": "https://instagram.com/username"
+    },
+    {
+      "field": "params.social_tiktok",
+      "label": "TikTok URL",
+      "type": "string",
+      "placeholder": "https://tiktok.com/@username"
+    },
+    {
+      "field": "params.social_bluesky",
+      "label": "Bluesky URL",
+      "type": "string",
+      "placeholder": "https://bsky.app/profile/username"
+    },
+    {
+      "field": "params.social_pinterest",
+      "label": "Pinterest URL",
+      "type": "string",
+      "placeholder": "https://pinterest.com/username"
+    },
+    {
+      "field": "params.social_github",
+      "label": "GitHub URL",
+      "type": "string",
+      "placeholder": "https://github.com/username"
+    },
+    {
+      "field": "params.social_reddit",
+      "label": "Reddit URL",
+      "type": "string",
+      "placeholder": "https://reddit.com/u/username"
+    },
+    {
+      "field": "params.social_discord",
+      "label": "Discord Server URL",
+      "type": "string",
+      "placeholder": "https://discord.gg/servercode"
+    },
+    {
+      "field": "params.social_email",
+      "label": "Email Address",
+      "type": "string",
+      "placeholder": "contact@example.com"
+    },
+    {
+      "field": "params.social_buymeacoffee",
+      "label": "Buy Me a Coffee URL",
+      "type": "string",
+      "placeholder": "https://buymeacoffee.com/username"
+    },
+    {
+      "field": "params.social_kofi",
+      "label": "Ko-fi URL",
+      "type": "string",
+      "placeholder": "https://ko-fi.com/username"
+    },
+    {
+      "field": "params.social_paypal",
+      "label": "PayPal URL",
+      "type": "string",
+      "placeholder": "https://paypal.me/username"
+    },
+    {
+      "field": "params.social_donate",
+      "label": "Donate/Support URL",
+      "type": "string",
+      "placeholder": "https://example.com/donate"
+    },
+    {
       "field": "params.enable_fontawesome",
       "label": "Enable FontAwesome Icons",
       "type": "boolean"
