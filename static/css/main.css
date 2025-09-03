@@ -910,6 +910,24 @@ blockquote.verse cite {
         }
     }
     
+    /* Emergency mode - hide social icons on extremely short screens */
+    @media (max-height: 400px) {
+        .social-icons {
+            display: none;
+        }
+        
+        .menu-content {
+            padding: var(--spacing-sm) 0 var(--spacing-sm);
+        }
+        
+        .nav-menu.scrollable {
+            max-height: calc(100vh - var(--header-height) - 40px);
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    
     /* CSS Variables for mobile */
     :root {
         --font-size-base: 16px;
@@ -1059,17 +1077,28 @@ blockquote.verse cite {
     /* Desktop short screen adaptations */
     @media (min-width: 769px) and (max-height: 700px) {
         .nav-menu.scrollable {
-            max-height: min(50vh, calc(100vh - 150px));
+            max-height: min(50vh, calc(100vh - 200px));
         }
     }
     
     @media (min-width: 769px) and (max-height: 500px) {
         .nav-menu.scrollable {
-            max-height: calc(100vh - 120px);
+            max-height: calc(100vh - 150px);
         }
         
         .menu-content {
             padding: var(--spacing-sm) 0;
+        }
+    }
+    
+    /* iPad landscape specific fixes - accounts for multiple social icon rows */
+    @media (min-width: 769px) and (max-width: 1024px) and (max-height: 820px) {
+        .primary-menu {
+            max-height: 85vh;
+        }
+        
+        .nav-menu.scrollable {
+            max-height: min(40vh, calc(100vh - 250px));
         }
     }
 }
