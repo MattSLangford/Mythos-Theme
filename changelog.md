@@ -2,6 +2,31 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.3.0] - 2025-09-03
+
+### ✨ Major New Features
+- **Social Media Integration System**: Complete social platform support with flexible icon grid layout and FontAwesome integration
+- **Complete Navigation System Redesign**: Fixed buggy menu with new mobile full-screen slide-in and desktop dropdown implementation
+- **Fediverse Creator Support**: Added journalist byline highlighting for enhanced link previews on Mastodon, Threads, and other fediverse platforms
+- **Contact Security Enhancement**: Replaced email field with contact form URL to prevent spam harvesting
+
+### 🎨 Design & UX Improvements
+- **Enhanced Mobile Menu**: Full-screen overlay with backdrop and proper z-index layering
+- **Scrollable Navigation**: Added fade gradient indicator for menus with 7+ items
+- **Social Icon Layout**: Dynamic 1-4 column grid system that adapts to number of configured platforms
+- **Aggressive Icon Hiding**: Smart social icon hiding on short screens to prevent browser UI conflicts
+
+### 🔧 Technical Improvements & Simplification
+- **CSS Consolidation**: Simplified menu system from 8+ breakpoints down to 2 for easier maintenance
+- **FontAwesome Always Available**: Removed toggle option, icons now always loaded for consistent functionality
+- **Plugin Field Organization**: Reorganized configuration fields for better user experience and logical grouping
+- **JavaScript Optimization**: Updated navigation overflow detection and social grid calculations
+
+### ♿ Accessibility Enhancements
+- **ARIA Improvements**: Enhanced menu accessibility with proper expanded states and labels
+- **Focus Management**: Better keyboard navigation and focus handling in redesigned menu system
+- **Cross-browser Compatibility**: Removed problematic CSS selectors for broader browser support
+
 ## [1.2.3] - 2025-09-02
 
 ### ✨ New Features Added

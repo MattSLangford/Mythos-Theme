@@ -14,6 +14,7 @@ Mythos is designed for people who want their blog to load fast and look professi
 - **Easy to read** - Clean typography and proper spacing
 - **Accessible** - Works with screen readers and keyboard navigation
 - **16 languages supported** - From English to Japanese to Ukrainian
+- **Social media ready** - Built-in support for major platforms with flexible icon layouts
 - **Customizable** - Change colors, add custom CSS, and more
 - **Photo friendly** - Beautiful image displays and photo grids
 
@@ -43,7 +44,9 @@ For complete setup instructions, customization guides, and examples, visit:
 
 ## What Makes It Special
 
-- **Smart navigation** - Automatically reorganizes when you have lots of menu items
+- **Smart navigation** - Mobile full-screen menu and desktop dropdown with scrollable support
+- **Social media integration** - Connect all your platforms with beautiful icon layouts
+- **Fediverse creator support** - Enhanced link previews on Mastodon and Threads
 - **Post summaries** - Show previews or full posts, your choice
 - **Photo collections** - Beautiful grid layouts for your photos
 - **Archive pages** - Clean chronological list of all your posts  
@@ -58,15 +61,19 @@ For complete setup instructions, customization guides, and examples, visit:
 **Repository:** [github.com/mattlangford/mythos-theme](https://github.com/mattlangford/mythos-theme)  
 **License:** MIT License
 
-## Support
+## Support & Donate
 
 - **Theme questions:** [GitHub Issues](https://github.com/mattlangford/mythos-theme/issues)
 - **Micro.blog help:** [help.micro.blog](https://help.micro.blog)
 - **Community:** [Micro.blog Community](https://help.micro.blog/)
 
+**Support Development:**
+- **GitHub Sponsors:** [github.com/sponsors/mattslangford](https://github.com/sponsors/mattslangford)
+- **Buy Me a Coffee:** [buymeacoffee.com/mattlangford](https://buymeacoffee.com/mattlangford)
+
 ## Version
 
-Current version: **1.2.3** (2025-09-02)
+Current version: **1.3.0** (2025-09-03)
 
 ---
 
