@@ -844,7 +844,11 @@ blockquote.verse cite {
     
     /* Enhanced overflow handling for 9+ navigation items */
     .nav-menu.scrollable {
-        max-height: min(60vh, calc(100vh - var(--header-height) - 200px));
+        max-height: min(
+            60vh, 
+            calc(100vh - var(--header-height) - 180px),
+            calc(100dvh - var(--header-height) - 160px)
+        );
         overflow-y: auto;
         margin-bottom: var(--spacing-md);
         border-bottom: 1px solid var(--color-border-light);
@@ -867,6 +871,43 @@ blockquote.verse cite {
     /* Hide fade gradient when scrolled to bottom */
     .nav-menu.scrollable.scrolled-to-bottom::after {
         display: none;
+    }
+    
+    /* Short screen adaptations */
+    @media (max-height: 600px) {
+        .nav-menu.scrollable {
+            max-height: min(
+                calc(100vh - var(--header-height) - 120px),
+                calc(100dvh - var(--header-height) - 100px)
+            );
+        }
+        
+        .social-icons {
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-lg);
+        }
+    }
+    
+    /* Very short screens - ultra-compact mode */
+    @media (max-height: 450px) {
+        .menu-content {
+            padding: var(--spacing-sm) 0 calc(var(--spacing-md) + env(safe-area-inset-bottom, 10px));
+        }
+        
+        .nav-menu.scrollable {
+            max-height: calc(100vh - var(--header-height) - 80px);
+        }
+        
+        .social-icons {
+            gap: var(--spacing-xs);
+            padding: var(--spacing-sm) var(--spacing-md);
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            font-size: 1rem;
+        }
     }
     
     /* CSS Variables for mobile */
@@ -1009,6 +1050,23 @@ blockquote.verse cite {
     .nav-menu.scrollable.scrolled-to-bottom::after {
         display: none;
     }
+    
+    /* Desktop short screen adaptations */
+    @media (min-width: 769px) and (max-height: 700px) {
+        .nav-menu.scrollable {
+            max-height: min(50vh, calc(100vh - 150px));
+        }
+    }
+    
+    @media (min-width: 769px) and (max-height: 500px) {
+        .nav-menu.scrollable {
+            max-height: calc(100vh - 120px);
+        }
+        
+        .menu-content {
+            padding: var(--spacing-sm) 0;
+        }
+    }
 }
 
 /* Navigation Links */
@@ -1051,6 +1109,12 @@ blockquote.verse cite {
     gap: var(--spacing-md);
     justify-content: center;
     flex-shrink: 0;
+}
+
+/* Remove duplicate border when navigation is scrollable */
+.nav-menu.scrollable + .social-icons {
+    border-top: none;
+    margin-top: 0;
 }
 
 /* Cross-Browser Compatible Grid Layout */
