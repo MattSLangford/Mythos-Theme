@@ -163,6 +163,13 @@
       "field": "params.enable_fontawesome",
       "label": "Enable FontAwesome Icons",
       "type": "boolean"
+    },
+    {
+      "field": "params.fediverse_creator",
+      "label": "Fediverse Creator Handle",
+      "type": "string",
+      "placeholder": "@username@mastodon.social",
+      "description": "Your fediverse handle for journalist byline highlighting (used by Mastodon, Threads, etc.)"
     }
   ]
 }

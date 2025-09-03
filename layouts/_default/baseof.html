@@ -38,6 +38,11 @@
     
     <meta name="author" content="{{ .Site.Params.author }}">
     
+    <!-- Fediverse Creator for enhanced link previews -->
+    {{ if .Site.Params.fediverse_creator }}
+    <meta name="fediverse:creator" content="{{ .Site.Params.fediverse_creator }}">
+    {{ end }}
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css?v=1.2.3">
     
