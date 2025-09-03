@@ -851,18 +851,15 @@ blockquote.verse cite {
         padding-bottom: var(--spacing-sm);
     }
     
-    /* "More" indicator for scrollable navigation */
+    /* Prominent fade gradient for scrollable indication */
     .nav-menu.scrollable::after {
-        content: 'More ↓';
+        content: '';
         position: sticky;
         bottom: 0;
         left: 0;
         right: 0;
-        text-align: center;
-        font-size: var(--font-size-xs);
-        color: var(--color-text-muted);
-        background: linear-gradient(to bottom, transparent 0%, var(--color-background) 40%, var(--color-background) 100%);
-        padding: 8px 0 4px;
+        height: 24px;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.08) 40%, var(--color-background) 100%);
         pointer-events: none;
         margin: 0 calc(-1 * var(--spacing-md));
     }
@@ -1015,14 +1012,11 @@ blockquote.verse cite {
     }
     
     .nav-menu.scrollable::after {
-        content: 'More ↓';
+        content: '';
         position: sticky;
         bottom: 0;
-        text-align: center;
-        font-size: var(--font-size-xs);
-        color: var(--color-text-muted);
-        background: linear-gradient(to bottom, transparent 0%, var(--color-background) 50%, var(--color-background) 100%);
-        padding: 6px 0 2px;
+        height: 20px;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.08) 30%, var(--color-background) 100%);
         pointer-events: none;
         margin: 0;
     }
