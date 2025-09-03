@@ -160,11 +160,6 @@
       "placeholder": "https://example.com/donate"
     },
     {
-      "field": "params.enable_fontawesome",
-      "label": "Enable FontAwesome Icons",
-      "type": "boolean"
-    },
-    {
       "field": "params.fediverse_creator",
       "label": "Fediverse Creator Handle",
       "type": "string",

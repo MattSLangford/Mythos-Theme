@@ -40,7 +40,6 @@
                         {{ end }}
                     </ul>
                     
-                    {{ if .Site.Params.enable_fontawesome }}
                     {{ $socialLinks := slice }}
                     {{ if .Site.Params.social_microblog }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_microblog "icon" "fab fa-microblog" "label" "Micro.blog") }}{{ end }}
                     {{ if .Site.Params.social_mastodon }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_mastodon "icon" "fab fa-mastodon" "label" "Mastodon") }}{{ end }}
@@ -66,7 +65,6 @@
                         </a>
                         {{ end }}
                     </div>
-                    {{ end }}
                     {{ end }}
                 </div>
             </div>
