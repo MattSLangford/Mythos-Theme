@@ -16,8 +16,9 @@
         
         if (!menuToggle || !primaryMenu) return;
         
-        // Set up social icons grid
+        // Set up social icons grid and navigation overflow
         initSocialGrid();
+        initNavigationOverflow();
         
         function openMenu() {
             menuToggle.setAttribute('aria-expanded', 'true');
@@ -85,6 +86,25 @@
             socialIcons.classList.add('cols-4');
         } else {
             socialIcons.classList.add('cols-3'); // Fallback for 9+ icons
+        }
+    }
+    
+    // Navigation overflow handling for 9+ menu items
+    function initNavigationOverflow() {
+        const navMenu = document.querySelector('.nav-menu');
+        if (!navMenu) return;
+        
+        const navItems = navMenu.querySelectorAll('.nav-item');
+        
+        // Add scrollable class if 9+ navigation items
+        if (navItems.length >= 9) {
+            navMenu.classList.add('scrollable');
+            
+            // Handle scroll-to-bottom detection for fade gradient
+            navMenu.addEventListener('scroll', function() {
+                const isScrolledToBottom = navMenu.scrollTop + navMenu.clientHeight >= navMenu.scrollHeight - 5;
+                navMenu.classList.toggle('scrolled-to-bottom', isScrolledToBottom);
+            });
         }
     }
     
