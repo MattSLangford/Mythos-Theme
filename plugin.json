@@ -16,6 +16,18 @@
       "placeholder": "Enter the number of posts per page (default: 10)"
     },
     {
+      "field": "params.custom_head_html",
+      "label": "Custom Head HTML",
+      "type": "string",
+      "placeholder": "This will be added before the closing </head>"
+    },
+    {
+      "field": "params.custom_body_html",
+      "label": "Custom Body HTML",
+      "type": "string",
+      "placeholder": "This will be added before the closing </body>"
+    },
+    {
       "field": "params.custom_avatar",
       "label": "Avatar Link",
       "type": "string",
@@ -37,6 +49,11 @@
       "type": "boolean"
     },
     {
+      "field": "params.hide_copy_links",
+      "label": "Hide Copy Link Buttons on Posts",
+      "type": "boolean"
+    },
+    {
       "field": "params.hide_footer_credits",
       "label": "Hide Footer Credits",
       "type": "boolean"
@@ -47,27 +64,11 @@
       "type": "boolean"
     },
     {
-      "field": "params.hide_copy_links",
-      "label": "Hide Copy Link Buttons on Posts",
-      "type": "boolean"
-    },
-    {
-      "field": "params.enable_dev_mode",
-      "label": "Enable Development Mode",
-      "type": "boolean",
-      "description": "Shows CSS class names and element info for customization. DISABLE for production sites."
-    },
-    {
-      "field": "params.custom_head_html",
-      "label": "Custom Head HTML",
+      "field": "params.fediverse_creator",
+      "label": "Fediverse Creator Handle",
       "type": "string",
-      "placeholder": "This will be added before the closing </head>"
-    },
-    {
-      "field": "params.custom_body_html",
-      "label": "Custom Body HTML",
-      "type": "string",
-      "placeholder": "This will be added before the closing </body>"
+      "placeholder": "@username@mastodon.social",
+      "description": "Your fediverse handle for journalist byline highlighting (used by Mastodon, Threads, etc.)"
     },
     {
       "field": "params.social_microblog",
@@ -160,11 +161,10 @@
       "placeholder": "https://example.com/donate"
     },
     {
-      "field": "params.fediverse_creator",
-      "label": "Fediverse Creator Handle",
-      "type": "string",
-      "placeholder": "@username@mastodon.social",
-      "description": "Your fediverse handle for journalist byline highlighting (used by Mastodon, Threads, etc.)"
+      "field": "params.enable_dev_mode",
+      "label": "Enable Development Mode",
+      "type": "boolean",
+      "description": "Shows CSS class names and element info for customization. DISABLE for production sites."
     }
   ]
 }
