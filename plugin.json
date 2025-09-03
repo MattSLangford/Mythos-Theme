@@ -131,12 +131,6 @@
       "placeholder": "https://discord.gg/servercode"
     },
     {
-      "field": "params.social_email",
-      "label": "Email Address",
-      "type": "string",
-      "placeholder": "contact@example.com"
-    },
-    {
       "field": "params.social_buymeacoffee",
       "label": "Buy Me a Coffee URL",
       "type": "string",
@@ -159,6 +153,12 @@
       "label": "Donate/Support URL",
       "type": "string",
       "placeholder": "https://example.com/donate"
+    },
+    {
+      "field": "params.social_contact",
+      "label": "Contact Form URL",
+      "type": "string",
+      "placeholder": "https://example.com/contact"
     },
     {
       "field": "params.enable_dev_mode",

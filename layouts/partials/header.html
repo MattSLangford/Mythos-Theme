@@ -51,11 +51,11 @@
                     {{ if .Site.Params.social_github }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_github "icon" "fab fa-github" "label" "GitHub") }}{{ end }}
                     {{ if .Site.Params.social_reddit }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_reddit "icon" "fab fa-reddit" "label" "Reddit") }}{{ end }}
                     {{ if .Site.Params.social_discord }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_discord "icon" "fab fa-discord" "label" "Discord") }}{{ end }}
-                    {{ if .Site.Params.social_email }}{{ $socialLinks = $socialLinks | append (dict "url" (printf "mailto:%s" .Site.Params.social_email) "icon" "fas fa-envelope" "label" "Email") }}{{ end }}
                     {{ if .Site.Params.social_buymeacoffee }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_buymeacoffee "icon" "fas fa-coffee" "label" "Buy Me a Coffee") }}{{ end }}
                     {{ if .Site.Params.social_kofi }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_kofi "icon" "fas fa-mug-hot" "label" "Ko-fi") }}{{ end }}
                     {{ if .Site.Params.social_paypal }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_paypal "icon" "fab fa-paypal" "label" "PayPal") }}{{ end }}
                     {{ if .Site.Params.social_donate }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_donate "icon" "fas fa-heart" "label" "Support") }}{{ end }}
+                    {{ if .Site.Params.social_contact }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_contact "icon" "fas fa-envelope" "label" "Contact") }}{{ end }}
                     
                     {{ if gt (len $socialLinks) 0 }}
                     <div class="social-icons">
