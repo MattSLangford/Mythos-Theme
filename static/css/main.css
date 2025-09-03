@@ -786,18 +786,19 @@ blockquote.verse cite {
         backdrop-filter: none !important;
     }
     
-    /* Mobile Menu - Full Screen Slide In */
+    /* Mobile Menu - Slide In Below Header */
     .primary-menu {
         position: fixed;
-        top: 0;
+        top: var(--header-height);
         right: -320px;
         width: 320px;
-        height: 100vh;
+        height: calc(100vh - var(--header-height));
+        height: calc(100dvh - var(--header-height)); /* Dynamic viewport height for mobile browsers */
         background-color: var(--color-background);
         border-left: 1px solid var(--color-border);
         transform: translateX(0);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1003;
+        z-index: 99;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
     }
     
@@ -808,15 +809,15 @@ blockquote.verse cite {
     /* Mobile Menu Backdrop */
     .menu-backdrop {
         position: fixed;
-        top: 0;
+        top: var(--header-height);
         left: 0;
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - var(--header-height));
         background-color: rgba(0, 0, 0, 0.5);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
+        z-index: 98;
     }
     
     .menu-backdrop.active {
@@ -828,8 +829,9 @@ blockquote.verse cite {
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-lg) 0 calc(var(--spacing-xl) + env(safe-area-inset-bottom, 20px));
         overflow-y: auto;
+        box-sizing: border-box;
     }
     
     .nav-menu {
@@ -988,11 +990,12 @@ blockquote.verse cite {
 /* Social Icons Grid */
 .social-icons {
     margin-top: var(--spacing-lg);
-    padding: var(--spacing-lg) var(--spacing-lg) 0;
+    padding: var(--spacing-lg);
     border-top: 1px solid var(--color-border-light);
     display: grid;
     gap: var(--spacing-md);
     justify-content: center;
+    flex-shrink: 0;
 }
 
 /* Cross-Browser Compatible Grid Layout */
