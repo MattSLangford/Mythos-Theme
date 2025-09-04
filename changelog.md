@@ -27,6 +27,12 @@ All notable changes to the Mythos Theme will be documented in this file.
 - **Focus Management**: Better keyboard navigation and focus handling in redesigned menu system
 - **Cross-browser Compatibility**: Removed problematic CSS selectors for broader browser support
 
+## [1.3.1] - 2025-09-04
+
+### 🔧 Bug Fixes & Improvements
+- **Site Branding Alignment**: Fixed vertical alignment of site title and avatar by changing `.site-title a` from `display: inline-flex` to `display: flex`
+- **Navigation Spacing**: Added `margin: 0` to `.nav-menu` on desktop (min-width: 769px) to fix odd spacing issues in navigation menu
+
 ## [1.2.3] - 2025-09-02
 
 ### ✨ New Features Added
