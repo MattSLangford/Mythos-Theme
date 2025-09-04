@@ -822,6 +822,11 @@ blockquote.verse cite {
     display: flex !important;
 }
 
+/* Hide social icons when JavaScript is disabled (they need JS for proper grid layout) */
+.no-js .social-icons {
+    display: none;
+}
+
 /* MOBILE: Full-screen overlay navigation */
 @media (max-width: 768px) {
     .site-navigation {
