@@ -770,6 +770,47 @@ blockquote.verse cite {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* CSS-only menu toggle styles (Progressive Enhancement Base) */
+.menu-toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    left: -9999px;
+}
+
+/* CSS-only menu functionality - show menu when checkbox is checked */
+.menu-toggle-input:checked ~ .primary-menu {
+    display: block !important;
+}
+
+.menu-toggle-input:checked ~ .menu-backdrop {
+    display: block !important;
+}
+
+/* Visual feedback for checkbox toggle */
+.menu-toggle-input:checked + .menu-toggle .hamburger span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle-input:checked + .menu-toggle .hamburger span:nth-child(2) {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.menu-toggle-input:checked + .menu-toggle .hamburger span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* JavaScript Enhancement - hide CSS-only version when JS is available */
+.js-enabled .menu-toggle-input,
+.js-enabled .menu-toggle:not(.js-menu-toggle) {
+    display: none !important;
+}
+
+.js-enabled .js-menu-toggle {
+    display: flex !important;
+}
+
 /* MOBILE: Full-screen overlay navigation */
 @media (max-width: 768px) {
     .site-navigation {

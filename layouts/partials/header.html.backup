@@ -18,19 +18,7 @@
         </div>
         
         <nav class="site-navigation" role="navigation" aria-label="Main navigation">
-            <!-- CSS-only mobile menu toggle using checkbox -->
-            <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
-            <label for="mobile-menu-toggle" class="menu-toggle" aria-label="Open main navigation menu">
-                <span class="menu-toggle-text">{{ T "Menu" }}</span>
-                <span class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </label>
-            
-            <!-- JavaScript fallback button (hidden by default) -->
-            <button class="menu-toggle js-menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open main navigation menu" type="button" style="display: none;">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open main navigation menu" type="button">
                 <span class="menu-toggle-text">{{ T "Menu" }}</span>
                 <span class="hamburger">
                     <span></span>

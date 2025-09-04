@@ -67,7 +67,8 @@
     {{ end }}
 </head>
 
-<body>
+<body class="no-js">
+    <script>document.body.className = document.body.className.replace('no-js', 'js');</script>
     {{ partial "header.html" . }}
     
     <main class="main-content" role="main">

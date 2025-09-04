@@ -10,11 +10,21 @@
     
     // Mobile menu toggle functionality
     function initMobileMenu() {
-        const menuToggle = document.querySelector('.menu-toggle');
+        // Enable JavaScript enhancement - hide CSS-only version
+        document.documentElement.classList.add('js-enabled');
+        
+        const menuToggle = document.querySelector('.js-menu-toggle');
         const primaryMenu = document.querySelector('.primary-menu');
         const menuBackdrop = document.querySelector('.menu-backdrop');
+        const cssToggleInput = document.querySelector('.menu-toggle-input');
         
         if (!menuToggle || !primaryMenu) return;
+        
+        // Show the JS menu toggle, hide CSS-only version
+        menuToggle.style.display = 'flex';
+        if (cssToggleInput) {
+            cssToggleInput.style.display = 'none';
+        }
         
         // Set up social icons grid and navigation overflow
         initSocialGrid();
