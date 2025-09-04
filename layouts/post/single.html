@@ -44,7 +44,7 @@
                 {{ else }}
                     {{ $shareText = .Summary | truncate 100 }}
                 {{ end }}
-                <a href="https://shareopenly.org/share/?url={{ .Permalink | queryEscape }}&text={{ $shareText | queryEscape }}" 
+                <a href="https://shareopenly.org/share/?url={{ .Permalink }}&text={{ $shareText }}" 
                    class="share-link-button" target="_blank" rel="noopener noreferrer" 
                    title="{{ T "Share" }}">
                     <i class="fas fa-share-nodes" aria-hidden="true"></i>
