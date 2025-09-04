@@ -997,6 +997,7 @@ blockquote.verse cite {
     
     .nav-menu {
         padding: 0;
+        margin: 0;
         flex: none;
         list-style: none;
         position: relative;
