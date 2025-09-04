@@ -29,7 +29,7 @@
     {{ end }}
     
     <footer class="post-footer">
-        {{ if or (templates.Exists "partials/reply-by-email.html") (templates.Exists "partials/conversation-link.html") (not .Site.Params.hide_copy_links) }}
+        {{ if or (templates.Exists "partials/reply-by-email.html") (templates.Exists "partials/conversation-link.html") (not .Site.Params.hide_share_links) (not .Site.Params.hide_copy_links) }}
         <div class="post-actions">
             {{ if templates.Exists "partials/reply-by-email.html" }}
                 {{ partial "reply-by-email.html" . }}
@@ -37,8 +37,23 @@
             {{ if templates.Exists "partials/conversation-link.html" }}
                 {{ partial "conversation-link.html" . }}
             {{ end }}
+            {{ if not .Site.Params.hide_share_links }}
+                {{ $shareText := "" }}
+                {{ if .Title }}
+                    {{ $shareText = .Title }}
+                {{ else }}
+                    {{ $shareText = .Summary | truncate 100 }}
+                {{ end }}
+                <a href="https://shareopenly.org/share/?url={{ .Permalink | urlize }}&text={{ $shareText | urlize }}" 
+                   class="share-link-button" target="_blank" rel="noopener noreferrer" 
+                   title="{{ T "Share" }}">
+                    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+                    {{ T "Share" }}
+                </a>
+            {{ end }}
             {{ if not .Site.Params.hide_copy_links }}
                 <button class="copy-link-button" data-url="{{ .Permalink }}" title="{{ T "CopyLink" }}">
+                    <i class="fas fa-copy" aria-hidden="true"></i>
                     {{ T "CopyLink" }}
                 </button>
             {{ end }}

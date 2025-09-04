@@ -49,6 +49,11 @@
       "type": "boolean"
     },
     {
+      "field": "params.hide_share_links",
+      "label": "Hide Share Buttons on Posts",
+      "type": "boolean"
+    },
+    {
       "field": "params.hide_copy_links",
       "label": "Hide Copy Link Buttons on Posts",
       "type": "boolean"
