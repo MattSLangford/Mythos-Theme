@@ -779,12 +779,23 @@ blockquote.verse cite {
 }
 
 /* CSS-only menu functionality - show menu when checkbox is checked */
-.menu-toggle-input:checked ~ .primary-menu {
-    display: block !important;
+@media (max-width: 768px) {
+    .menu-toggle-input:checked ~ .primary-menu {
+        transform: translateX(-320px) !important;
+    }
+    
+    .menu-toggle-input:checked ~ .menu-backdrop {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
 }
 
-.menu-toggle-input:checked ~ .menu-backdrop {
-    display: block !important;
+@media (min-width: 769px) {
+    .menu-toggle-input:checked ~ .primary-menu {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(0) translateY(0) !important;
+    }
 }
 
 /* Visual feedback for checkbox toggle */
