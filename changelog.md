@@ -27,6 +27,20 @@ All notable changes to the Mythos Theme will be documented in this file.
 - **Focus Management**: Better keyboard navigation and focus handling in redesigned menu system
 - **Cross-browser Compatibility**: Removed problematic CSS selectors for broader browser support
 
+## [1.3.2] - 2025-09-04
+
+### ✨ Progressive Enhancement for JavaScript-Disabled Users
+- **CSS-Only Mobile Menu**: Implemented checkbox-based mobile menu that works without JavaScript using progressive enhancement
+- **Universal Navigation Access**: Mobile navigation now functional for all users, regardless of JavaScript support
+- **Smart Social Icons**: Social icons automatically hide when JavaScript is disabled (they require JS for proper grid layout)
+- **Enhanced Accessibility**: No-JavaScript users get full navigation functionality while JavaScript users retain enhanced features
+
+### 🔧 Technical Implementation
+- **Dual Menu System**: CSS-only label/checkbox for base functionality, enhanced JavaScript button for additional features
+- **Progressive Enhancement Pattern**: `.no-js` and `.js` classes automatically detect JavaScript availability
+- **Graceful Degradation**: JavaScript failures no longer break mobile navigation
+- **Maintained Features**: JavaScript users keep all existing functionality (escape key, click-outside, backdrop, animations)
+
 ## [1.3.1] - 2025-09-04
 
 ### 🔧 Bug Fixes & Improvements
