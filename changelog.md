@@ -2,6 +2,9 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.3.6] - 2025-09-07
+- Fixed microblog conversation avatar alignment with proper margin spacing
+
 ## [1.3.5] - 2025-09-07
 - Added Amazon social media link option with FontAwesome icon
 
