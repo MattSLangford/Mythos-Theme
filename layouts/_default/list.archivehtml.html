@@ -9,14 +9,17 @@
     </header>
     
     {{ if not .Site.Params.hide_archive_categories }}
+    {{ $list := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+    {{ if gt (len $list) 0 }}
     <div class="archive-section">
         <h2>{{ T "Categories" }}</h2>
         <ul class="archive-categories" role="list">
-            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-            <li><a href="/categories/{{ $name | urlize }}" class="category-button">{{ $name }} ({{ len $taxonomy.Pages }})</a></li>
+            {{ range $list }}
+            <li><a href="{{ .Permalink }}" class="category-button">{{ .Title }} ({{ len .Pages }})</a></li>
             {{ end }}
         </ul>
     </div>
+    {{ end }}
     {{ end }}
     
     <div class="archive-section">
