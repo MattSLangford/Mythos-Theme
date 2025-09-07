@@ -136,6 +136,12 @@
       "placeholder": "https://discord.gg/servercode"
     },
     {
+      "field": "params.social_amazon",
+      "label": "Amazon URL",
+      "type": "string",
+      "placeholder": "https://amazon.com/author/username"
+    },
+    {
       "field": "params.social_buymeacoffee",
       "label": "Buy Me a Coffee URL",
       "type": "string",
