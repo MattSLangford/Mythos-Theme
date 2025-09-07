@@ -2,6 +2,9 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.3.5] - 2025-09-07
+- Added Amazon social media link option with FontAwesome icon
+
 ## [1.3.4] - 2025-09-07
 - Fixed category display inconsistency between individual posts and archive page
 - Archive page now shows category names without hyphens (e.g., "My Category" instead of "my-category")
