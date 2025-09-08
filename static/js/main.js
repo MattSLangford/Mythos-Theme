@@ -139,20 +139,6 @@
         });
     }
     
-    // Add loading state to images
-    function initImageLoading() {
-        const images = document.querySelectorAll('img:not(.avatar-image)');
-        
-        images.forEach(function(img) {
-            if (img.complete) {
-                img.classList.add('loaded');
-            } else {
-                img.addEventListener('load', function() {
-                    this.classList.add('loaded');
-                });
-            }
-        });
-    }
     
     // Code block copy functionality
     function initCodeCopy() {
@@ -216,7 +202,6 @@
     function init() {
         initMobileMenu();
         initSmoothScrolling();
-        initImageLoading();
         initCodeCopy();
     }
     
