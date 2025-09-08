@@ -26,8 +26,7 @@
             cssToggleInput.style.display = 'none';
         }
         
-        // Set up social icons grid and navigation overflow
-        // initSocialGrid(); // Temporarily disabled - using CSS auto-layout instead
+        // Set up navigation overflow
         initNavigationOverflow();
         
         function openMenu() {
@@ -79,25 +78,6 @@
         window.addEventListener('resize', closeMenu);
     }
     
-    // Social icons grid setup
-    function initSocialGrid() {
-        const socialIcons = document.querySelector('.social-icons');
-        if (!socialIcons) return;
-        
-        const iconCount = socialIcons.children.length;
-        
-        // Remove existing column classes
-        socialIcons.classList.remove('cols-1', 'cols-2', 'cols-3', 'cols-4');
-        
-        // Add appropriate column class based on count
-        if (iconCount <= 3) {
-            socialIcons.classList.add(`cols-${iconCount}`);
-        } else if (iconCount <= 8) {
-            socialIcons.classList.add('cols-4');
-        } else {
-            socialIcons.classList.add('cols-3'); // Fallback for 9+ icons
-        }
-    }
     
     // Navigation overflow handling for 7+ menu items
     function initNavigationOverflow() {

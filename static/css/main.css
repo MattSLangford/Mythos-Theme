@@ -1153,25 +1153,14 @@ blockquote.verse cite {
     margin-top: 0;
 }
 
-/* Cross-Browser Compatible Grid Layout */
-.social-icons {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* CSS Auto-layout Alternative (replaces JavaScript) */
+/* Social Icons Grid - Auto-layout */
 .social-icons {
     grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
     gap: var(--spacing-sm);
+    max-width: 212px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-/* Specific layouts for different icon counts - will be set by JavaScript */
-.social-icons.cols-1 { grid-template-columns: 1fr; max-width: 44px; }
-.social-icons.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 100px; }
-.social-icons.cols-3 { grid-template-columns: repeat(3, 1fr); max-width: 156px; }
-.social-icons.cols-4 { grid-template-columns: repeat(4, 1fr); max-width: 212px; }
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
