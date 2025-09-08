@@ -14,8 +14,8 @@
       <meta property="og:title" content="{{ .Site.Title }}">
     {{ end }}
     {{ if .IsHome }}
-      <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 125 }}">
-      <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 60 }}">
+      <meta name="twitter:description" content="{{ .Site.Params.itunes_description | truncate 160 }}">
+      <meta name="og:description" content="{{ .Site.Params.itunes_description | truncate 160 }}">
       <meta name="description" content="{{ .Site.Params.itunes_description }}">
       <!-- Use avatar as social media image for home page -->
       {{ if .Site.Params.custom_avatar }}
