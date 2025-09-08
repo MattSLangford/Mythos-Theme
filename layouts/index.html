@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="home-content">
     
-    <div class="posts-list" role="feed" aria-label="Blog posts">
+    <div class="posts-list" aria-label="Blog posts">
         {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (or .Site.Params.posts_per_page 10) }}
         
         {{ range .Paginator.Pages }}
