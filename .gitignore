@@ -33,6 +33,8 @@ $RECYCLE.BIN/
 /public/
 /resources/_gen/
 hugo_stats.json
+.hugo_build.lock
+/resources/
 
 # Micro.blog
 .microblog/
@@ -47,6 +49,7 @@ hugo_stats.json
 
 # Claude Code specific files
 CLAUDE.md
+.claude/settings.local.json
 
 # Logs
 *.log
@@ -67,3 +70,16 @@ yarn-error.log*
 # Temporary files
 *.tmp
 *.temp
+
+# CSS/SCSS build artifacts
+*.css.map
+*.scss.map
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS-specific files
+.fuse_hidden*
+.nfs*
