@@ -27,7 +27,7 @@
         }
         
         // Set up social icons grid and navigation overflow
-        initSocialGrid();
+        // initSocialGrid(); // Temporarily disabled - using CSS auto-layout instead
         initNavigationOverflow();
         
         function openMenu() {
