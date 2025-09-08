@@ -73,7 +73,7 @@ For complete setup instructions, customization guides, and examples, visit:
 
 ## Version
 
-Current version: **1.3.9** (2025-09-07)
+Current version: **1.3.9** - See [Releases](https://github.com/MattSLangford/Mythos-Theme/releases) for version history and release notes.
 
 ---
 
