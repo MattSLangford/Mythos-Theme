@@ -157,10 +157,65 @@
         }
     }
     
+    // Copy link button functionality
+    function initCopyLinkButtons() {
+        const copyButtons = document.querySelectorAll('.copy-link-button');
+        
+        copyButtons.forEach(function(copyButton) {
+            const url = copyButton.dataset.url;
+            const copiedText = copyButton.dataset.copiedText;
+            
+            copyButton.addEventListener('click', async function() {
+                try {
+                    // Try modern clipboard API first
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(url);
+                        showCopiedFeedback(copyButton, copiedText);
+                    } else {
+                        // Fallback for older browsers or non-HTTPS
+                        const textArea = document.createElement('textarea');
+                        textArea.value = url;
+                        textArea.style.position = 'fixed';
+                        textArea.style.left = '-999999px';
+                        textArea.style.top = '-999999px';
+                        document.body.appendChild(textArea);
+                        textArea.focus();
+                        textArea.select();
+                        
+                        try {
+                            document.execCommand('copy');
+                            showCopiedFeedback(copyButton, copiedText);
+                        } catch (err) {
+                            console.error('Failed to copy link:', err);
+                        } finally {
+                            textArea.remove();
+                        }
+                    }
+                } catch (err) {
+                    console.error('Failed to copy link:', err);
+                }
+            });
+        });
+        
+        function showCopiedFeedback(button, copiedText) {
+            const originalText = button.innerHTML;
+            button.innerHTML = copiedText;
+            button.classList.add('copied');
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.classList.remove('copied');
+                button.disabled = false;
+            }, 2000);
+        }
+    }
+    
     // Initialize all functionality when DOM is ready
     function init() {
         initMobileMenu();
         initCodeCopy();
+        initCopyLinkButtons();
     }
     
     // Run initialization

@@ -52,7 +52,7 @@
                 </a>
             {{ end }}
             {{ if not .Site.Params.hide_copy_links }}
-                <button class="copy-link-button" data-url="{{ .Permalink }}" title="{{ T "CopyLink" }}">
+                <button class="copy-link-button" data-url="{{ .Permalink }}" data-copied-text="{{ T "LinkCopied" }}" title="{{ T "CopyLink" }}">
                     <i class="fas fa-copy" aria-hidden="true"></i>
                     {{ T "CopyLink" }}
                 </button>
@@ -62,61 +62,6 @@
         
         {{ if .Site.Params.include_conversation }}
         <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
-        {{ end }}
-        
-        {{ if not .Site.Params.hide_copy_links }}
-        <script>
-        (function() {
-            const copyButton = document.querySelector('.copy-link-button');
-            if (!copyButton) return;
-            
-            const url = copyButton.dataset.url;
-            const copiedText = '{{ T "LinkCopied" }}';
-            
-            copyButton.addEventListener('click', async function() {
-                try {
-                    // Try modern clipboard API first
-                    if (navigator.clipboard && window.isSecureContext) {
-                        await navigator.clipboard.writeText(url);
-                        showCopiedFeedback();
-                    } else {
-                        // Fallback for older browsers or non-HTTPS
-                        const textArea = document.createElement('textarea');
-                        textArea.value = url;
-                        textArea.style.position = 'fixed';
-                        textArea.style.left = '-999999px';
-                        textArea.style.top = '-999999px';
-                        document.body.appendChild(textArea);
-                        textArea.focus();
-                        textArea.select();
-                        
-                        try {
-                            document.execCommand('copy');
-                            showCopiedFeedback();
-                        } catch (err) {
-                            console.error('Failed to copy link:', err);
-                        } finally {
-                            textArea.remove();
-                        }
-                    }
-                } catch (err) {
-                    console.error('Failed to copy link:', err);
-                }
-            });
-            
-            function showCopiedFeedback() {
-                copyButton.setAttribute('data-copied-text', copiedText);
-                copyButton.classList.add('copied');
-                copyButton.disabled = true;
-                
-                setTimeout(() => {
-                    copyButton.classList.remove('copied');
-                    copyButton.disabled = false;
-                    copyButton.removeAttribute('data-copied-text');
-                }, 2000);
-            }
-        })();
-        </script>
         {{ end }}
     </footer>
 </article>
