@@ -1,5 +1,7 @@
 # Mythos Theme
 
+![GitHub release](https://img.shields.io/github/v/release/MattSLangford/Mythos-Theme)
+
 A clean, fast, and readable theme for Micro.blog that gets out of the way of your writing. Black text, white background, and sharp typography that looks great on any device.
 
 ![Mythos Theme Screenshot](screenshot.png)
@@ -71,9 +73,9 @@ For complete setup instructions, customization guides, and examples, visit:
 - **GitHub Sponsors:** [github.com/sponsors/mattslangford](https://github.com/sponsors/mattslangford)
 - **Buy Me a Coffee:** [buymeacoffee.com/mattlangford](https://buymeacoffee.com/mattlangford)
 
-## Version
+## Version History
 
-Current version: **1.3.9** - See [Releases](https://github.com/MattSLangford/Mythos-Theme/releases) for version history and release notes.
+See [Releases](https://github.com/MattSLangford/Mythos-Theme/releases) for version history and release notes.
 
 ---
 
