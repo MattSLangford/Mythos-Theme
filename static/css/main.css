@@ -1164,7 +1164,6 @@ blockquote.verse cite {
 /* CSS Auto-layout Alternative (replaces JavaScript) */
 .social-icons {
     grid-template-columns: repeat(auto-fit, minmax(32px, 1fr));
-    max-width: min(calc(var(--icon-count, 4) * 52px), 220px);
     gap: var(--spacing-sm);
 }
 
