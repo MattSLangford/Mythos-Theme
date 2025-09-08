@@ -2,6 +2,9 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.3.7] - 2025-09-07
+- Fixed mobile menu positioning by correcting header height variable
+
 ## [1.3.6] - 2025-09-07
 - Fixed microblog conversation avatar alignment with proper margin spacing
 
