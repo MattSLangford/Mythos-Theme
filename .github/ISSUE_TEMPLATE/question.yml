@@ -1,63 +1,12 @@
-name: Question or Support
-description: Ask a question about using or customizing the Mythos Theme
+name: Question
+description: Ask a question about the Mythos Theme
 title: "[Question] "
 labels: ["question"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Have a question about the Mythos Theme? We're here to help!
-        
-        **Note:** For general Micro.blog support, visit [help.micro.blog](https://help.micro.blog)
-        
-  - type: dropdown
-    id: category
-    attributes:
-      label: What type of question is this?
-      options:
-        - Installation/Setup
-        - Customization (CSS/HTML)
-        - Theme Features
-        - Compatibility
-        - Best Practices
-        - Other
-    validations:
-      required: true
-      
   - type: textarea
     id: question
     attributes:
-      label: Your Question
-      description: What would you like to know?
+      label: What's your question?
       placeholder: "How do I..."
     validations:
       required: true
-      
-  - type: textarea
-    id: context
-    attributes:
-      label: Additional Context
-      description: |
-        Any relevant details about your setup, what you've tried, or what you're trying to achieve.
-        Include screenshots if helpful!
-    validations:
-      required: false
-      
-  - type: input
-    id: theme-version
-    attributes:
-      label: Theme Version (if relevant)
-      description: In your Micro.blog Dashboard, click **Plug-ins** to see the Mythos Theme version
-      placeholder: "v1.3.10"
-    validations:
-      required: false
-      
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Checklist
-      options:
-        - label: I have checked the theme documentation at [mythos.micro.blog](https://mythos.micro.blog)
-          required: false
-        - label: I have searched for similar questions in existing issues
-          required: true
