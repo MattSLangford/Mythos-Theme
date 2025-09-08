@@ -1,5 +1,0 @@
-Mythos Theme v1.3.9
-Last updated: 7 September 2025
-Author: Matt Langford
-Website: https://mattlangford.com
-Repository: https://github.com/mattlangford/mythos-theme
