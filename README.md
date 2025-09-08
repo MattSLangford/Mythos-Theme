@@ -73,7 +73,7 @@ For complete setup instructions, customization guides, and examples, visit:
 
 ## Version
 
-Current version: **1.3.8** (2025-09-07)
+Current version: **1.3.9** (2025-09-07)
 
 ---
 

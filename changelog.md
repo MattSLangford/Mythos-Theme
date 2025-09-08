@@ -2,6 +2,15 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.3.9] - 2025-09-07
+- Removed development mode functionality entirely (use browser tools)
+- Removed dead image loading code that added unused `.loaded` class
+- Replaced JavaScript smooth scrolling with CSS `scroll-behavior: smooth`
+- Replaced JavaScript social icons grid with pure CSS auto-layout
+- Moved inline copy link JavaScript to external main.js file
+- Removed incorrect `role="feed"` attributes from HTML templates
+- Updated no-JavaScript fallbacks (social icons now work without JS)
+
 ## [1.3.8] - 2025-09-07
 - Improved accessibility with better ARIA labels and menu roles
 - Added DNS prefetch hint for Font Awesome CDN performance
@@ -15,10 +24,10 @@ All notable changes to the Mythos Theme will be documented in this file.
 ## [1.3.6] - 2025-09-07
 - Fixed microblog conversation avatar alignment with proper margin spacing
 
-## [1.3.5] - 2025-09-07
+## [1.3.5] - 2025-09-06
 - Added Amazon social media link option with FontAwesome icon
 
-## [1.3.4] - 2025-09-07
+## [1.3.4] - 2025-09-06
 - Fixed category display inconsistency between individual posts and archive page
 - Archive page now shows category names without hyphens (e.g., "My Category" instead of "my-category")
 - Improved category rendering using Hugo's taxonomy term pages
