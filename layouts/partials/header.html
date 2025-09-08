@@ -22,7 +22,7 @@
             <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input" aria-hidden="true">
             <label for="mobile-menu-toggle" class="menu-toggle" aria-label="Open main navigation menu">
                 <span class="menu-toggle-text">{{ T "Menu" }}</span>
-                <span class="hamburger">
+                <span class="hamburger" aria-hidden="true">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -32,7 +32,7 @@
             <!-- JavaScript fallback button (hidden by default) -->
             <button class="menu-toggle js-menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open main navigation menu" type="button" style="display: none;">
                 <span class="menu-toggle-text">{{ T "Menu" }}</span>
-                <span class="hamburger">
+                <span class="hamburger" aria-hidden="true">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -40,12 +40,12 @@
             </button>
             
             <div class="menu-backdrop" id="menu-backdrop"></div>
-            <div class="primary-menu" id="primary-menu">
+            <div class="primary-menu" id="primary-menu" role="menu" aria-label="Navigation menu">
                 <div class="menu-content">
                     <ul class="nav-menu">
                         {{ range .Site.Menus.main }}
-                        <li class="nav-item">
-                            <a href="{{ .URL }}" class="nav-link"{{ if .Pre }} {{ .Pre | safeHTMLAttr }}{{ end }}>
+                        <li class="nav-item" role="none">
+                            <a href="{{ .URL }}" class="nav-link" role="menuitem"{{ if .Pre }} {{ .Pre | safeHTMLAttr }}{{ end }}>
                                 {{ .Name }}
                             </a>
                         </li>
@@ -71,7 +71,7 @@
                     {{ if .Site.Params.social_contact }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_contact "icon" "fas fa-envelope" "label" "Contact") }}{{ end }}
                     
                     {{ if gt (len $socialLinks) 0 }}
-                    <div class="social-icons">
+                    <div class="social-icons" role="group" aria-label="Social media links">
                         {{ range $socialLinks }}
                         <a href="{{ .url }}" class="social-link" aria-label="{{ .label }}" target="_blank" rel="noopener noreferrer">
                             <i class="{{ .icon }}" aria-hidden="true"></i>
