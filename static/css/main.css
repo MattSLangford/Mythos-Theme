@@ -60,7 +60,7 @@
      * Controls the width of your content and key measurements. */
     --container-width: 42rem;
     --container-width-wide: 48rem;
-    --header-height: 4rem;
+    --header-height: 4.75rem;
     --touch-target-height: 44px;
     --button-padding: var(--spacing-md) var(--spacing-lg);
     --button-padding-compact: var(--spacing-sm) var(--spacing-md);
