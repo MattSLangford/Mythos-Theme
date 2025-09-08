@@ -2,6 +2,13 @@
 
 All notable changes to the Mythos Theme will be documented in this file.
 
+## [1.3.8] - 2025-09-07
+- Improved accessibility with better ARIA labels and menu roles
+- Added DNS prefetch hint for Font Awesome CDN performance
+- Standardized meta description truncation to 160 characters
+- Added motion preference support for smooth scrolling
+- Fixed avatar layout shift with proper width/height attributes
+
 ## [1.3.7] - 2025-09-07
 - Fixed mobile menu positioning by correcting header height variable
 
