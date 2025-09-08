@@ -118,27 +118,6 @@
         }
     }
     
-    // Smooth scrolling for anchor links
-    function initSmoothScrolling() {
-        const anchorLinks = document.querySelectorAll('a[href^="#"]');
-        
-        anchorLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    e.preventDefault();
-                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                    targetElement.scrollIntoView({
-                        behavior: prefersReducedMotion ? 'auto' : 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    }
-    
     
     // Code block copy functionality
     function initCodeCopy() {
@@ -201,7 +180,6 @@
     // Initialize all functionality when DOM is ready
     function init() {
         initMobileMenu();
-        initSmoothScrolling();
         initCodeCopy();
     }
     

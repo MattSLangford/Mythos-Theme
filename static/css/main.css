@@ -215,6 +215,13 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+/* Smooth scrolling for anchor links (respects motion preferences) */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 /* Main page setup - this controls your overall site appearance */
 body {
     margin: 0;
