@@ -7,6 +7,7 @@ body:
     id: question
     attributes:
       label: What's your question?
+      description: Please include any links to help with answering the question
       placeholder: "How do I..."
     validations:
       required: true

@@ -7,16 +7,25 @@ body:
     id: theme-version
     attributes:
       label: Theme Version
-      description: In Dashboard > Design, look for the Mythos Theme version
+      description: In Micro.blog Dashboard > Plugins, look for the Mythos Theme Version
       placeholder: "1.3.10"
     validations:
       required: true
+      
+  - type: input
+    id: site-link
+    attributes:
+      label: Link To Your Site (optional)
+      placeholder: "https://yoursite.micro.blog"
+    validations:
+      required: false
       
   - type: dropdown
     id: browser
     attributes:
       label: Browser
       options:
+        - All Browsers
         - Safari
         - Chrome
         - Firefox
@@ -29,15 +38,8 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: What's the problem?
-      placeholder: "Describe what's broken..."
+      label: What's the issue?
+      description: Describe the issue in detail, include links, and include screenshots
+      placeholder: "Describe what's happening..."
     validations:
       required: true
-      
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots (optional)
-      description: Drag and drop images here
-    validations:
-      required: false
