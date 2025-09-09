@@ -8,7 +8,7 @@ body:
     attributes:
       label: Theme Version
       description: In Micro.blog Dashboard > Plugins, look for the Mythos Theme Version
-      placeholder: "1.3.10"
+      placeholder: "1.3.11"
     validations:
       required: true
       
