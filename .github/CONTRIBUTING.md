@@ -26,7 +26,7 @@ This is a **Micro.blog theme**, not a generic Hugo theme. It requires specific t
 You have two options for testing:
 
 ### Option 1: Upload Fork as New Plugin
-1. Go to Micro.blog > Design > Edit Themes > New Plug-in
+1. Go to Micro.blog > Design > Edit Themes > New Plug-in **(NOT New Theme)**
 2. Upload your forked repository for testing
 3. Apply the plugin to test your changes
 
