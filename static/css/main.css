@@ -1964,9 +1964,19 @@ summary:focus {
     outline-offset: -2px;
 }
 
-/* Custom arrow */
+/* Custom arrow - hide default marker more aggressively */
 summary::marker {
     content: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::marker,
+summary::-webkit-details-marker {
+    content: "";
+    display: none;
 }
 
 summary::before {
