@@ -49,7 +49,7 @@ hugo_stats.json
 
 # Claude Code specific files
 CLAUDE.md
-.claude/settings.local.json
+.claude/
 
 # Logs
 *.log
