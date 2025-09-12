@@ -118,6 +118,18 @@
       "placeholder": "https://pinterest.com/username"
     },
     {
+      "field": "params.social_linkedin",
+      "label": "LinkedIn URL",
+      "type": "string",
+      "placeholder": "https://linkedin.com/in/username"
+    },
+    {
+      "field": "params.social_tumblr",
+      "label": "Tumblr URL",
+      "type": "string",
+      "placeholder": "https://username.tumblr.com"
+    },
+    {
       "field": "params.social_github",
       "label": "GitHub URL",
       "type": "string",

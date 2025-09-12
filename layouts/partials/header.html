@@ -60,6 +60,8 @@
                     {{ if .Site.Params.social_tiktok }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_tiktok "icon" "fab fa-tiktok" "label" "TikTok") }}{{ end }}
                     {{ if .Site.Params.social_bluesky }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_bluesky "icon" "fab fa-bluesky" "label" "Bluesky") }}{{ end }}
                     {{ if .Site.Params.social_pinterest }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_pinterest "icon" "fab fa-pinterest" "label" "Pinterest") }}{{ end }}
+                    {{ if .Site.Params.social_linkedin }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_linkedin "icon" "fab fa-linkedin" "label" "LinkedIn") }}{{ end }}
+                    {{ if .Site.Params.social_tumblr }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_tumblr "icon" "fab fa-tumblr" "label" "Tumblr") }}{{ end }}
                     {{ if .Site.Params.social_github }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_github "icon" "fab fa-github" "label" "GitHub") }}{{ end }}
                     {{ if .Site.Params.social_reddit }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_reddit "icon" "fab fa-reddit" "label" "Reddit") }}{{ end }}
                     {{ if .Site.Params.social_discord }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_discord "icon" "fab fa-discord" "label" "Discord") }}{{ end }}
