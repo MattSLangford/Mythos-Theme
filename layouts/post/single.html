@@ -11,11 +11,19 @@
             </time>
         </div>
     </header>
-    
+
+    {{ if templates.Exists "partials/microhook-before-post-content.html" }}
+    {{ partial "microhook-before-post-content.html" . }}
+    {{ end }}
+
     <div class="post-content">
         {{ .Content }}
     </div>
-    
+
+    {{ if templates.Exists "partials/microhook-after-post-content.html" }}
+    {{ partial "microhook-after-post-content.html" . }}
+    {{ end }}
+
     {{ if and .Params.categories (not .Site.Params.show_categories) }}
     <div class="post-categories">
         <div class="category-list">

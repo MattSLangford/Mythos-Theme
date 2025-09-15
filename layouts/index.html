@@ -1,6 +1,10 @@
 {{ define "main" }}
 <div class="home-content">
-    
+
+    {{ if templates.Exists "partials/microhook-home-before-posts.html" }}
+    {{ partial "microhook-home-before-posts.html" . }}
+    {{ end }}
+
     <div class="posts-list" aria-label="Blog posts">
         {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") (or .Site.Params.posts_per_page 10) }}
         
@@ -70,5 +74,9 @@
         </nav>
         {{ end }}
     </div>
+
+    {{ if templates.Exists "partials/microhook-home-after-posts.html" }}
+    {{ partial "microhook-home-after-posts.html" . }}
+    {{ end }}
 </div>
 {{ end }}

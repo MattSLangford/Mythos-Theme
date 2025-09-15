@@ -6,12 +6,18 @@
         {{ end }}
         
     </header>
-    
+
+    {{ if templates.Exists "partials/microhook-before-page-content.html" }}
+    {{ partial "microhook-before-page-content.html" . }}
+    {{ end }}
+
     <div class="post-content">
         {{ .Content }}
     </div>
-    
-    
-    
+
+    {{ if templates.Exists "partials/microhook-after-page-content.html" }}
+    {{ partial "microhook-after-page-content.html" . }}
+    {{ end }}
+
 </article>
 {{ end }}
