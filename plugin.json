@@ -1,5 +1,5 @@
 {
-  "version": "1.3.12",
+  "version": "1.3.13",
   "title": "Mythos Theme",
   "description": "A minimal, fast, and highly readable Micro.blog theme with clean black and white design. Created by Matt Langford (@mtt on Micro.blog).",
   "fields": [
@@ -112,10 +112,28 @@
       "placeholder": "https://bsky.app/profile/username"
     },
     {
+      "field": "params.social_medium",
+      "label": "Medium URL",
+      "type": "string",
+      "placeholder": "https://medium.com/@username"
+    },
+    {
+      "field": "params.social_threads",
+      "label": "Threads URL",
+      "type": "string",
+      "placeholder": "https://threads.net/@username"
+    },
+    {
       "field": "params.social_pinterest",
       "label": "Pinterest URL",
       "type": "string",
       "placeholder": "https://pinterest.com/username"
+    },
+    {
+      "field": "params.social_youtube",
+      "label": "YouTube URL",
+      "type": "string",
+      "placeholder": "https://youtube.com/@username"
     },
     {
       "field": "params.social_linkedin",
@@ -124,16 +142,34 @@
       "placeholder": "https://linkedin.com/in/username"
     },
     {
+      "field": "params.social_snapchat",
+      "label": "Snapchat URL",
+      "type": "string",
+      "placeholder": "https://snapchat.com/add/username"
+    },
+    {
       "field": "params.social_tumblr",
       "label": "Tumblr URL",
       "type": "string",
       "placeholder": "https://username.tumblr.com"
     },
     {
+      "field": "params.social_flickr",
+      "label": "Flickr URL",
+      "type": "string",
+      "placeholder": "https://flickr.com/photos/username"
+    },
+    {
       "field": "params.social_github",
       "label": "GitHub URL",
       "type": "string",
       "placeholder": "https://github.com/username"
+    },
+    {
+      "field": "params.social_gitlab",
+      "label": "GitLab URL",
+      "type": "string",
+      "placeholder": "https://gitlab.com/username"
     },
     {
       "field": "params.social_reddit",
@@ -152,6 +188,12 @@
       "label": "Amazon URL",
       "type": "string",
       "placeholder": "https://amazon.com/author/username"
+    },
+    {
+      "field": "params.social_patreon",
+      "label": "Patreon URL",
+      "type": "string",
+      "placeholder": "https://patreon.com/username"
     },
     {
       "field": "params.social_buymeacoffee",
