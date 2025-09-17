@@ -2,9 +2,9 @@
      data-content-background="#1a1a1a"
      data-avatar-background="#2a2a2a">
   {{ if .Title }}
-    <h1 style="margin: 0 0 20px 0; font-size: 24px; font-weight: bold; line-height: 1.2;">{{ .Title }}</h1>
+    <b style="font-size:18px;">{{ .Title }}</b>
   {{ end }}
   {{ if .Summary }}
-    <p style="margin: 0; font-size: 16px; line-height: 1.4; opacity: 0.9;">{{ .Summary }}</p>
+    <p style="font-size: 15px;">{{ .Summary | truncatewords 25 }}</p>
   {{ end }}
 </div>
