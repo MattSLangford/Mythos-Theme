@@ -213,6 +213,7 @@ html {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     -webkit-text-size-adjust: 100%;
+    scroll-padding-top: var(--header-height);
 }
 
 /* Smooth scrolling for anchor links (respects motion preferences) */
