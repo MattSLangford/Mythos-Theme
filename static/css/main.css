@@ -1455,6 +1455,11 @@ input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:fo
     border-color: var(--color-accent);
 }
 
+/* Form submit button spacing */
+form input[type="submit"] {
+    margin-top: var(--spacing-sm);
+}
+
 /* Search Space Plugin Specific */
 #search-space-form {
     margin-bottom: var(--spacing-xl);
