@@ -1,8 +1,4 @@
-<div style="background-color: #36454f; color: white; padding: 20px 20px 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif; line-height: 1.6; letter-spacing: 0.01em;" data-content-background="#36454f" data-avatar-background="#36454f"{{ if .Site.Params.custom_avatar }} data-avatar-url="{{ .Site.Params.custom_avatar }}"{{ end }}>
-  {{ if .Title }}
-    <b style="font-size: 26px; line-height: 1.2; margin-bottom: 16px; font-weight: 600; letter-spacing: 0.01em;">{{ .Title }}</b>
-  {{ end }}
-  {{ if .Summary }}
-    <p style="font-size: 18px; line-height: 1.4; margin: 0; letter-spacing: 0.01em;">{{ .Summary }}</p>
-  {{ end }}
+<div style="background-color: #4a525a; color: white; padding: 20px 20px 20px 0; line-height: 1.6;" data-content-background="#4a525a" data-avatar-background="#4a525a"{{ if .Site.Params.custom_avatar }} data-avatar-url="{{ .Site.Params.custom_avatar }}"{{ end }}>
+  <h1 style="font-size: 22px; line-height: 1.2;">{{ or .Title .Site.Title }}</h1>
+  <p style="font-size: 18px;">{{ or .Summary .Content }}</p>
 </div>
