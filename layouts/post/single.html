@@ -9,9 +9,8 @@
             <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date | time.Format ":date_long" }}
             </time>
-            <a href="{{ .Permalink }}" class="u-url" style="display: none;">{{ .Permalink }}</a>
             {{ if .Site.Author.name }}
-            <span class="p-author h-card" style="display: none;">{{ .Site.Author.name }}</span>
+            <span class="p-author" style="display: none;">{{ .Site.Author.name }}</span>
             {{ end }}
         </div>
     </header>
@@ -34,7 +33,7 @@
             {{ range .Params.categories }}
             {{ $categoryName := . }}
             {{ $categoryTaxonomy := index $.Site.Taxonomies.categories ($categoryName | urlize) }}
-            <a href="/categories/{{ . | urlize }}" class="category-button">{{ . }} ({{ len $categoryTaxonomy.Pages }})</a>
+            <a href="/categories/{{ . | urlize }}" class="category-button p-category">{{ . }} ({{ len $categoryTaxonomy.Pages }})</a>
             {{ end }}
         </div>
     </div>

@@ -13,7 +13,7 @@
             <header class="post-header">
                 {{ if .Title }}
                 <h2 class="post-title p-name">
-                    <a href="{{ .Permalink }}" class="u-url">{{ .Title }}</a>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
                 </h2>
                 {{ end }}
                 
@@ -24,16 +24,16 @@
                         </time>
                     </a>
                     {{ if .Site.Author.name }}
-                    <span class="p-author h-card" style="display: none;">{{ .Site.Author.name }}</span>
+                    <span class="p-author" style="display: none;">{{ .Site.Author.name }}</span>
                     {{ end }}
                 </div>
             </header>
             
-            <div class="post-content e-content">
+            <div class="post-content">
                 {{ if .Title }}
                     {{ if and .Truncated (in .RawContent "<!--more-->") }}
                         {{/* Always respect <!--more--> tag regardless of summary settings */}}
-                        {{ .Summary }}
+                        <div class="p-summary">{{ .Summary }}</div>
                         <div class="continue-reading">
                             <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
                         </div>
@@ -42,19 +42,19 @@
                         {{ $words := split .Content " " }}
                         {{ $maxWords := 150 }}
                         {{ if gt (len $words) $maxWords }}
-                            {{ delimit (first $maxWords $words) " " }}...
+                            <div class="p-summary">{{ delimit (first $maxWords $words) " " }}...</div>
                             <div class="continue-reading">
                                 <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
                             </div>
                         {{ else }}
-                            {{ .Content }}
+                            <div class="e-content">{{ .Content }}</div>
                         {{ end }}
                     {{ else }}
                         {{/* Show full content when no <!--more--> tag and summaries disabled */}}
-                        {{ .Content }}
+                        <div class="e-content">{{ .Content }}</div>
                     {{ end }}
                 {{ else }}
-                    {{ .Content }}
+                    <div class="e-content">{{ .Content }}</div>
                 {{ end }}
             </div>
             
