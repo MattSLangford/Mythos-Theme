@@ -1,14 +1,14 @@
 <header class="site-header" role="banner">
-    <div class="header-container">
+    <div class="header-container h-card">
         <div class="site-branding">
             <div class="site-info">
                 <h1 class="site-title">
-                    <a href="/" rel="home">
+                    <a href="/" class="u-url u-uid" rel="home">
                         {{ if not .Site.Params.show_profile_photo }}
                             {{ if .Site.Params.custom_avatar }}
-                            <img src="{{ .Site.Params.custom_avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar" width="32" height="32">
+                            <img src="{{ .Site.Params.custom_avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar u-photo" width="32" height="32">
                             {{ else if .Site.Author.avatar }}
-                            <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar" width="32" height="32">
+                            <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar u-photo" width="32" height="32">
                             {{ end }}
                         {{ end }}
                         {{ .Site.Title }}
@@ -82,7 +82,7 @@
                     {{ if gt (len $socialLinks) 0 }}
                     <div class="social-icons" role="group" aria-label="Social media links">
                         {{ range $socialLinks }}
-                        <a href="{{ .url }}" class="social-link" aria-label="{{ .label }}" target="_blank" rel="noopener noreferrer">
+                        <a href="{{ .url }}" class="social-link u-url" aria-label="{{ .label }}" target="_blank" rel="noopener noreferrer me">
                             <i class="{{ .icon }}" aria-hidden="true"></i>
                         </a>
                         {{ end }}
