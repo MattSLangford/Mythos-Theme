@@ -27,24 +27,27 @@
         {{ $paginator := .Paginate .Pages (or .Site.Params.posts_per_page 10) }}
         
         {{ range .Paginator.Pages }}
-        <article class="post-item" role="article">
+        <article class="post-item h-entry" role="article">
             <header class="post-header">
                 {{ if .Title }}
-                <h2 class="post-title">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <h2 class="post-title p-name">
+                    <a href="{{ .Permalink }}" class="u-url">{{ .Title }}</a>
                 </h2>
                 {{ end }}
                 
                 <div class="post-meta">
-                    <a href="{{ .Permalink }}" class="post-date-link">
-                        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                    <a href="{{ .Permalink }}" class="post-date-link u-url">
+                        <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                             {{ .Date | time.Format ":date_long" }}
                         </time>
                     </a>
+                    {{ if .Site.Author.name }}
+                    <span class="p-author h-card" style="display: none;">{{ .Site.Author.name }}</span>
+                    {{ end }}
                 </div>
             </header>
             
-            <div class="post-content">
+            <div class="post-content e-content">
                 {{ if .Title }}
                     {{ if and .Truncated (in .RawContent "<!--more-->") }}
                         {{/* Always respect <!--more--> tag regardless of summary settings */}}

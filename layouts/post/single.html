@@ -1,14 +1,18 @@
 {{ define "main" }}
-<article class="post">
+<article class="post h-entry">
     <header class="post-header">
         {{ if .Title }}
-        <h1 class="post-title">{{ .Title }}</h1>
+        <h1 class="post-title p-name">{{ .Title }}</h1>
         {{ end }}
         
         <div class="post-meta">
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date | time.Format ":date_long" }}
             </time>
+            <a href="{{ .Permalink }}" class="u-url" style="display: none;">{{ .Permalink }}</a>
+            {{ if .Site.Author.name }}
+            <span class="p-author h-card" style="display: none;">{{ .Site.Author.name }}</span>
+            {{ end }}
         </div>
     </header>
 
@@ -16,7 +20,7 @@
     {{ partial "microhook-before-post-content.html" . }}
     {{ end }}
 
-    <div class="post-content">
+    <div class="post-content e-content">
         {{ .Content }}
     </div>
 
