@@ -3,7 +3,7 @@
         <div class="site-branding">
             <div class="site-info">
                 <h1 class="site-title">
-                    <a href="/" class="u-url u-uid" rel="home">
+                    <a href="/" class="u-url" rel="home">
                         {{ if not .Site.Params.show_profile_photo }}
                             {{ if .Site.Params.custom_avatar }}
                             <img src="{{ .Site.Params.custom_avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar u-photo" width="32" height="32">
@@ -11,7 +11,7 @@
                             <img src="{{ .Site.Author.avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar u-photo" width="32" height="32">
                             {{ end }}
                         {{ end }}
-                        {{ .Site.Title }}
+                        <span class="p-name">{{ .Site.Title }}</span>
                     </a>
                 </h1>
             </div>
