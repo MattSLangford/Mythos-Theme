@@ -39,13 +39,12 @@
                         </div>
                     {{ else if .Site.Params.use_post_summaries }}
                         {{/* Only do automatic truncation when summaries are enabled */}}
-                        {{ if .Truncated }}
                             <div class="p-summary">{{ .Summary }}</div>
-                            <div class="continue-reading">
-                                <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
-                            </div>
-                        {{ else }}
-                            <div class="e-content">{{ .Content }}</div>
+                            {{ if .Truncated }}
+                                <div class="continue-reading">
+                                    <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                                    </div>
+                            {{ end }}
                         {{ end }}
                     {{ else }}
                         {{/* Show full content when no <!--more--> tag and summaries disabled */}}
