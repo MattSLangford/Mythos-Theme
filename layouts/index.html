@@ -41,7 +41,13 @@
                         {{/* Only do automatic truncation when summaries are enabled */}}
                         {{ $words := split .Content " " }}
                         {{ $maxWords := 150 }}
-                        {{ if gt (len $words) $maxWords }}
+                        {{/* Use custom summary if it exists */}}
+                        {{ if .Params.custom_summary }}
+                            <div class="p-summary">{{ .Summary | safeHTML }}</div>
+                            <div class="continue-reading">
+                                <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
+                            </div>
+                        {{ else if gt (len $words) $maxWords }}
                             <div class="p-summary">{{ delimit (first $maxWords $words) " " }}...</div>
                             <div class="continue-reading">
                                 <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
