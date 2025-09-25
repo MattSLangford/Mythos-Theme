@@ -39,10 +39,8 @@
                         </div>
                     {{ else if .Site.Params.use_post_summaries }}
                         {{/* Only do automatic truncation when summaries are enabled */}}
-                        {{ $words := split .Content " " }}
-                        {{ $maxWords := 150 }}
-                        {{ if gt (len $words) $maxWords }}
-                            <div class="p-summary">{{ delimit (first $maxWords $words) " " }}...</div>
+                        {{ if .Truncated }}
+                            <div class="p-summary">{{ .Summary }}</div>
                             <div class="continue-reading">
                                 <a href="{{ .Permalink }}">{{ T "ContinueReading" }} →</a>
                             </div>
