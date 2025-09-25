@@ -1278,6 +1278,10 @@ blockquote.verse cite {
     margin-bottom: var(--spacing-md);
 }
 
+.continue-reading {
+    margin-top: var(--spacing-md);
+}
+
 /* Single Post */
 .post {
     max-width: 100%;
