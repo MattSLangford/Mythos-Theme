@@ -4,7 +4,7 @@
             <div class="site-info">
                 <h1 class="site-title">
                     <a href="/" class="u-url" rel="home">
-                        {{ if not .Site.Params.show_profile_photo }}
+                        {{ if not .Site.Params.hide_profile_photo }}
                             {{ if .Site.Params.custom_avatar }}
                             <img src="{{ .Site.Params.custom_avatar }}" alt="{{ .Site.Title }} logo" class="title-avatar u-photo" width="32" height="32">
                             {{ else if .Site.Author.avatar }}

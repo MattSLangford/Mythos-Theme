@@ -34,7 +34,7 @@
       "placeholder": "Enter the URL to a custom avatar image"
     },
     {
-      "field": "params.show_profile_photo",
+      "field": "params.hide_profile_photo",
       "label": "Hide Avatar",
       "type": "boolean"
     },
