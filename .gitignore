@@ -49,7 +49,6 @@ hugo_stats.json
 
 # Claude Code specific files
 CLAUDE.md
-.claude/
 
 # Logs
 *.log
