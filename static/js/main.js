@@ -31,12 +31,14 @@
         
         function openMenu() {
             menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.setAttribute('aria-label', 'Close main navigation menu');
             primaryMenu.classList.add('active');
             if (menuBackdrop) menuBackdrop.classList.add('active');
         }
-        
+
         function closeMenu() {
             menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open main navigation menu');
             primaryMenu.classList.remove('active');
             if (menuBackdrop) menuBackdrop.classList.remove('active');
         }
