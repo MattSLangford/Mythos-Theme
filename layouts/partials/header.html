@@ -45,7 +45,7 @@
                     <ul class="nav-menu">
                         {{ range .Site.Menus.main }}
                         <li class="nav-item" role="none">
-                            <a href="{{ .URL }}" class="nav-link" role="menuitem"{{ if .Pre }} {{ .Pre | safeHTMLAttr }}{{ end }}>
+                            <a href="{{ .URL }}" class="nav-link {{ .Name }}" role="menuitem">
                                 {{ .Name }}
                             </a>
                         </li>
