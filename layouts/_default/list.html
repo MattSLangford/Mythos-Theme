@@ -21,13 +21,13 @@
     {{ end }}
     
     {{ if .Pages }}
-    <div class="posts-list" aria-label="Blog posts">
+    <section class="posts-list" aria-label="Blog posts">
         {{ if or (eq .Kind "taxonomy") (eq .Kind "term") }}
         {{/* Show pagination for taxonomy and term pages (posts listings) */}}
         {{ $paginator := .Paginate .Pages (or .Site.Params.posts_per_page 10) }}
         
         {{ range .Paginator.Pages }}
-        <article class="post-item h-entry" role="article">
+        <article class="post-item h-entry">
             <header class="post-header">
                 {{ if .Title }}
                 <h2 class="post-title p-name">
@@ -76,7 +76,7 @@
         {{ end }}
         
         {{ if gt .Paginator.TotalPages 1 }}
-        <nav class="pagination" role="navigation" aria-label="Pagination Navigation">
+        <nav class="pagination" aria-label="Pagination Navigation">
             {{ if .Paginator.HasPrev }}
             <a href="{{ .Paginator.Prev.URL }}" class="prev-page" aria-label="Go to page {{ .Paginator.Prev.PageNumber }}">← {{ T "NewerPosts" }}</a>
             {{ end }}
@@ -104,7 +104,7 @@
         </article>
         {{ end }}
         {{ end }}
-    </div>
+    </section>
     {{ else }}
     <div class="empty-list">
         <p>{{ T "NoPostsFound" }}</p>

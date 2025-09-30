@@ -28,7 +28,7 @@
     
     {{ $allPosts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
     {{ if $allPosts }}
-    <div class="archive-posts-list" aria-label="All blog posts">
+    <section class="archive-posts-list" aria-label="All blog posts">
         {{ range $allPosts }}
         <article class="archive-post-item" role="article">
             <div class="archive-post-date">
@@ -49,7 +49,7 @@
             </div>
         </article>
         {{ end }}
-    </div>
+    </section>
     {{ else }}
     <div class="empty-list">
         <p>{{ T "NoPostsFound" }}</p>
