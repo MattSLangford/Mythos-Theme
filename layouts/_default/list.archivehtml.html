@@ -30,21 +30,21 @@
     {{ if $allPosts }}
     <section class="archive-posts-list" aria-label="All blog posts">
         {{ range $allPosts }}
-        <article class="archive-post-item" role="article">
+        <article class="archive-post-item h-entry" role="article">
             <div class="archive-post-date">
-                <a href="{{ .Permalink }}" class="archive-date-link">
-                    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                <a href="{{ .Permalink }}" class="archive-date-link u-url">
+                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                         {{ .Date | time.Format ":date_long" }}
                     </time>
                 </a>
             </div>
             <div class="archive-post-content">
                 {{ if .Title }}
-                    <h3 class="archive-post-title">{{ .Title }}</h3>
+                    <h3 class="archive-post-title p-name">{{ .Title }}</h3>
                 {{ else }}
                     {{ $content := .Content | plainify }}
                     {{ $summary := substr $content 0 50 }}
-                    <span class="archive-post-summary">{{ $summary }}{{ if gt (len $content) 50 }}...{{ end }}</span>
+                    <span class="archive-post-summary e-content">{{ $summary }}{{ if gt (len $content) 50 }}...{{ end }}</span>
                 {{ end }}
             </div>
         </article>
