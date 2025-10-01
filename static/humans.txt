@@ -1,0 +1,16 @@
+/* DESIGNER */
+
+Name: Matt Langford
+Web: https://mattlangford.com
+Contact: matt [at] mattlangford [dot] com
+Micro.blog: @mtt
+Mastodon: https://mastodon.social/@mtt
+Github: https://github.com/MattSLangford
+From: Phoenix, AZ, USA
+
+/* SITE */
+
+Standards: HTML5, CSS3
+Software: Hugo, Git, VS Code
+Design Repo: https://github.com/MattSLangford/Mythos-Theme
+Hosted by: Micro.blog
