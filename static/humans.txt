@@ -2,15 +2,16 @@
 
 Name: Matt Langford
 Web: https://mattlangford.com
-Contact: matt [at] mattlangford [dot] com
+Contact: hi [at] mattlangford [dot] c o m
 Micro.blog: @mtt
-Mastodon: https://mastodon.social/@mtt
+Mastodon: https://micro.blog/Mtt?remote_follow=1
 Github: https://github.com/MattSLangford
-From: Phoenix, AZ, USA
+From: Lafayette, LA, USA
 
 /* SITE */
 
 Standards: HTML5, CSS3
-Software: Hugo, Git, VS Code
+Documentation: https://mythos.micro.blog
+Software: Hugo, Git, Nova, Claude Code
 Design Repo: https://github.com/MattSLangford/Mythos-Theme
-Hosted by: Micro.blog
+Hosted by: Micro.blog 
