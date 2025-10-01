@@ -55,7 +55,7 @@
     {{ if templates.Exists "partials/microhook-uncss.html" }}
     {{ partial "microhook-uncss.html" . }}
     {{ else }}
-    <link rel="stylesheet" href="/css/main.css?v=1.4.10">
+    <link rel="stylesheet" href="/css/main.css?{{ .Site.Params.theme_seconds }}">
     {{ end }}
     
     <!-- RSS -->
