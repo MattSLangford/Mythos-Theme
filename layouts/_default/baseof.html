@@ -43,9 +43,10 @@
       {{ end }}
     {{- end -}}
     <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ delimit (split .Summary " " | first 5) " " }} … | {{ .Site.Title }}{{ end }}{{ end }}</title>
-    
-    <meta name="author" content="{{ .Site.Params.author }}">
-    
+
+    <!-- Author information -->
+    <link rel="author" href="/humans.txt">
+
     <!-- Fediverse Creator for enhanced link previews -->
     {{ if .Site.Params.fediverse_creator }}
     <meta name="fediverse:creator" content="{{ .Site.Params.fediverse_creator }}">
