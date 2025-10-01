@@ -13,7 +13,7 @@
     {{ if gt (len $list) 0 }}
     <div class="archive-section">
         <h2>{{ T "Categories" }}</h2>
-        <ul class="archive-categories" role="list">
+        <ul class="archive-categories">
             {{ range $list }}
             <li><a href="{{ .Permalink }}" class="category-button">{{ .Title }} ({{ len .Pages }})</a></li>
             {{ end }}
@@ -30,7 +30,7 @@
     {{ if $allPosts }}
     <section class="archive-posts-list" aria-label="All blog posts">
         {{ range $allPosts }}
-        <article class="archive-post-item h-entry" role="article">
+        <article class="archive-post-item h-entry">
             <div class="archive-post-date">
                 <a href="{{ .Permalink }}" class="archive-date-link u-url">
                     <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
