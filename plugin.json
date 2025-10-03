@@ -112,6 +112,12 @@
       "placeholder": "https://bsky.app/profile/username"
     },
     {
+      "field": "params.social_nostr",
+      "label": "Nostr URL",
+      "type": "string",
+      "placeholder": "https://nostr.com/your_npub or vanity url"
+    },
+    {
       "field": "params.social_medium",
       "label": "Medium URL",
       "type": "string",
