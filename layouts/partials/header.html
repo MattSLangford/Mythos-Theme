@@ -57,6 +57,7 @@
                     {{ if .Site.Params.social_mastodon }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_mastodon "icon" "fab fa-mastodon" "label" "Mastodon") }}{{ end }}
                     {{ if .Site.Params.social_x }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_x "icon" "fab fa-x-twitter" "label" "X") }}{{ end }}
                     {{ if .Site.Params.social_instagram }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_instagram "icon" "fab fa-instagram" "label" "Instagram") }}{{ end }}
+                    {{ if .Site.Params.social_facebook }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_facebook "icon" "fab fa-facebook" "label" "Facebook") }}{{ end }}
                     {{ if .Site.Params.social_tiktok }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_tiktok "icon" "fab fa-tiktok" "label" "TikTok") }}{{ end }}
                     {{ if .Site.Params.social_bluesky }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_bluesky "icon" "fab fa-bluesky" "label" "Bluesky") }}{{ end }}
                     {{ if .Site.Params.social_nostr }}{{ $socialLinks = $socialLinks | append (dict "url" .Site.Params.social_nostr "icon" "fas fa-feather" "label" "Nostr") }}{{ end }}
