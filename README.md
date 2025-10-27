@@ -62,6 +62,7 @@ For complete setup instructions, customization guides, and examples, visit:
 
 **Created by:** [Matt Langford](https://mattlangford.com)  
 **Website:** [mattlangford.com](https://mattlangford.com)  
+**Mastodon:** [mastodon.social/@mtt](https://mastodon.social/@mtt)
 **Repository:** [github.com/mattlangford/mythos-theme](https://github.com/mattlangford/mythos-theme)  
 **License:** MIT License
 

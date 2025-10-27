@@ -4,7 +4,7 @@ Name: Matt Langford
 Web: https://mattlangford.com
 Contact: hi [at] mattlangford [dot] c o m
 Micro.blog: @mtt
-Mastodon: https://micro.blog/Mtt?remote_follow=1
+Mastodon: https://mastodon.social/@mtt
 Github: https://github.com/MattSLangford
 From: Lafayette, LA, USA
 
